@@ -1,5 +1,4 @@
-﻿namespace ProjectEuler
+﻿module ProjectEuler
 
-module Say =
-    let hello name =
-        printfn "Hello %s" name
+let sumOfMultiplesOf3And5 n =
+    0

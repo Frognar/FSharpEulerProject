@@ -1,8 +1,7 @@
 module Tests
 
-open System
 open Xunit
 
 [<Fact>]
-let ``My test`` () =
-    Assert.True(true)
+let ``sum of multiples of 3 and 5 for natural numbers below 3 is 0`` () =
+    Assert.Equal(0, ProjectEuler.sumOfMultiplesOf3And5 3)
