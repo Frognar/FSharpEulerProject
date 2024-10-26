@@ -33,3 +33,7 @@ let ``fibonacci sequence up to 5 is [1; 2; 3; 5]`` () =
 [<Fact>]
 let ``fibonacci sequence up to 100 is [1; 2; 3; 5; 8; 13; 21; 34; 55; 89]`` () =
     Assert.StrictEqual([1; 2; 3; 5; 8; 13; 21; 34; 55; 89], ProjectEuler.fibonacciUpTo 100)
+
+[<Fact>]
+let ``sum of even fibonacci numbers up to 1 is 0`` () =
+    Assert.Equal(0, ProjectEuler.sumOfEvenFibonacciNumbers 1)

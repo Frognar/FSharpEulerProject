@@ -12,3 +12,6 @@ let fibonacciUpTo maxFibValue =
     fibonacci
     |> Seq.takeWhile (fun x -> x <= maxFibValue)
     |> Seq.toList
+
+let sumOfEvenFibonacciNumbers maxFibValue =
+    0
