@@ -17,3 +17,8 @@ let ``sum of multiples of 3 and 5 for numbers below 6 is 8`` () =
 [<Fact>]
 let ``sum of multiples of 3 and 5 for numbers below 10 is 23`` () =
     Assert.Equal(23, ProjectEuler.sumOfMultiplesOf3And5 10)
+
+
+[<Fact>]
+let ``sum of multiples of 3 and 5 for numbers below 1000 is 233168`` () =
+    Assert.Equal(233168, ProjectEuler.sumOfMultiplesOf3And5 1000)
