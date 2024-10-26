@@ -8,5 +8,4 @@ let sumOfMultiplesOf3And5 n =
 let fibonacciUpTo maxFibValue =
     match maxFibValue with
     | 0 -> []
-    | 1 -> [1]
-    | _ -> [1; 2]
+    | _ -> [1 .. maxFibValue]

@@ -13,3 +13,8 @@ let ``fibonacci sequence up to 1 is [1]`` () =
 [<Fact>]
 let ``fibonacci sequence up to 2 is [1; 2]`` () =
     Assert.StrictEqual([1; 2], ProjectEuler.fibonacciUpTo 2)
+
+
+[<Fact>]
+let ``fibonacci sequence up to 3 is [1; 2; 3]`` () =
+    Assert.StrictEqual([1; 2; 3], ProjectEuler.fibonacciUpTo 3)
