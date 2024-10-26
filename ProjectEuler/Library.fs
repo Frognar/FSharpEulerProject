@@ -22,4 +22,5 @@ let rec primeFactors n =
     match n with
     | _ when n < 2 -> []
     | _ when n % 2 = 0 -> 2 :: primeFactors (n / 2)
+    | _ when n % 3 = 0 -> 3 :: primeFactors (n / 3)
     | _ -> [n]
