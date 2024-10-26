@@ -11,6 +11,7 @@
     <ItemGroup>
         <Compile Include="SumOfMultiplesOf3And5Tests.fs" />
         <Compile Include="EvenFibonacciNumbersTests.fs" />
+        <Compile Include="PrimeFactorsTests.fs" />
         <Compile Include="Program.fs"/>
     </ItemGroup>
 
