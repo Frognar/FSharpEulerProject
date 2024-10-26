@@ -1,7 +1,6 @@
 ﻿module ProjectEuler
 
 let sumOfMultiplesOf3And5 n =
-    match n with
-    | _ when n > 5 -> 8
-    | _ when n > 3 -> 3
-    | _ -> 0
+    [1 .. n-1]
+    |> List.filter (fun x -> x % 3 = 0 || x % 5 = 0)
+    |> List.sum

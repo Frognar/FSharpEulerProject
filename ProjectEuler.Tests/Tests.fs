@@ -13,3 +13,7 @@ let ``sum of multiples of 3 and 5 for natural numbers below 4 is 3`` () =
 [<Fact>]
 let ``sum of multiples of 3 and 5 for numbers below 6 is 8`` () =
     Assert.Equal(8, ProjectEuler.sumOfMultiplesOf3And5 6)
+
+[<Fact>]
+let ``sum of multiples of 3 and 5 for numbers below 10 is 23`` () =
+    Assert.Equal(23, ProjectEuler.sumOfMultiplesOf3And5 10)
