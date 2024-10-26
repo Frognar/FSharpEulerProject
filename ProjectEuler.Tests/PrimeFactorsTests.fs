@@ -13,3 +13,7 @@ let ``prime factors of 2 is [2]`` () =
 [<Fact>]
 let ``prime factors of 3 is [3]`` () =
     Assert.StrictEqual([3], ProjectEuler.primeFactors 3)
+
+[<Fact>]
+let ``prime factors of 4 is [2; 2]`` () =
+    Assert.StrictEqual([2; 2], ProjectEuler.primeFactors 4)
