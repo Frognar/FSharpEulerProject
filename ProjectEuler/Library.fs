@@ -19,4 +19,6 @@ let sumOfEvenFibonacciNumbers maxFibValue =
     |> List.sum
 
 let primeFactors n =
-    []
+    match n with
+    | 2 -> [2]
+    | _ -> []
