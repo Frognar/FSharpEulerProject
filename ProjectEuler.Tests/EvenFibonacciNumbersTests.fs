@@ -37,3 +37,19 @@ let ``fibonacci sequence up to 100 is [1; 2; 3; 5; 8; 13; 21; 34; 55; 89]`` () =
 [<Fact>]
 let ``sum of even fibonacci numbers up to 1 is 0`` () =
     Assert.Equal(0, ProjectEuler.sumOfEvenFibonacciNumbers 1)
+
+[<Fact>]
+let ``sum of even fibonacci numbers up to 2 is 2`` () =
+    Assert.Equal(2, ProjectEuler.sumOfEvenFibonacciNumbers 2)
+
+[<Fact>]
+let ``sum of even fibonacci numbers up to 3 is 2`` () =
+    Assert.Equal(2, ProjectEuler.sumOfEvenFibonacciNumbers 3)
+
+[<Fact>]
+let ``sum of even fibonacci numbers up to 100 is 44`` () =
+    Assert.Equal(44, ProjectEuler.sumOfEvenFibonacciNumbers 100)
+
+[<Fact>]
+let ``sum of even fibonacci numbers up to 4_000_000 is 4613732`` () =
+    Assert.Equal(4613732, ProjectEuler.sumOfEvenFibonacciNumbers 4_000_000)
