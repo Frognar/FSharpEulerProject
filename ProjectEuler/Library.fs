@@ -1,4 +1,7 @@
 ﻿module ProjectEuler
 
 let sumOfMultiplesOf3And5 n =
-    if n < 4 then 0 else 3
+    match n with
+    | _ when n > 5 -> 8
+    | _ when n > 3 -> 3
+    | _ -> 0
