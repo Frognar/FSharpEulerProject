@@ -1,4 +1,4 @@
-module Tests
+module SumOfMultiplesOf3And5Tests
 
 open Xunit
 
