@@ -20,5 +20,5 @@ let sumOfEvenFibonacciNumbers maxFibValue =
 
 let primeFactors n =
     match n with
-    | 2 -> [2]
-    | _ -> []
+    | _ when n < 2 -> []
+    | _ -> [n]
