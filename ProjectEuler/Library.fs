@@ -18,9 +18,11 @@ let sumOfEvenFibonacciNumbers maxFibValue =
     |> List.filter (fun x -> x % 2 = 0)
     |> List.sum
 
-let rec primeFactors n =
-    match n with
-    | _ when n < 2 -> []
-    | _ when n % 2 = 0 -> 2 :: primeFactors (n / 2)
-    | _ when n % 3 = 0 -> 3 :: primeFactors (n / 3)
-    | _ -> [n]
+let primeFactors n =
+    let rec factor n div res =
+        match n with
+        | _ when n < 2 -> res |> List.rev
+        | _ when n % div = 0 -> factor (n / div) div (div :: res)
+        | _ -> factor n (div + 1) res
+
+    factor n 2 [] 
