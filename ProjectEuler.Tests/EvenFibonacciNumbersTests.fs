@@ -9,3 +9,7 @@ let ``fibonacci sequence up to 0 is empty`` () =
 [<Fact>]
 let ``fibonacci sequence up to 1 is [1]`` () =
     Assert.StrictEqual([1], ProjectEuler.fibonacciUpTo 1)
+
+[<Fact>]
+let ``fibonacci sequence up to 2 is [1; 2]`` () =
+    Assert.StrictEqual([1; 2], ProjectEuler.fibonacciUpTo 2)

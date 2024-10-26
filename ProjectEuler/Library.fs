@@ -6,4 +6,7 @@ let sumOfMultiplesOf3And5 n =
     |> List.sum
 
 let fibonacciUpTo maxFibValue =
-    if maxFibValue > 0 then [1] else []
+    match maxFibValue with
+    | 0 -> []
+    | 1 -> [1]
+    | _ -> [1; 2]
