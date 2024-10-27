@@ -45,3 +45,11 @@ let ``isPalindrome of 9009 is true`` () =
 [<Fact>]
 let ``getPalindromesFromMultiples [1..10] should be [1; 2; 3; 4; 5; 6; 7; 8; 9]`` () =
     Assert.StrictEqual([1; 2; 3; 4; 5; 6; 7; 8; 9], ProjectEuler.getPalindromesFromMultiples [1..10])
+
+[<Fact>]
+let ``biggestPalindromeProduct of 2-digit numbers is 9009`` () =
+    Assert.Equal(9009, ProjectEuler.getLargestPalindromeFromMultiples [10..99])
+
+[<Fact>]
+let ``biggestPalindromeProduct of 3-digit numbers is x`` () =
+    Assert.Equal(906609, ProjectEuler.getLargestPalindromeFromMultiples [100..999])

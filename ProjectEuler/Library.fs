@@ -43,3 +43,7 @@ let getPalindromesFromMultiples xs =
     |> List.map (fun (x, y) -> x * y)
     |> List.filter isPalindrome
     |> List.distinct
+
+let getLargestPalindromeFromMultiples xs =
+    getPalindromesFromMultiples xs
+    |> List.max
