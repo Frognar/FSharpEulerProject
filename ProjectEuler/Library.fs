@@ -1,5 +1,7 @@
 ﻿module ProjectEuler
 
+open System
+
 let sumOfMultiplesOf3And5 n =
     [1 .. n-1]
     |> List.filter (fun x -> x % 3 = 0 || x % 5 = 0)
@@ -32,4 +34,7 @@ let largestPrimeFactor n =
     |> List.max
 
 let isPalindrome n =
-    n < 10
+    let str = (string n)
+    match str with
+    | _ when String.length str <= 1 -> true
+    | _ -> str[0] = str[1]
