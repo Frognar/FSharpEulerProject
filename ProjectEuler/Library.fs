@@ -37,3 +37,9 @@ let isPalindrome n =
     let str = (string n)
     let rev = Seq.rev str |> Seq.map string |> String.concat ""
     str = rev
+
+let getPalindromesFromMultiples xs =
+    List.allPairs xs xs
+    |> List.map (fun (x, y) -> x * y)
+    |> List.filter isPalindrome
+    |> List.distinct

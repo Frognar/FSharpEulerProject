@@ -41,3 +41,7 @@ let ``isPalindrome of 1221 is true`` () =
 [<Fact>]
 let ``isPalindrome of 9009 is true`` () =
     Assert.True(ProjectEuler.isPalindrome 9009)
+
+[<Fact>]
+let ``getPalindromesFromMultiples [1..10] should be [1; 2; 3; 4; 5; 6; 7; 8; 9]`` () =
+    Assert.StrictEqual([1; 2; 3; 4; 5; 6; 7; 8; 9], ProjectEuler.getPalindromesFromMultiples [1..10])
