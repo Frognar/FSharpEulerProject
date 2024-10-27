@@ -30,3 +30,6 @@ let primeFactors (n: int64) : int64 list =
 let largestPrimeFactor n =
     primeFactors n
     |> List.max
+
+let isPalindrome n =
+    true
