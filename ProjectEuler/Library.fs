@@ -32,4 +32,4 @@ let largestPrimeFactor n =
     |> List.max
 
 let isPalindrome n =
-    true
+    n < 10
