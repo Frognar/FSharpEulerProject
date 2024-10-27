@@ -20,3 +20,24 @@ let ``isPalindrome of 11 is true`` () =
 [<Fact>]
 let ``isPalindrome of 22 is true`` () =
     Assert.True(ProjectEuler.isPalindrome 22)
+
+[<Fact>]
+let ``isPalindrome of 112 is false`` () =
+    Assert.False(ProjectEuler.isPalindrome 112)
+
+[<Fact>]
+let ``isPalindrome of 111 is true`` () =
+    Assert.True(ProjectEuler.isPalindrome 111)
+
+[<Fact>]
+let ``isPalindrome of 121 is true`` () =
+    Assert.True(ProjectEuler.isPalindrome 121)
+
+[<Fact>]
+let ``isPalindrome of 1221 is true`` () =
+    Assert.True(ProjectEuler.isPalindrome 1221)
+
+
+[<Fact>]
+let ``isPalindrome of 9009 is true`` () =
+    Assert.True(ProjectEuler.isPalindrome 9009)

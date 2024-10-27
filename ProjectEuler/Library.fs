@@ -35,6 +35,5 @@ let largestPrimeFactor n =
 
 let isPalindrome n =
     let str = (string n)
-    match str with
-    | _ when String.length str <= 1 -> true
-    | _ -> str[0] = str[1]
+    let rev = Seq.rev str |> Seq.map string |> String.concat ""
+    str = rev
