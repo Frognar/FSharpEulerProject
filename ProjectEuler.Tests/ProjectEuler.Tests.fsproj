@@ -9,6 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <Compile Include="LeastCommonMultipleTests.fs" />
         <Compile Include="SumOfMultiplesOf3And5Tests.fs" />
         <Compile Include="EvenFibonacciNumbersTests.fs" />
         <Compile Include="PrimeFactorsTests.fs" />

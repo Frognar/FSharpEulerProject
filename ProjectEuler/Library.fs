@@ -47,3 +47,6 @@ let getPalindromesFromMultiples xs =
 let getLargestPalindromeFromMultiples xs =
     getPalindromesFromMultiples xs
     |> List.max
+
+let greatestCommonDivisor a b =
+    1
