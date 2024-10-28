@@ -48,5 +48,6 @@ let getLargestPalindromeFromMultiples xs =
     getPalindromesFromMultiples xs
     |> List.max
 
-let greatestCommonDivisor a b =
-    a
+let rec greatestCommonDivisor a b =
+    if b = 0 then a
+    else greatestCommonDivisor b (a % b)
