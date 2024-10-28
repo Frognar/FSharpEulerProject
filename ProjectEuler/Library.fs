@@ -49,4 +49,4 @@ let getLargestPalindromeFromMultiples xs =
     |> List.max
 
 let greatestCommonDivisor a b =
-    1
+    a
