@@ -29,3 +29,7 @@ let ``lcm for [1; 1] is 1`` () =
 [<Fact>]
 let ``lcm for [1..3] is 6`` () =
     Assert.Equal(6, ProjectEuler.leastCommonMultiple [1..3])
+
+[<Fact>]
+let ``lcm for [1..10] is 2520`` () =
+    Assert.Equal(2520, ProjectEuler.leastCommonMultiple [1..10])
