@@ -53,6 +53,12 @@ let rec greatestCommonDivisor a b =
     else greatestCommonDivisor b (a % b)
 
 let leastCommonMultiple numbers =
-    let a = List.head numbers 
-    let b = List.head (List.tail numbers)
-    a * b / greatestCommonDivisor a b
+    let rec lcm a tail =
+        match tail with
+        | [] -> a
+        | [b] -> a * b / greatestCommonDivisor a b
+        | b::t -> lcm (a * b / greatestCommonDivisor a b) t
+
+    match numbers with
+    | [] -> 0
+    | a::tail -> lcm a tail
