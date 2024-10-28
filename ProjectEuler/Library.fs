@@ -49,7 +49,7 @@ let getLargestPalindromeFromMultiples xs =
     |> List.max
 
 let rec greatestCommonDivisor a b =
-    if b = 0 then a
+    if b = 0L then a
     else greatestCommonDivisor b (a % b)
 
 let leastCommonMultiple numbers =
@@ -60,5 +60,5 @@ let leastCommonMultiple numbers =
         | b::t -> lcm (a * b / greatestCommonDivisor a b) t
 
     match numbers with
-    | [] -> 0
+    | [] -> 0L
     | a::tail -> lcm a tail
