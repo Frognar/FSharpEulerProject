@@ -51,3 +51,6 @@ let getLargestPalindromeFromMultiples xs =
 let rec greatestCommonDivisor a b =
     if b = 0 then a
     else greatestCommonDivisor b (a % b)
+
+let leastCommonMultiple numbers =
+    1
