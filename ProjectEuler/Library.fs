@@ -53,4 +53,6 @@ let rec greatestCommonDivisor a b =
     else greatestCommonDivisor b (a % b)
 
 let leastCommonMultiple numbers =
-    1
+    let a = List.head numbers 
+    let b = List.head (List.tail numbers)
+    a * b / greatestCommonDivisor a b

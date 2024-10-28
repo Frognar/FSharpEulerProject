@@ -17,3 +17,7 @@ let ``gcd for 4 and 2 is 2`` () =
 [<Fact>]
 let ``lcm for [1; 1] is 1`` () =
     Assert.Equal(1, ProjectEuler.leastCommonMultiple [1; 1])
+
+[<Fact>]
+let ``lcm for [1; 2] is 2`` () =
+    Assert.Equal(2, ProjectEuler.leastCommonMultiple [1; 2])
