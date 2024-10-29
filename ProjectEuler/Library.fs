@@ -63,5 +63,5 @@ let leastCommonMultiple numbers =
     | [] -> 0L
     | a::tail -> lcm a tail
 
-let sumOfSquares numbers =
-    0
+let sumOfSquares (numbers: int list) =
+    numbers |> List.sum
