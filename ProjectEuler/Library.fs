@@ -67,3 +67,6 @@ let sumOfSquares numbers =
     numbers
     |> List.map (fun x -> x * x)
     |> List.sum
+
+let squareOfSum numbers =
+    0
