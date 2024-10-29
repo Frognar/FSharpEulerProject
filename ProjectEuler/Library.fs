@@ -62,3 +62,6 @@ let leastCommonMultiple numbers =
     match numbers with
     | [] -> 0L
     | a::tail -> lcm a tail
+
+let sumOfSquares numbers =
+    0
