@@ -21,3 +21,7 @@ let ``sum of the squares of the first 10 natural numbers is 385`` () =
 [<Fact>]
 let ``square of the sum of the first 0 natural numbers is 0`` () =
     Assert.Equal(0, ProjectEuler.squareOfSum [])
+
+[<Fact>]
+let ``square of the sum of the first 1 natural numbers is 1`` () =
+    Assert.Equal(1, ProjectEuler.squareOfSum [1])
