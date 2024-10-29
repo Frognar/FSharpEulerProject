@@ -63,10 +63,10 @@ let leastCommonMultiple numbers =
     | [] -> 0L
     | a::tail -> lcm a tail
 
+let square x = x * x
+
 let sumOfSquares numbers =
-    numbers
-    |> List.map (fun x -> x * x)
-    |> List.sum
+    numbers |> List.map square |> List.sum
 
 let squareOfSum (numbers: int list) =
     numbers
