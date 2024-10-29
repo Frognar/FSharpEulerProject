@@ -69,5 +69,4 @@ let sumOfSquares numbers =
     numbers |> List.map square |> List.sum
 
 let squareOfSum (numbers: int list) =
-    numbers
-    |> List.sum
+    numbers |> List.sum |> square
