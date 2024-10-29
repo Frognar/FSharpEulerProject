@@ -37,3 +37,7 @@ let ``square of the sum of the first 10 natural numbers is 3025`` () =
 [<Fact>]
 let ``difference between the sum of the squares of the first 10 natural numbers and the square of the sum id 2630`` () =
     Assert.Equal(2640, ProjectEuler.squareOfSum [1..10] - ProjectEuler.sumOfSquares [1..10])
+
+[<Fact>]
+let ``difference between the sum of the squares of the first 100 natural numbers and the square of the sum id 25164150`` () =
+    Assert.Equal(25164150, ProjectEuler.squareOfSum [1..100] - ProjectEuler.sumOfSquares [1..100])
