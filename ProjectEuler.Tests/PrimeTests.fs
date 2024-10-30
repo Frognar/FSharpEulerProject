@@ -82,3 +82,6 @@ let ``19 is prime`` () =
 let ``20 is not prime`` () =
     Assert.False(ProjectEuler.isPrime 20)
 
+[<Fact>]
+let ``first 10 prime numbers are [2; 3; 5; 7; 11; 13; 17; 19; 23; 29]`` () =
+    Assert.StrictEqual([2; 3; 5; 7; 11; 13; 17; 19; 23; 29], ProjectEuler.generatePrimes () |> Seq.take 10 |> Seq.toList)

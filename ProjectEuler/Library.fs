@@ -80,3 +80,7 @@ let isPrime n =
         | _ -> checkPrime n (div + 2)
 
     checkPrime n 5
+
+let generatePrimes () =
+    Seq.initInfinite (fun x -> x + 1)
+    |> Seq.filter isPrime
