@@ -1,7 +1,5 @@
 ﻿module ProjectEuler
 
-open System
-
 let sumOfMultiplesOf3And5 n =
     [1 .. n-1]
     |> List.filter (fun x -> x % 3 = 0 || x % 5 = 0)
@@ -75,8 +73,10 @@ let isPrime n =
     let rec checkPrime n div =
         match n with
         | _ when n < 2 -> false
-        | _ when n <= div -> true
+        | _ when n <= 3 -> true
+        | _ when n % 2 = 0 || n % 3 = 0 -> false
+        | _ when n < (div * div) -> true
         | _ when n % div = 0 -> false
-        | _ -> checkPrime n (div + 1)
+        | _ -> checkPrime n (div + 2)
 
-    checkPrime n 2
+    checkPrime n 5
