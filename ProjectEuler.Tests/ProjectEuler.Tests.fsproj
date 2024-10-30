@@ -9,11 +9,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="LeastCommonMultipleTests.fs" />
-        <Compile Include="SumOfMultiplesOf3And5Tests.fs" />
         <Compile Include="EvenFibonacciNumbersTests.fs" />
-        <Compile Include="PrimeFactorsTests.fs" />
         <Compile Include="LargestPalindromeProductTests.fs" />
+        <Compile Include="LeastCommonMultipleTests.fs" />
+        <Compile Include="PrimeFactorsTests.fs" />
+        <Compile Include="PrimeTests.fs" />
+        <Compile Include="SumOfMultiplesOf3And5Tests.fs" />
         <Compile Include="SumSquareDifferenceTests.fs" />
         <Compile Include="Program.fs"/>
     </ItemGroup>
