@@ -14,3 +14,7 @@ let ``2 is prime`` () =
 let ``3 is prime`` () =
     Assert.True(ProjectEuler.isPrime 3)
 
+[<Fact>]
+let ``4 is not prime`` () =
+    Assert.False(ProjectEuler.isPrime 4)
+
