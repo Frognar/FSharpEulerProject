@@ -72,7 +72,11 @@ let squareOfSum (numbers: int list) =
     numbers |> List.sum |> square
 
 let isPrime n =
-    match n with
-    | _ when n < 2 -> false
-    | 2 | 3 -> true
-    | _ -> false
+    let rec checkPrime n div =
+        match n with
+        | _ when n < 2 -> false
+        | _ when n <= div -> true
+        | _ when n % div = 0 -> false
+        | _ -> checkPrime n (div + 1)
+
+    checkPrime n 2
