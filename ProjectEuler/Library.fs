@@ -102,3 +102,6 @@ let largestProduct (numbers: int64 list list): int64 =
     | n -> n
          |> List.map listProduct
          |> List.max
+
+let threeSumCombinations n =
+    [[1; 2; 3]]

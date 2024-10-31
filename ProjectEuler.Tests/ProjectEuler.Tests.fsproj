@@ -15,6 +15,7 @@
         <Compile Include="LeastCommonMultipleTests.fs" />
         <Compile Include="PrimeFactorsTests.fs" />
         <Compile Include="PrimeTests.fs" />
+        <Compile Include="SpecialPythagoreanTripletTests.fs" />
         <Compile Include="SumOfMultiplesOf3And5Tests.fs" />
         <Compile Include="SumSquareDifferenceTests.fs" />
         <Compile Include="Program.fs"/>
