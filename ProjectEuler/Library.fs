@@ -86,4 +86,6 @@ let generatePrimes () =
     |> Seq.filter isPrime
 
 let splitIntoSubstrings size str =
-    []
+    match str with
+    | "" -> []
+    | _ -> [str]
