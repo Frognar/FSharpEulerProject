@@ -93,10 +93,10 @@ let splitIntoSubstrings size str =
     split size str [] |> List.rev
 
 let splitDigits (str: string) =
-    str |> Seq.map (fun c -> int (string c)) |> Seq.toList
+    str |> Seq.map (fun c -> int64 (string c)) |> Seq.toList
 
-let largestProduct (numbers: int list list): int =
-    let listProduct l = l |> List.fold (*) 1
+let largestProduct (numbers: int64 list list): int64 =
+    let listProduct l = l |> List.fold (*) 1L
     match numbers with
     | [] -> 0
     | n -> n
