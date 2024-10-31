@@ -45,3 +45,7 @@ let ``[[1]] largest product is 1`` () =
 [<Fact>]
 let ``[[1]; [2]] largest product is 2`` () =
     Assert.Equal(2, ProjectEuler.largestProduct [[1]; [2]])
+
+[<Fact>]
+let ``[[1; 3]; [2; 1]] largest product is 3`` () =
+    Assert.Equal(3, ProjectEuler.largestProduct [[1; 3]; [2; 1]])
