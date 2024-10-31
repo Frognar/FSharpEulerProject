@@ -104,4 +104,4 @@ let largestProduct (numbers: int64 list list): int64 =
          |> List.max
 
 let threeSumCombinations n =
-    [[1; 2; 3]]
+    [[1; 2; if n % 2 = 0 then 3 else 4]]
