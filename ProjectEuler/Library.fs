@@ -91,3 +91,6 @@ let splitIntoSubstrings size str =
         else split size (str[1..]) (str[0..size - 1] :: acc)
 
     split size str [] |> List.rev
+
+let splitDigits str =
+    []

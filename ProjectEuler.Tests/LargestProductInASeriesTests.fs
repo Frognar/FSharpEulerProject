@@ -21,3 +21,7 @@ let ``"12" split into substrings of size 2 should be ["12"]`` () =
 [<Fact>]
 let ``"123" split into substrings of size 2 should be ["12"; "23"]`` () =
     Assert.StrictEqual(["12"; "23"], ProjectEuler.splitIntoSubstrings 2 "123")
+
+[<Fact>]
+let ``"" split into digits should be []`` () =
+    Assert.Empty(ProjectEuler.splitDigits "")
