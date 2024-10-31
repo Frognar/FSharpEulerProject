@@ -86,6 +86,8 @@ let generatePrimes () =
     |> Seq.filter isPrime
 
 let splitIntoSubstrings size str =
-    match str with
-    | "" -> []
-    | _ -> str |> Seq.toList |> List.map string
+    let rec split size (str: string) acc =
+        if str.Length < size then acc
+        else split size (str[1..]) (str[0..size - 1] :: acc)
+
+    split size str [] |> List.rev
