@@ -9,3 +9,7 @@ let ``"" split into substrings of size 1 should be []`` () =
 [<Fact>]
 let ``"1" split into substrings of size 1 should be ["1"]`` () =
     Assert.StrictEqual(["1"], ProjectEuler.splitIntoSubstrings 1 "1")
+
+[<Fact>]
+let ``"12" split into substrings of size 1 should be ["1"; "2"]`` () =
+    Assert.StrictEqual(["1"; "2"], ProjectEuler.splitIntoSubstrings 1 "12")

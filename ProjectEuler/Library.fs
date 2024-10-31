@@ -88,4 +88,4 @@ let generatePrimes () =
 let splitIntoSubstrings size str =
     match str with
     | "" -> []
-    | _ -> [str]
+    | _ -> str |> Seq.toList |> List.map string
