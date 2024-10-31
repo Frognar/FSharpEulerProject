@@ -11,6 +11,7 @@
     <ItemGroup>
         <Compile Include="EvenFibonacciNumbersTests.fs" />
         <Compile Include="LargestPalindromeProductTests.fs" />
+        <Compile Include="LargestProductInASeriesTests.fs" />
         <Compile Include="LeastCommonMultipleTests.fs" />
         <Compile Include="PrimeFactorsTests.fs" />
         <Compile Include="PrimeTests.fs" />

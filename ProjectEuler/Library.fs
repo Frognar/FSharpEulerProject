@@ -84,3 +84,6 @@ let isPrime n =
 let generatePrimes () =
     Seq.initInfinite (fun x -> x + 1)
     |> Seq.filter isPrime
+
+let splitIntoSubstrings size str =
+    []
