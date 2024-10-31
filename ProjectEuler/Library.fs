@@ -92,5 +92,6 @@ let splitIntoSubstrings size str =
 
     split size str [] |> List.rev
 
-let splitDigits str =
-    []
+let splitDigits (str: string) =
+    if str.Length = 0 then []
+    else [int str]
