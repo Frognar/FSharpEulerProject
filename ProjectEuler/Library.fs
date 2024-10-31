@@ -97,4 +97,4 @@ let splitDigits (str: string) =
 
 let largestProduct (numbers: int list list): int =
     if numbers.Length = 0 then 0
-    else numbers[0][0]
+    else numbers |> List.map (fun l -> l[0]) |> List.max
