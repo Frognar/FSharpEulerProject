@@ -33,3 +33,7 @@ let ``"1" split into digits should be [1]`` () =
 [<Fact>]
 let ``"12" split into digits should be [1; 2]`` () =
     Assert.StrictEqual([1; 2], ProjectEuler.splitDigits "12")
+
+[<Fact>]
+let ``[] largest product is 0`` () =
+    Assert.Equal(0, ProjectEuler.largestProduct [])

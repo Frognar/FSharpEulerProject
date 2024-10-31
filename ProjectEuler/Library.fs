@@ -94,3 +94,6 @@ let splitIntoSubstrings size str =
 
 let splitDigits (str: string) =
     str |> Seq.map (fun c -> int (string c)) |> Seq.toList
+
+let largestProduct numbers =
+    0
