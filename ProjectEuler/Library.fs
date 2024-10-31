@@ -104,4 +104,10 @@ let largestProduct (numbers: int64 list list): int64 =
          |> List.max
 
 let threeSumCombinations n =
-    [[1; 2; if n % 2 = 0 then 3 else 4]]
+    seq {
+        for b in [2..n/2 - 1] do
+            for a in [1..b - 1] do
+                let c = n - a - b
+                if c > b then
+                    yield [a; b; c]
+    } |> Seq.toList
