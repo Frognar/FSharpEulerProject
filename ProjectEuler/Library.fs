@@ -93,5 +93,4 @@ let splitIntoSubstrings size str =
     split size str [] |> List.rev
 
 let splitDigits (str: string) =
-    if str.Length = 0 then []
-    else [int str]
+    str |> Seq.map (fun c -> int (string c)) |> Seq.toList
