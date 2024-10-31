@@ -96,7 +96,9 @@ let splitDigits (str: string) =
     str |> Seq.map (fun c -> int (string c)) |> Seq.toList
 
 let largestProduct (numbers: int list list): int =
-    if numbers.Length = 0 then 0
-    else numbers
-         |> List.map (fun l -> l |> List.fold (fun acc x -> acc * x) 1)
+    let listProduct l = l |> List.fold (*) 1
+    match numbers with
+    | [] -> 0
+    | n -> n
+         |> List.map listProduct
          |> List.max
