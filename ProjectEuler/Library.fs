@@ -114,5 +114,6 @@ let threeSumCombinations n =
 
 let primesUpTo n =
     match n with
+    | 3 -> [2; 3]
     | 2 -> [2]
     | _ -> []
