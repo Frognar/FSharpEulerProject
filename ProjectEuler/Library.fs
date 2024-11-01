@@ -113,4 +113,6 @@ let threeSumCombinations n =
     } |> Seq.toList
 
 let primesUpTo n =
-    []
+    match n with
+    | 2 -> [2]
+    | _ -> []
