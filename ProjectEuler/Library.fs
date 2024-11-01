@@ -111,3 +111,6 @@ let threeSumCombinations n =
                 if c > b then
                     yield [a; b; c]
     } |> Seq.toList
+
+let primesUpTo n =
+    []
