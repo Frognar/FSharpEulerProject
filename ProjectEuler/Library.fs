@@ -113,7 +113,11 @@ let threeSumCombinations n =
     } |> Seq.toList
 
 let primesUpTo n =
+    let rec sieve candidates primes =
+        match candidates with
+        | [] -> primes
+        | x::xs -> sieve (xs |> List.filter (fun y -> y % x <> 0)) (x::primes)
+    
     match n with
-    | 3 | 4 -> [2; 3]
-    | 2 -> [2]
-    | _ -> []
+    | _ when n < 2 -> []
+    | _ -> sieve [2..n] [] |> List.rev
