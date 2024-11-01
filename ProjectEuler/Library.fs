@@ -116,8 +116,8 @@ let primesUpTo n =
     let rec sieve candidates primes =
         match candidates with
         | [] -> primes
-        | x::xs -> sieve (xs |> List.filter (fun y -> y % x <> 0)) (x::primes)
+        | x::xs -> sieve (xs |> List.filter (fun y -> y % x <> 0L)) (x::primes)
     
     match n with
-    | _ when n < 2 -> []
-    | _ -> sieve [2..n] [] |> List.rev
+    | _ when n < 2L -> []
+    | _ -> sieve [2L..n] [] |> List.rev
