@@ -14,3 +14,7 @@ let ``primes up to 2 are [2]`` () =
 let ``primes up to 3 are [2; 3]`` () =
     Assert.StrictEqual([2; 3], ProjectEuler.primesUpTo 3)
 
+[<Fact>]
+let ``primes up to 4 are [2; 3]`` () =
+    Assert.StrictEqual([2; 3], ProjectEuler.primesUpTo 4)
+
