@@ -22,3 +22,11 @@ let ``grid 2x2 has columns in the same direction`` () =
     let actual = ProjectEuler.getStraightAdjacentNumbers grid
     let expected = [[1; 3]; [2; 4]]
     expected |> List.iter (fun x -> Assert.Contains(x, actual))
+
+[<Fact>]
+let ``grid 2x2 has diagonals in the same direction`` () =
+    let grid = [[1; 2]
+                [3; 4]]
+    let actual = ProjectEuler.getStraightAdjacentNumbers grid
+    let expected = [[1; 4]; [2; 3]]
+    expected |> List.iter (fun x -> Assert.Contains(x, actual))

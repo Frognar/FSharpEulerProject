@@ -128,6 +128,12 @@ let primesUpTo n =
         [for i in 2 .. int n do if isPrime[i] then yield int64 i]
 
 let getStraightAdjacentNumbers (grid: int list list) =
+    let getDiagonals (g: int list list) =
+        let size = List.length g
+        [[for i in 0 .. size - 1 do yield g[i][i]]
+         [for i in 0 .. size - 1 do yield g[i][size - 1 - i]]]
+
     let rows = grid
     let columns = List.transpose grid
-    List.concat [rows; columns]
+    let diagonals = getDiagonals grid
+    List.concat [rows; columns; diagonals]
