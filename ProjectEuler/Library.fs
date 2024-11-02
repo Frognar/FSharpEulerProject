@@ -127,5 +127,5 @@ let primesUpTo n =
 
         [for i in 2 .. int n do if isPrime[i] then yield int64 i]
 
-let getStraightAdjacentNumbers grid =
-    [[1]]
+let getStraightAdjacentNumbers (grid: int list list) =
+    grid
