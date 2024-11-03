@@ -36,3 +36,10 @@ let ``split empty matrix with 2x2 window should be []`` () =
     let grid = []
     let actual = ProjectEuler.splitWithWindow 2 grid
     Assert.Empty(actual)
+
+[<Fact>]
+let ``split 2x2 matrix with 2x2 window should contain the original matrix`` () =
+    let grid = [[1; 2]
+                [3; 4]]
+    let actual = ProjectEuler.splitWithWindow 2 grid
+    Assert.StrictEqual([grid], actual)
