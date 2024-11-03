@@ -139,11 +139,12 @@ let getStraightAdjacentNumbers (grid: int list list) =
     List.concat [rows; columns; diagonals]
 
 let splitWithWindow window (matrix: int list list) =
-    let size = List.length matrix
-    if size < window then []
+    let width = List.length matrix
+    let height = if width = 0 then 0 else List.length matrix[0]
+    if width < window then []
     else [
-          for xOffset in 0 .. size - window do
-              for yOffset in 0 .. size - window do
-                [for i in yOffset .. window + yOffset- 1 do
-                     [for j in xOffset .. window + xOffset - 1 do yield matrix[i][j]]]
+          for jOffset in 0 .. height - window do
+              for iOffset in 0 .. width - window do
+                [for i in iOffset .. window + iOffset- 1 do
+                     [for j in jOffset .. window + jOffset - 1 do yield matrix[i][j]]]
           ]
