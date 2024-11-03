@@ -141,5 +141,7 @@ let getStraightAdjacentNumbers (grid: int list list) =
 let splitWithWindow window (matrix: int list list) =
     let size = List.length matrix
     if size < window then []
-    else [[[for i in 0 .. window - 1 do yield matrix[0][i]]
-           [for i in 0 .. window - 1 do yield matrix[1][i]]]]
+    else [[
+           for i in 0 .. window - 1 do
+           [for j in 0 .. window - 1 do yield matrix[i][j]]
+           ]]
