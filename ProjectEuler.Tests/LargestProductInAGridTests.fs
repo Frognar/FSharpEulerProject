@@ -43,3 +43,11 @@ let ``split 2x2 matrix with 2x2 window should contain the original matrix`` () =
                 [3; 4]]
     let actual = ProjectEuler.splitWithWindow 2 grid
     Assert.StrictEqual([grid], actual)
+
+[<Fact>]
+let ``split 3x3 matrix with 2x2 window should contain top left 2x2 matrix`` () =
+    let grid = [[1; 2; 3]
+                [4; 5; 6]
+                [7; 8; 9]]
+    let actual = ProjectEuler.splitWithWindow 2 grid
+    Assert.Contains([[1; 2]; [4; 5]], actual)

@@ -138,7 +138,8 @@ let getStraightAdjacentNumbers (grid: int list list) =
     let diagonals = getDiagonals grid
     List.concat [rows; columns; diagonals]
 
-let splitWithWindow window matrix =
+let splitWithWindow window (matrix: int list list) =
     let size = List.length matrix
     if size < window then []
-    else [matrix]
+    else [[[matrix[0][0]; matrix[0][1]]
+           [matrix[1][0];matrix[1][1]]]]
