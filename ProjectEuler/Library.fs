@@ -137,3 +137,6 @@ let getStraightAdjacentNumbers (grid: int list list) =
     let columns = List.transpose grid
     let diagonals = getDiagonals grid
     List.concat [rows; columns; diagonals]
+
+let splitWithWindow window matrix =
+    []

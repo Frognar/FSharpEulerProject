@@ -30,3 +30,9 @@ let ``grid 2x2 has diagonals in the same direction`` () =
     let actual = ProjectEuler.getStraightAdjacentNumbers grid
     let expected = [[1; 4]; [2; 3]]
     expected |> List.iter (fun x -> Assert.Contains(x, actual))
+
+[<Fact>]
+let ``split empty matrix with 2x2 window should be []`` () =
+    let grid = []
+    let actual = ProjectEuler.splitWithWindow 2 grid
+    Assert.Empty(actual)
