@@ -143,5 +143,7 @@ let splitWithWindow window (matrix: int list list) =
     if size < window then []
     else [
           for xOffset in 0 .. size - window do
-          [for i in 0 .. window - 1 do [for j in xOffset .. window + xOffset - 1 do yield matrix[i][j]]]
+              for yOffset in 0 .. size - window do
+                [for i in yOffset .. window + yOffset- 1 do
+                     [for j in xOffset .. window + xOffset - 1 do yield matrix[i][j]]]
           ]
