@@ -83,3 +83,12 @@ let ``split 2x3 matrix with 2x2 widow should contain two 2x2 matrices`` () =
     let actual = ProjectEuler.splitWithWindow 2 grid
     let expected = [[[1; 2]; [4; 5]]; [[2; 3]; [5; 6]]]
     Assert.StrictEqual(expected, actual)
+
+[<Fact>]
+let ``split 4x4 matrix with 2x2 window should contain nine 2x2 matrices`` () =
+    let grid = [[1; 2; 3; 4]
+                [5; 6; 7; 8]
+                [9; 10; 11; 12]
+                [13; 14; 15; 16]]
+    let actual = ProjectEuler.splitWithWindow 2 grid
+    Assert.Equal(9, List.length actual)
