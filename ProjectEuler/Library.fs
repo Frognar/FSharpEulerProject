@@ -157,4 +157,4 @@ let triangularNumbers () =
         (0, 1)
 
 let getDivisors n =
-    [1..n]
+    [1..n] |> List.filter (fun x -> n % x = 0)
