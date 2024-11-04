@@ -39,3 +39,11 @@ let ``the seventh triangular number has over 5 divisors`` () =
                            |> List.length;
 
     Assert.True(numberOfDivisors > 5)
+
+[<Fact>]
+let ``first triangular number with over 500 divisors is 76576500`` () =
+    let triangularNumber = ProjectEuler.triangularNumbers ()
+                            |> Seq.skipWhile (fun x -> ProjectEuler.getDivisors x |> List.length < 500)
+                            |> Seq.head
+
+    Assert.Equal(76576500, triangularNumber)
