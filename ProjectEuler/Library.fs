@@ -157,4 +157,12 @@ let triangularNumbers () =
         (0, 1)
 
 let getDivisors n =
-    [1..n] |> List.filter (fun x -> n % x = 0)
+    let upperBound = int (sqrt (float n))
+    [1..upperBound]
+    |> List.collect (fun d ->
+        if n % d = 0 then
+            if d = n / d then [d]
+            else [d; n / d]
+        else []
+    )
+    |> List.sort

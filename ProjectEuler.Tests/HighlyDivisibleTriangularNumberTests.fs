@@ -25,3 +25,7 @@ let ``2 is divisible by [1; 2]`` () =
 [<Fact>]
 let ``3 is divisible by [1; 3]`` () =
     Assert.StrictEqual([1; 3], ProjectEuler.getDivisors 3)
+
+[<Fact>]
+let ``351235123 is divisible by [1; 351235123]`` () =
+    Assert.StrictEqual([1; 351235123], ProjectEuler.getDivisors 351235123)
