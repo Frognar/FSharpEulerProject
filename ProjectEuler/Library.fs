@@ -166,3 +166,6 @@ let getDivisors n =
         else []
     )
     |> List.sort
+
+let roundTo10Digits n =
+    3710728753I

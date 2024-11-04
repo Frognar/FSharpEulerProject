@@ -14,6 +14,7 @@
         <Compile Include="LargestPalindromeProductTests.fs" />
         <Compile Include="LargestProductInAGridTests.fs" />
         <Compile Include="LargestProductInASeriesTests.fs" />
+        <Compile Include="LargeSumTests.fs" />
         <Compile Include="LeastCommonMultipleTests.fs" />
         <Compile Include="PrimeFactorsTests.fs" />
         <Compile Include="PrimeTests.fs" />
