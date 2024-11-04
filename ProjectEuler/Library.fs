@@ -168,4 +168,4 @@ let getDivisors n =
     |> List.sort
 
 let roundTo10Digits n =
-    3710728753I
+    n |> string |> Seq.take 10 |> Seq.map string |> String.concat "" |> System.Numerics.BigInteger.Parse
