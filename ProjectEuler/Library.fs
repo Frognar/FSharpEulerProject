@@ -157,4 +157,4 @@ let triangularNumbers () =
         (0, 1)
 
 let getDivisors n =
-    [1]
+    [1..n]
