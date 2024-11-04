@@ -150,4 +150,8 @@ let splitWithWindow window (matrix: int list list) =
           ]
 
 let triangularNumbers () =
-    Seq.initInfinite (fun x -> [1..x + 1] |> List.sum)
+    Seq.unfold
+        (fun (current, n) ->
+            let nextValue = current + n
+            Some(nextValue, (nextValue, n + 1)))
+        (0, 1)
