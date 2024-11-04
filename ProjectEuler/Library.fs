@@ -168,5 +168,9 @@ let getDivisors n =
     |> List.sort
 
 let roundTo10Digits (n: System.Numerics.BigInteger) =
-    let x = n |> string |> String.length |> (+) -10 |> double
-    double n / (double 10 ** x) |> round |> System.Numerics.BigInteger 
+    let nLength = n |> string |> String.length
+    if nLength < 10 then n
+    else 
+        let x = nLength |> (+) -10 |> double
+        let rounded = double n / (double 10 ** x) |> round |> int64
+        rounded |> string |> Seq.take 10 |> Seq.map string |> String.concat "" |> System.Numerics.BigInteger.Parse
