@@ -148,3 +148,6 @@ let splitWithWindow window (matrix: int list list) =
                 [for i in iOffset .. window + iOffset- 1 do
                      [for j in jOffset .. window + jOffset - 1 do yield matrix[i][j]]]
           ]
+
+let triangularNumbers () =
+    seq { 1 }

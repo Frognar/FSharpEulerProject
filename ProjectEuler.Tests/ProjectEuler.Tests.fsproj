@@ -10,6 +10,7 @@
 
     <ItemGroup>
         <Compile Include="EvenFibonacciNumbersTests.fs" />
+        <Compile Include="HighlyDivisibleTriangularNumberTests.fs" />
         <Compile Include="LargestPalindromeProductTests.fs" />
         <Compile Include="LargestProductInAGridTests.fs" />
         <Compile Include="LargestProductInASeriesTests.fs" />
