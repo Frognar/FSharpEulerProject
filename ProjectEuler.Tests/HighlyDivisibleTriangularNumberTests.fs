@@ -13,3 +13,7 @@ let ``the second triangular number is 3`` () =
 [<Fact>]
 let ``the seventh triangular number is 28`` () =
     Assert.Equal(28, ProjectEuler.triangularNumbers () |> Seq.skip 6 |> Seq.head)
+
+[<Fact>]
+let ``1 is divisible by [1]`` () =
+    Assert.StrictEqual([1], ProjectEuler.getDivisors 1)

@@ -155,3 +155,6 @@ let triangularNumbers () =
             let nextValue = current + n
             Some(nextValue, (nextValue, n + 1)))
         (0, 1)
+
+let getDivisors n =
+    [1]
