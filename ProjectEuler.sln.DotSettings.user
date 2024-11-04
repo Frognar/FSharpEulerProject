@@ -25,9 +25,7 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5ea1f566_002Dc349_002D4886_002D8fd6_002D91e3d520cd59/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;Solution /&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=867edaee_002D17f2_002D4605_002D8b1e_002D153f538ffd82/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;Solution /&gt;
-&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=867edaee_002D17f2_002D4605_002D8b1e_002D153f538ffd82/@EntryIndexedValue">JetBrains.ReSharper.UnitTestFramework.Session.Serialization.SessionState</s:String>
 	
 	
 	

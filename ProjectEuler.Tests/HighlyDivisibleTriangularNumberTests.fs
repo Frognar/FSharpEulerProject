@@ -29,3 +29,13 @@ let ``3 is divisible by [1; 3]`` () =
 [<Fact>]
 let ``351235123 is divisible by [1; 351235123]`` () =
     Assert.StrictEqual([1; 351235123], ProjectEuler.getDivisors 351235123)
+
+[<Fact>]
+let ``the seventh triangular number has over 5 divisors`` () =
+    let numberOfDivisors = ProjectEuler.triangularNumbers ()
+                           |> Seq.skip 6
+                           |> Seq.head
+                           |> ProjectEuler.getDivisors
+                           |> List.length;
+
+    Assert.True(numberOfDivisors > 5)
