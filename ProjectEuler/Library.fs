@@ -185,4 +185,4 @@ let nextCollatz n =
     | Even -> n / 2
     | Odd -> 3 * n + 1
 
-let collatzSequence n = [1]
+let collatzSequence n = [1..n] |> List.rev

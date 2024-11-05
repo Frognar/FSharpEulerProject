@@ -25,3 +25,7 @@ let ``next Collatz number after 5 is 16`` () =
 [<Fact>]
 let ``Collatz sequence for 1 is [1]`` () =
     Assert.StrictEqual([1], ProjectEuler.collatzSequence 1)
+
+[<Fact>]
+let ``Collatz sequence for 2 is [2; 1]`` () =
+    Assert.StrictEqual([2; 1], ProjectEuler.collatzSequence 2)
