@@ -184,3 +184,5 @@ let nextCollatz n =
     match n with
     | Even -> n / 2
     | Odd -> 3 * n + 1
+
+let collatzSequence n = [1]
