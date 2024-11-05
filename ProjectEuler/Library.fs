@@ -196,12 +196,17 @@ let collatzSequence n =
     loop n [n] |> List.rev
 
 let collatzSequences n =
+    let rec updateMemory (mem: Map<int, int list>) (acc: int list) =
+        match acc with
+        | [head] -> mem.Add (head, acc)
+        | head::tail when not (mem.ContainsKey head) -> updateMemory (mem.Add (head, acc)) tail
+        | _ -> mem
+
     let rec loop n cur acc (mem: Map<int, int list>) =
         match cur with
-        | 1 -> mem.Add (n, acc |> List.rev)
+        | 1 -> updateMemory mem (acc |> List.rev)
         | _ when mem.ContainsKey cur ->
-            let full = List.concat [acc |> List.skip 1 |> List.rev; mem[cur]]
-            mem.Add (n, full)
+            updateMemory mem (List.concat [acc |> List.skip 1 |> List.rev; mem[cur]])
         | _ -> 
             let next = nextCollatz cur
             loop n next (next :: acc) mem
