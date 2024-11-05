@@ -40,15 +40,15 @@ let ``Collatz sequence for 13 is [13; 40; 20; 10; 5; 16; 8; 4; 2; 1]`` () =
 
 [<Fact>]
 let ``Collatz sequences for 1 are [ (1, [1]) ]`` () =
-    Assert.StrictEqual(Map [(1, [1])], ProjectEuler.collatzSequences 1)
+    Assert.StrictEqual(Map [(1L, [1L])], ProjectEuler.collatzSequences 1)
 
 [<Fact>]
 let ``Collatz sequences for 2 are [ (1, [1]); (2, [2; 1]) ]`` () =
-    Assert.StrictEqual(Map [(1, [1]); (2, [2; 1])], ProjectEuler.collatzSequences 2)
+    Assert.StrictEqual(Map [(1L, [1L]); (2L, [2L; 1L])], ProjectEuler.collatzSequences 2)
 
 [<Fact>]
 let ``longest Collatz sequence in range [1..99_999] is from 77031 with 351 steps`` () =
-    Assert.Equal((77031, 351), ProjectEuler.collatzSequences 99_999
+    Assert.Equal((77031L, 351), ProjectEuler.collatzSequences 99_999
                  |> Map.toList
                  |> List.map (fun (n, x) -> (n, x |> List.length))
                  |> List.maxBy snd)
