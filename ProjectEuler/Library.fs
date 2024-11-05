@@ -196,6 +196,20 @@ let collatzSequence n =
     loop n [n] |> List.rev
 
 let collatzSequences n =
-    [1..n]
-    |> List.map (fun x -> (x, collatzSequence x))
-    |> Map
+    let rec loop n cur acc (mem: Map<int, int list>) =
+        match cur with
+        | 1 -> mem.Add (n, acc |> List.rev)
+        | _ when mem.ContainsKey cur ->
+            let full = List.concat [acc |> List.skip 1 |> List.rev; mem[cur]]
+            mem.Add (n, full)
+        | _ -> 
+            let next = nextCollatz cur
+            loop n next (next :: acc) mem
+    
+    let rec buildSequences i mem =
+        if i > n then mem
+        else
+            let mem = loop i i [i] mem
+            buildSequences (i + 1) mem
+    
+    buildSequences 1 Map.empty
