@@ -37,3 +37,7 @@ let ``Collatz sequence for 3 is [3; 10; 5; 16; 8; 4; 2; 1]`` () =
 [<Fact>]
 let ``Collatz sequence for 13 is [13; 40; 20; 10; 5; 16; 8; 4; 2; 1]`` () =
     Assert.StrictEqual([13; 40; 20; 10; 5; 16; 8; 4; 2; 1], ProjectEuler.collatzSequence 13)
+
+[<Fact>]
+let ``Collatz sequences for [1] are [ (1, [1]) ]`` () =
+    Assert.StrictEqual(Map [(1, [1])], ProjectEuler.collatzSequences [1])

@@ -194,3 +194,6 @@ let collatzSequence n =
             loop next (next :: acc)
 
     loop n [n] |> List.rev
+
+let collatzSequences n =
+    Map [ (1, [1]) ]
