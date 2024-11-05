@@ -175,6 +175,12 @@ let roundTo10Digits (n: System.Numerics.BigInteger) =
         let rounded = double n / (double 10 ** x) |> round |> int64
         rounded |> string |> Seq.take 10 |> Seq.map string |> String.concat "" |> System.Numerics.BigInteger.Parse
 
+let (|Even|Odd|) n =
+    match n with
+    | _ when n % 2 = 0 -> Even
+    | _ -> Odd
+
 let nextCollatz n =
-    if n % 2 <> 0 then 3 * n + 1
-    else n / 2
+    match n with
+    | Even -> n / 2
+    | Odd -> 3 * n + 1
