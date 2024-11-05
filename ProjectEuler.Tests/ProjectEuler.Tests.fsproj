@@ -16,6 +16,7 @@
         <Compile Include="LargestProductInASeriesTests.fs" />
         <Compile Include="LargeSumTests.fs" />
         <Compile Include="LeastCommonMultipleTests.fs" />
+        <Compile Include="LongestCollatzSequence.fs" />
         <Compile Include="PrimeFactorsTests.fs" />
         <Compile Include="PrimeTests.fs" />
         <Compile Include="SpecialPythagoreanTripletTests.fs" />
