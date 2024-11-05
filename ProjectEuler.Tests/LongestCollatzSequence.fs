@@ -52,3 +52,10 @@ let ``longest Collatz sequence in range [1..99_999] is from 77031 with 351 steps
                  |> Map.toList
                  |> List.map (fun (n, x) -> (n, x |> List.length))
                  |> List.maxBy snd)
+
+[<Fact>]
+let ``longest Collatz sequence in range [1..999_999] is from 837799 with 525 steps`` () =
+    Assert.Equal((837799L, 525), ProjectEuler.collatzSequences 999_999
+                 |> Map.toList
+                 |> List.map (fun (n, x) -> (n, x |> List.length))
+                 |> List.maxBy snd)
