@@ -185,4 +185,12 @@ let nextCollatz n =
     | Even -> n / 2
     | Odd -> 3 * n + 1
 
-let collatzSequence n = [1..n] |> List.rev
+let collatzSequence n =
+    let rec loop n acc =
+        match n with
+        | 1 -> acc
+        | _ ->
+            let next = nextCollatz n
+            loop next (next :: acc)
+
+    loop n [n] |> List.rev
