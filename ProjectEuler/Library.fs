@@ -176,4 +176,4 @@ let roundTo10Digits (n: System.Numerics.BigInteger) =
         rounded |> string |> Seq.take 10 |> Seq.map string |> String.concat "" |> System.Numerics.BigInteger.Parse
 
 let nextCollatz n =
-    if n = 13 then 40 else 20
+    if n = 13 then 40 else n / 2
