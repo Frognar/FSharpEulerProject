@@ -196,4 +196,6 @@ let collatzSequence n =
     loop n [n] |> List.rev
 
 let collatzSequences n =
-    Map [ (1, [1]) ]
+    n
+    |> List.map (fun x -> (x, collatzSequence x))
+    |> Map
