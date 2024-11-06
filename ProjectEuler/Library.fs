@@ -1,6 +1,7 @@
 ﻿module ProjectEuler
 
 open System.Numerics
+open Humanizer
 
 let sumOfMultiplesOf3And5 n =
     [1 .. n-1]
@@ -241,3 +242,5 @@ let powerDigitSum (n: int) p =
 
     let res = pow (n |> BigInteger) p
     res |> string |> Seq.map string |> Seq.map int |> Seq.sum
+
+let read (n: int) = n |> NumberToWordsExtension.ToWords    
