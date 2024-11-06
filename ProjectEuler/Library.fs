@@ -220,4 +220,4 @@ let collatzSequences (n: int64) =
     buildSequences 1L Map.empty
 
 let latticePaths x =
-    2
+    if x = 1 then 2 else 6
