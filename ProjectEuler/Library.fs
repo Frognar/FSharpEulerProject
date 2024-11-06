@@ -219,8 +219,10 @@ let collatzSequences (n: int64) =
     
     buildSequences 1L Map.empty
 
-let factorial n =
-    if n < 2 then 1 else 2
+let rec factorial n =
+    match n with
+    | 0 | 1 -> 1
+    | _ -> n * factorial (n - 1)
 
 let latticePaths x =
     if x = 1 then 2 else 6

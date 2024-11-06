@@ -25,3 +25,7 @@ let ``factorial 1 is 1`` () =
 [<Fact>]
 let ``factorial 2 is 2`` () =
     Assert.Equal(2, ProjectEuler.factorial 2)
+
+[<Fact>]
+let ``factorial 3 is 6`` () =
+    Assert.Equal(6, ProjectEuler.factorial 3)
