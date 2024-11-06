@@ -176,6 +176,10 @@ let roundTo10Digits (n: System.Numerics.BigInteger) =
         rounded |> string |> Seq.take 10 |> Seq.map string |> String.concat "" |> System.Numerics.BigInteger.Parse
 
 let powerDigitSum n p =
-    match p with
-    | 0 -> 1
-    | _ -> n
+    let rec pow x p =
+        match p with
+        | 0 -> 1
+        | 1 -> x
+        | _ -> pow (x * 2) (p - 1)
+    
+    pow n p

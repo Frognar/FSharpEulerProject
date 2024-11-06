@@ -13,3 +13,7 @@ let ``sum of digits of 2^1 is 2`` () =
 [<Fact>]
 let ``sum of digits of 3^1 is 3`` () =
     Assert.Equal(3I, ProjectEuler.powerDigitSum 3 1)
+
+[<Fact>]
+let ``sum of digits of 2^2 is 4`` () =
+    Assert.Equal(4I, ProjectEuler.powerDigitSum 2 2)
