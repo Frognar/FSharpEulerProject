@@ -17,3 +17,11 @@ let ``starting in the top left corner of a 2x2 gird, there are exactly six route
 [<Fact>]
 let ``factorial 0 is 1`` () =
     Assert.Equal(1, ProjectEuler.factorial 0)
+
+[<Fact>]
+let ``factorial 1 is 1`` () =
+    Assert.Equal(1, ProjectEuler.factorial 1)
+
+[<Fact>]
+let ``factorial 2 is 2`` () =
+    Assert.Equal(2, ProjectEuler.factorial 2)
