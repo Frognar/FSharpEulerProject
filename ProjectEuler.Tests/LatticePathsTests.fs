@@ -4,15 +4,15 @@ open Xunit
 
 [<Fact>]
 let ``starting in the top left corner of a 1x1 gird, there are exactly two routes to the bottom right corner`` () =
-    Assert.Equal(2, ProjectEuler.latticePaths 1)
+    Assert.Equal(2L, ProjectEuler.latticePaths 1)
 
 [<Fact>]
 let ``starting in the top left corner of a 2x2 gird, there are exactly six routes to the bottom right corner`` () =
-    Assert.Equal(6, ProjectEuler.latticePaths 2)
+    Assert.Equal(6L, ProjectEuler.latticePaths 2)
 
-//[<Fact>]
-//let ``starting in the top left corner of a 3x3 gird, there are exactly 20 routes to the bottom right corner`` () =
-//    Assert.Equal(20, ProjectEuler.latticePaths 3)
+[<Fact>]
+let ``starting in the top left corner of a 3x3 gird, there are exactly 20 routes to the bottom right corner`` () =
+    Assert.Equal(20L, ProjectEuler.latticePaths 3)
 
 [<Fact>]
 let ``factorial 0 is 1`` () =

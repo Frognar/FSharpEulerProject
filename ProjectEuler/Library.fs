@@ -228,4 +228,4 @@ let factorial n =
     loop n 1
 
 let latticePaths x =
-    if x = 1 then 2 else 6
+    (factorial (2L * x)) / ((factorial x) * (factorial x))
