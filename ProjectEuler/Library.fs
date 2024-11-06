@@ -182,4 +182,5 @@ let powerDigitSum n p =
         | 1 -> x
         | _ -> pow (x * n) (p - 1)
     
-    pow n p
+    let res = pow n p
+    res |> string |> Seq.map string |> Seq.map int |> Seq.sum
