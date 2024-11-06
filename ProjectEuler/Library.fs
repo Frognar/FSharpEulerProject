@@ -1,5 +1,7 @@
 ﻿module ProjectEuler
 
+open System.Numerics
+
 let sumOfMultiplesOf3And5 n =
     [1 .. n-1]
     |> List.filter (fun x -> x % 3 = 0 || x % 5 = 0)
@@ -175,12 +177,12 @@ let roundTo10Digits (n: System.Numerics.BigInteger) =
         let rounded = double n / (double 10 ** x) |> round |> int64
         rounded |> string |> Seq.take 10 |> Seq.map string |> String.concat "" |> System.Numerics.BigInteger.Parse
 
-let powerDigitSum n p =
-    let rec pow x p =
+let powerDigitSum (n: int) p =
+    let rec pow x p : BigInteger =
         match p with
-        | 0 -> 1
+        | 0 -> 1I
         | 1 -> x
-        | _ -> pow (x * n) (p - 1)
-    
-    let res = pow n p
+        | _ -> pow (x * (n |> BigInteger)) (p - 1)
+
+    let res = pow (n |> BigInteger) p
     res |> string |> Seq.map string |> Seq.map int |> Seq.sum
