@@ -174,3 +174,6 @@ let roundTo10Digits (n: System.Numerics.BigInteger) =
         let x = nLength |> (+) -10 |> double
         let rounded = double n / (double 10 ** x) |> round |> int64
         rounded |> string |> Seq.take 10 |> Seq.map string |> String.concat "" |> System.Numerics.BigInteger.Parse
+
+let powerDigitSum n p =
+    1
