@@ -219,13 +219,13 @@ let collatzSequences (n: int64) =
     
     buildSequences 1L Map.empty
 
-let factorial n =
-    let rec loop i acc =
+let factorial n: double =
+    let rec loop (i: double) (acc: double) =
         match i with
-        | 0L | 1L -> acc
-        | _ -> loop (i - 1L) (acc * i)
+        | _ when i <= 1.0 -> acc
+        | _ -> loop (i - 1.0) (acc * i)
     
-    loop n 1
+    loop n (1: double)
 
 let latticePaths x =
-    (factorial (2L * x)) / ((factorial x) * (factorial x))
+    (factorial (2.0 * x)) / ((factorial x) * (factorial x))
