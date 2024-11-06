@@ -177,6 +177,61 @@ let roundTo10Digits (n: System.Numerics.BigInteger) =
         let rounded = double n / (double 10 ** x) |> round |> int64
         rounded |> string |> Seq.take 10 |> Seq.map string |> String.concat "" |> System.Numerics.BigInteger.Parse
 
+let (|Even|Odd|) n =
+    match n with
+    | _ when n % 2 = 0 -> Even
+    | _ -> Odd
+
+let nextCollatz n =
+    match n with
+    | Even -> n / 2
+    | Odd -> 3 * n + 1
+
+let collatzSequence n =
+    let rec loop n acc =
+        match n with
+        | 1 -> acc
+        | _ ->
+            let next = nextCollatz n
+            loop next (next :: acc)
+
+    loop n [n] |> List.rev
+
+let collatzSequences (n: int64) =
+    let rec updateMemory (mem: Map<int64, int64 list>) (acc: int64 list) =
+        match acc with
+        | [head] -> mem.Add (head, acc)
+        | head::tail when not (mem.ContainsKey head) -> updateMemory (mem.Add (head, acc)) tail
+        | _ -> mem
+
+    let rec loop n cur acc (mem: Map<int64, int64 list>) =
+        match cur with
+        | 1L -> updateMemory mem (acc |> List.rev)
+        | _ when mem.ContainsKey cur ->
+            updateMemory mem (List.concat [acc |> List.skip 1 |> List.rev; mem[cur]])
+        | _ -> 
+            let next = if cur % 2L = 0L then cur / 2L else 3L * cur + 1L
+            loop n next (next :: acc) mem
+    
+    let rec buildSequences i mem =
+        if i > n then mem
+        else
+            let mem = loop i i [i] mem
+            buildSequences (i + 1L) mem
+    
+    buildSequences 1L Map.empty
+
+let factorial n: double =
+    let rec loop (i: double) (acc: double) =
+        match i with
+        | _ when i <= 1.0 -> acc
+        | _ -> loop (i - 1.0) (acc * i)
+    
+    loop n (1: double)
+
+let latticePaths x =
+    (factorial (2.0 * x)) / ((factorial x) * (factorial x))
+
 let powerDigitSum (n: int) p =
     let rec pow x p : BigInteger =
         match p with

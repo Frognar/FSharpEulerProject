@@ -11,11 +11,13 @@
     <ItemGroup>
         <Compile Include="EvenFibonacciNumbersTests.fs" />
         <Compile Include="HighlyDivisibleTriangularNumberTests.fs" />
+        <Compile Include="LatticePathsTests.fs" />
         <Compile Include="LargestPalindromeProductTests.fs" />
         <Compile Include="LargestProductInAGridTests.fs" />
         <Compile Include="LargestProductInASeriesTests.fs" />
         <Compile Include="LargeSumTests.fs" />
         <Compile Include="LeastCommonMultipleTests.fs" />
+        <Compile Include="LongestCollatzSequence.fs" />
         <Compile Include="PowerDigitSumTests.fs" />
         <Compile Include="PrimeFactorsTests.fs" />
         <Compile Include="PrimeTests.fs" />
