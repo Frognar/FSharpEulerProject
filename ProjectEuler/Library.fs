@@ -180,6 +180,6 @@ let powerDigitSum n p =
         match p with
         | 0 -> 1
         | 1 -> x
-        | _ -> pow (x * 2) (p - 1)
+        | _ -> pow (x * n) (p - 1)
     
     pow n p
