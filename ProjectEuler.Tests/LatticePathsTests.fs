@@ -3,8 +3,5 @@ module LatticePathsTests
 open Xunit
 
 [<Fact>]
-let ``in grid 2x2 from the top left corner can go right`` () =
-    let startPosition = (0, 0)
-    let girdSize = (2, 2)
-    let possibleMoves = ProjectEuler.possibleMoves startPosition girdSize
-    Assert.Contains((0, 1), possibleMoves)
+let ``starting in the top left corner of a 1x1 gird, there are exactly two routes to the bottom right corner`` () =
+    Assert.Equal(2, ProjectEuler.latticePaths 1)

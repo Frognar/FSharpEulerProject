@@ -219,5 +219,5 @@ let collatzSequences (n: int64) =
     
     buildSequences 1L Map.empty
 
-let possibleMoves start gridSize =
-    [(0, 1)]
+let latticePaths x =
+    2
