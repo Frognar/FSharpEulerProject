@@ -25,3 +25,13 @@ let ``the maximum total from top to bottom of triangle [ [3]; [4; 7] ] is 10`` (
 [<Fact>]
 let ``the maximum total from top to bottom of triangle [ [3]; [7; 4]; [2; 4; 6] ] is 14`` () =
     Assert.Equal(14, ProjectEuler.maximumTotal [ [3]; [7; 4]; [2; 4; 6] ])
+
+[<Fact>]
+let ``the maximum total from top to bottom of the given triangle is 23`` () =
+    let triangle = [
+        [3]
+        [7; 4]
+        [2; 4; 6]
+        [8; 5; 9; 3]
+    ]
+    Assert.Equal(23, ProjectEuler.maximumTotal triangle)
