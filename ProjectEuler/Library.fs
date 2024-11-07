@@ -247,4 +247,9 @@ let read (n: int) = n |> NumberToWordsExtension.ToWords
 
 let maximumTotal (triangle: int list list) =
     if triangle.IsEmpty then 0
-    else triangle[0][0]
+    else
+        let revTriangle = triangle |> List.rev
+        let bottom = revTriangle |> List.head
+        let rest = revTriangle |> List.tail
+        if rest.IsEmpty then bottom[0]
+        else rest[0][0] + bottom[0]
