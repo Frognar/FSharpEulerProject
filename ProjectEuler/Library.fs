@@ -251,5 +251,5 @@ let maximumTotal (triangle: int list list) =
         let revTriangle = triangle |> List.rev
         let bottom = revTriangle |> List.head
         let rest = revTriangle |> List.tail
-        if rest.IsEmpty then bottom[0]
-        else rest[0][0] + bottom[0]
+        if rest.IsEmpty then bottom |> List.max
+        else rest[0][0] + (bottom |> List.max)
