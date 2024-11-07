@@ -246,4 +246,5 @@ let powerDigitSum (n: int) p =
 let read (n: int) = n |> NumberToWordsExtension.ToWords
 
 let maximumTotal (triangle: int list list) =
-    triangle[0][0]
+    if triangle.IsEmpty then 0
+    else triangle[0][0]
