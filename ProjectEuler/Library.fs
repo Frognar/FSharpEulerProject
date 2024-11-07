@@ -249,7 +249,13 @@ let maximumTotal (triangle: int list list) =
     if triangle.IsEmpty then 0
     else
         let revTriangle = triangle |> List.rev
-        let bottom = revTriangle |> List.head
-        let rest = revTriangle |> List.tail
-        if rest.IsEmpty then bottom |> List.max
-        else rest[0][0] + (bottom |> List.max)
+        let rec progress (revTr: int list list) (btm: int list) =
+            if revTr.IsEmpty then btm[0]
+            else
+                let nextBottom: int list = revTr
+                                           |> List.head
+                                           |> List.indexed
+                                           |> List.map (fun (i, x) -> x + if btm[i] >= btm[i + 1] then btm[i] else btm[i + 1])
+                progress (revTr |> List.tail) nextBottom
+        
+        progress (revTriangle |> List.tail) (revTriangle |> List.head)
