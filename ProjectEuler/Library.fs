@@ -285,7 +285,11 @@ let read (n: int) =
     
     if n < 10 then readUnit n
     elif n < 20 then readTeens n
-    else readTens n
+    else
+        let tens = n / 10 * 10
+        let units = n % 10
+        if units = 0 then readTens tens
+        else readTens tens + "-" + readUnit units
 
 
 

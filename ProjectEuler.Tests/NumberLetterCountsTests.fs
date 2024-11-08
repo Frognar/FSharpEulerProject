@@ -47,3 +47,15 @@ let ``teens are read as expected`` number expected =
 [<InlineData(90, "ninety")>]
 let ``tens are read as expected`` number expected =
     Assert.Equal(expected, ProjectEuler.read number)
+
+[<Theory>]
+[<InlineData(21, "twenty-one")>]
+[<InlineData(32, "thirty-two")>]
+[<InlineData(43, "forty-three")>]
+[<InlineData(54, "fifty-four")>]
+[<InlineData(65, "sixty-five")>]
+[<InlineData(76, "seventy-six")>]
+[<InlineData(87, "eighty-seven")>]
+[<InlineData(98, "ninety-eight")>]
+let ``numbers 21 to 99 are read as expected`` number expected =
+    Assert.Equal(expected, ProjectEuler.read number)
