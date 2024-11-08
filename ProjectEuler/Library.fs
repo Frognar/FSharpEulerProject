@@ -256,8 +256,9 @@ let read (n: int) =
         | 9 -> "nine"
         | _ -> ""
 
-    let readTeens n =
+    let read1_19 n =
         match n with
+        | x when x < 10 -> readUnit x
         | 10 -> "ten"
         | 11 -> "eleven"
         | 12 -> "twelve"
@@ -287,17 +288,18 @@ let read (n: int) =
         | 0 -> readTens (n / 10)
         | x -> readTens (n / 10) + "-" + readUnit x
 
+    let read1_99 n =
+        match n with
+        | x when x < 20 -> read1_19 x
+        | x -> read20_99 x
+
     let read100_999 n =
         match n % 100 with
         | 0 -> readUnit (n / 100) + " hundred"
-        | x when x < 10 -> readUnit (n / 100) + " hundred and " + readUnit x
-        | x when x < 20 -> readUnit (n / 100) + " hundred and " + readTeens x
-        | x -> readUnit (n / 100) + " hundred and " + read20_99 x
+        | x -> readUnit (n / 100) + " hundred and " + read1_99 x
     
     match n with
-    | x when x < 10 -> readUnit x
-    | x when x < 20 -> readTeens x
-    | x when x < 100 -> read20_99 x
+    | x when x < 100 -> read1_99 x
     | x when x < 1000 -> read100_999 x
     | _ -> "one thousand"
 
