@@ -282,14 +282,29 @@ let read (n: int) =
         | 80 -> "eighty"
         | 90 -> "ninety"
         | _ -> ""
+
+    let readHundreds x = readUnit (x / 100) + " hundred"
     
     if n < 10 then readUnit n
     elif n < 20 then readTeens n
-    else
+    elif n < 100 then
         let tens = n / 10 * 10
         let units = n % 10
         if units = 0 then readTens tens
         else readTens tens + "-" + readUnit units
+    else
+        let hundreds = n / 100 * 100
+        let rest = n % 100
+        if rest = 0 then readHundreds hundreds
+        elif rest < 10 then readHundreds hundreds + " and " + readUnit rest
+        elif rest < 20 then readHundreds hundreds + " and " + readTeens rest
+        else
+            let tens = rest / 10 * 10
+            let units = rest % 10
+            if tens = 0 then readHundreds hundreds + " and " + readUnit units
+            elif units = 0 then readHundreds hundreds + " and " + readTens tens
+            else readHundreds hundreds + " and " + readTens tens + "-" + readUnit units
+        
 
 
 

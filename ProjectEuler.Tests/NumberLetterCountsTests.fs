@@ -59,3 +59,30 @@ let ``tens are read as expected`` number expected =
 [<InlineData(98, "ninety-eight")>]
 let ``numbers 21 to 99 are read as expected`` number expected =
     Assert.Equal(expected, ProjectEuler.read number)
+
+[<Theory>]
+[<InlineData(100, "one hundred")>]
+[<InlineData(200, "two hundred")>]
+[<InlineData(300, "three hundred")>]
+[<InlineData(400, "four hundred")>]
+[<InlineData(500, "five hundred")>]
+[<InlineData(600, "six hundred")>]
+[<InlineData(700, "seven hundred")>]
+[<InlineData(800, "eight hundred")>]
+[<InlineData(900, "nine hundred")>]
+let ``hundreds are read as expected`` number expected =
+    Assert.Equal(expected, ProjectEuler.read number)
+
+[<Theory>]
+[<InlineData(101, "one hundred and one")>]
+[<InlineData(112, "one hundred and twelve")>]
+[<InlineData(121, "one hundred and twenty-one")>]
+[<InlineData(132, "one hundred and thirty-two")>]
+[<InlineData(143, "one hundred and forty-three")>]
+[<InlineData(154, "one hundred and fifty-four")>]
+[<InlineData(165, "one hundred and sixty-five")>]
+[<InlineData(176, "one hundred and seventy-six")>]
+[<InlineData(187, "one hundred and eighty-seven")>]
+[<InlineData(198, "one hundred and ninety-eight")>]
+let ``numbers 101 to 999 are read as expected`` number expected =
+    Assert.Equal(expected, ProjectEuler.read number)
