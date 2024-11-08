@@ -21,3 +21,17 @@ open Xunit
 [<InlineData(9, "nine")>]
 let ``units are read as expected`` number expected =
     Assert.Equal(expected, ProjectEuler.read number)
+
+[<Theory>]
+[<InlineData(10, "ten")>]
+[<InlineData(11, "eleven")>]
+[<InlineData(12, "twelve")>]
+[<InlineData(13, "thirteen")>]
+[<InlineData(14, "fourteen")>]
+[<InlineData(15, "fifteen")>]
+[<InlineData(16, "sixteen")>]
+[<InlineData(17, "seventeen")>]
+[<InlineData(18, "eighteen")>]
+[<InlineData(19, "nineteen")>]
+let ``teens are read as expected`` number expected =
+    Assert.Equal(expected, ProjectEuler.read number)
