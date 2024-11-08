@@ -86,3 +86,7 @@ let ``hundreds are read as expected`` number expected =
 [<InlineData(198, "one hundred and ninety-eight")>]
 let ``numbers 101 to 999 are read as expected`` number expected =
     Assert.Equal(expected, ProjectEuler.read number)
+
+[<Fact>]
+let ``1000 is read as one thousand`` () =
+    Assert.Equal("one thousand", ProjectEuler.read 1000)

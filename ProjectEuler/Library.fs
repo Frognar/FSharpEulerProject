@@ -292,7 +292,7 @@ let read (n: int) =
         let units = n % 10
         if units = 0 then readTens tens
         else readTens tens + "-" + readUnit units
-    else
+    elif n < 1000 then
         let hundreds = n / 100 * 100
         let rest = n % 100
         if rest = 0 then readHundreds hundreds
@@ -304,6 +304,7 @@ let read (n: int) =
             if tens = 0 then readHundreds hundreds + " and " + readUnit units
             elif units = 0 then readHundreds hundreds + " and " + readTens tens
             else readHundreds hundreds + " and " + readTens tens + "-" + readUnit units
+    else "one thousand"
         
 
 
