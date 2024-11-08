@@ -244,7 +244,7 @@ let powerDigitSum (n: int) p =
     res |> string |> Seq.map string |> Seq.map int |> Seq.sum
 
 let read (n: int) =
-    "one"
+    if n = 1 then "one" else "two"
 
 let maximumTotal (triangle: int list list) =
     match triangle |> List.rev with

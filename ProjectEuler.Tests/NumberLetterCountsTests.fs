@@ -9,6 +9,8 @@ open Xunit
 //                 |> List.map (_.Replace(" ", "").Replace("-", "").Length)
 //                 |> List.sum)
 
-[<Fact>]
-let ``1 is one`` () =
-    Assert.Equal("one", ProjectEuler.read 1)
+[<Theory>]
+[<InlineData(1, "one")>]
+[<InlineData(2, "two")>]
+let ``number is read as expected`` number expected =
+    Assert.Equal(expected, ProjectEuler.read number)
