@@ -243,8 +243,8 @@ let powerDigitSum (n: int) p =
     res |> string |> Seq.map string |> Seq.map int |> Seq.sum
 
 let read (n: int) =
-    let readUnit x =
-        match x with
+    let readUnit n =
+        match n with
         | 1 -> "one"
         | 2 -> "two"
         | 3 -> "three"
@@ -256,8 +256,8 @@ let read (n: int) =
         | 9 -> "nine"
         | _ -> ""
 
-    let readTeens x =
-        match x with
+    let readTeens n =
+        match n with
         | 10 -> "ten"
         | 11 -> "eleven"
         | 12 -> "twelve"
@@ -270,43 +270,36 @@ let read (n: int) =
         | 19 -> "nineteen"
         | _ -> ""
 
-    let readTens x =
-        match x with
-        | 20 -> "twenty"
-        | 30 -> "thirty"
-        | 40 -> "forty"
-        | 50 -> "fifty"
-        | 60 -> "sixty"
-        | 70 -> "seventy"
-        | 80 -> "eighty"
-        | 90 -> "ninety"
+    let readTens n =
+        match n with
+        | 2 -> "twenty"
+        | 3 -> "thirty"
+        | 4 -> "forty"
+        | 5 -> "fifty"
+        | 6 -> "sixty"
+        | 7 -> "seventy"
+        | 8 -> "eighty"
+        | 9 -> "ninety"
         | _ -> ""
 
-    let readHundreds x = readUnit (x / 100) + " hundred"
+    let read20_99 n =
+        match n % 10 with
+        | 0 -> readTens (n / 10)
+        | x -> readTens (n / 10) + "-" + readUnit x
+
+    let read100_999 n =
+        match n % 100 with
+        | 0 -> readUnit (n / 100) + " hundred"
+        | x when x < 10 -> readUnit (n / 100) + " hundred and " + readUnit x
+        | x when x < 20 -> readUnit (n / 100) + " hundred and " + readTeens x
+        | x -> readUnit (n / 100) + " hundred and " + read20_99 x
     
-    if n < 10 then readUnit n
-    elif n < 20 then readTeens n
-    elif n < 100 then
-        let tens = n / 10 * 10
-        let units = n % 10
-        if units = 0 then readTens tens
-        else readTens tens + "-" + readUnit units
-    elif n < 1000 then
-        let hundreds = n / 100 * 100
-        let rest = n % 100
-        if rest = 0 then readHundreds hundreds
-        elif rest < 10 then readHundreds hundreds + " and " + readUnit rest
-        elif rest < 20 then readHundreds hundreds + " and " + readTeens rest
-        else
-            let tens = rest / 10 * 10
-            let units = rest % 10
-            if tens = 0 then readHundreds hundreds + " and " + readUnit units
-            elif units = 0 then readHundreds hundreds + " and " + readTens tens
-            else readHundreds hundreds + " and " + readTens tens + "-" + readUnit units
-    else "one thousand"
-        
-
-
+    match n with
+    | x when x < 10 -> readUnit x
+    | x when x < 20 -> readTeens x
+    | x when x < 100 -> read20_99 x
+    | x when x < 1000 -> read100_999 x
+    | _ -> "one thousand"
 
 let maximumTotal (triangle: int list list) =
     match triangle |> List.rev with
