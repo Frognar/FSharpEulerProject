@@ -35,3 +35,15 @@ let ``units are read as expected`` number expected =
 [<InlineData(19, "nineteen")>]
 let ``teens are read as expected`` number expected =
     Assert.Equal(expected, ProjectEuler.read number)
+
+[<Theory>]
+[<InlineData(20, "twenty")>]
+[<InlineData(30, "thirty")>]
+[<InlineData(40, "forty")>]
+[<InlineData(50, "fifty")>]
+[<InlineData(60, "sixty")>]
+[<InlineData(70, "seventy")>]
+[<InlineData(80, "eighty")>]
+[<InlineData(90, "ninety")>]
+let ``tens are read as expected`` number expected =
+    Assert.Equal(expected, ProjectEuler.read number)
