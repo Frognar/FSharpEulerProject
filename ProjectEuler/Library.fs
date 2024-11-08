@@ -1,7 +1,6 @@
 ﻿module ProjectEuler
 
 open System.Numerics
-open Humanizer
 
 let sumOfMultiplesOf3And5 n =
     [1 .. n-1]
