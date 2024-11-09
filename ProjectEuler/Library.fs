@@ -229,6 +229,9 @@ let factorial n: double =
     
     loop n (1: double)
 
+let bigFactorial n =
+    1I
+
 let latticePaths x =
     (factorial (2.0 * x)) / ((factorial x) * (factorial x))
 
