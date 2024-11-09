@@ -13,3 +13,7 @@ let ``the sum of the digits in 2 is 2`` () =
 [<Fact>]
 let ``the sum of the digits in 12 is 3`` () =
     Assert.Equal(3, ProjectEuler.digitSum 12)
+
+[<Fact>]
+let ``the sum of the digits in 10! is 27`` () =
+    Assert.Equal(27, ProjectEuler.digitSum (ProjectEuler.factorial 10))
