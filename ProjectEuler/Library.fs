@@ -169,13 +169,13 @@ let getDivisors n =
     )
     |> List.sort
 
-let roundTo10Digits (n: System.Numerics.BigInteger) =
+let roundTo10Digits (n: BigInteger) =
     let nLength = n |> string |> String.length
     if nLength < 10 then n
     else 
         let x = nLength |> (+) -10 |> double
         let rounded = double n / (double 10 ** x) |> round |> int64
-        rounded |> string |> Seq.take 10 |> Seq.map string |> String.concat "" |> System.Numerics.BigInteger.Parse
+        rounded |> string |> Seq.take 10 |> Seq.map string |> String.concat "" |> BigInteger.Parse
 
 let (|Even|Odd|) n =
     match n with
@@ -315,3 +315,6 @@ let maximumTotal (triangle: int list list) =
                                   |> List.indexed
                                   |> List.map (fun (i, x) -> x + if btm[i] >= btm[i + 1] then btm[i] else btm[i + 1]))
         progress tail head
+
+let digitSum n =
+    1
