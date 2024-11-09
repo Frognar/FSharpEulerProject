@@ -317,4 +317,4 @@ let maximumTotal (triangle: int list list) =
         progress tail head
 
 let digitSum n =
-    1
+    n
