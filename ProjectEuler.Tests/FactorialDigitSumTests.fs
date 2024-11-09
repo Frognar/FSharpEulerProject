@@ -25,3 +25,7 @@ let ``the factorial of 0 is 1`` () =
 [<Fact>]
 let ``the factorial of 2 is 2`` () =
     Assert.Equal(2I, ProjectEuler.bigFactorial 2I)
+
+[<Fact>]
+let ``the factorial of 3 is 6`` () =
+    Assert.Equal(6I, ProjectEuler.bigFactorial 3I)
