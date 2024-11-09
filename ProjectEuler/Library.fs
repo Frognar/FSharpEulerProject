@@ -317,4 +317,4 @@ let maximumTotal (triangle: int list list) =
         progress tail head
 
 let digitSum n =
-    n
+    n |> string |> Seq.map (fun x -> int (string x)) |> Seq.sum
