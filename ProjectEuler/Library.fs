@@ -230,7 +230,7 @@ let factorial n: double =
     loop n (1: double)
 
 let bigFactorial n =
-    1I
+    if n <= 1I then 1I else n
 
 let latticePaths x =
     (factorial (2.0 * x)) / ((factorial x) * (factorial x))
