@@ -221,20 +221,12 @@ let collatzSequences (n: int64) =
     
     buildSequences 1L Map.empty
 
-let factorial n: double =
-    let rec loop (i: double) (acc: double) =
-        match i with
-        | _ when i <= 1.0 -> acc
-        | _ -> loop (i - 1.0) (acc * i)
-    
-    loop n (1: double)
+let factorial<'a when 'a :> INumber<'a> and 'a: comparison> (n: 'a) : 'a =
+    if n <= 'a.One then 'a.One
+    else ['a.One..n] |> Seq.reduce (*)
 
-let bigFactorial n =
-    if n <= 1I then 1I
-    else [1I..n] |> Seq.reduce (*)
-
-let latticePaths x =
-    (factorial (2.0 * x)) / ((factorial x) * (factorial x))
+let latticePaths (x: BigInteger) =
+    (factorial (2I * x)) / ((factorial x) * (factorial x))
 
 let powerDigitSum (n: int) p =
     let rec pow x p : BigInteger =
