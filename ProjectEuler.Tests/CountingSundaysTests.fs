@@ -32,17 +32,29 @@ let ``unless it is divisible by 400`` year =
     Assert.True(ProjectEuler.isLeapYear year)
 
 [<Fact>]
-let ``if 1st January is Monday, the 1st of February is Thursday`` () =
+let ``after monday in 31 day month the next day is thursday`` () =
     Assert.Equal(ProjectEuler.Thursday, ProjectEuler.nextDay ProjectEuler.Monday 31)
 
 [<Fact>]
-let ``if 1st of February is Thursday in a leap year, the 1st of March is Friday`` () =
-    Assert.Equal(ProjectEuler.Friday, ProjectEuler.nextDay ProjectEuler.Thursday 29)
+let ``after tuesday in 31 day month the next day is friday`` () =
+    Assert.Equal(ProjectEuler.Friday, ProjectEuler.nextDay ProjectEuler.Tuesday 31)
 
 [<Fact>]
-let ``if 1st of February is Thursday in a non-leap year, the 1st of March is Thursday`` () =
-    Assert.Equal(ProjectEuler.Thursday, ProjectEuler.nextDay ProjectEuler.Thursday 28)
+let ``after wednesday in 31 day month the next day is saturday`` () =
+    Assert.Equal(ProjectEuler.Saturday, ProjectEuler.nextDay ProjectEuler.Wednesday 31)
 
 [<Fact>]
-let ``if 1st of March is Friday, the 1st of April is Monday`` () =
+let ``after thursday in 31 day month the next day is sunday`` () =
+    Assert.Equal(ProjectEuler.Sunday, ProjectEuler.nextDay ProjectEuler.Thursday 31)
+
+[<Fact>]
+let ``after friday in 31 day month the next day is monday`` () =
     Assert.Equal(ProjectEuler.Monday, ProjectEuler.nextDay ProjectEuler.Friday 31)
+
+[<Fact>]
+let ``after saturday in 31 day month the next day is tuesday`` () =
+    Assert.Equal(ProjectEuler.Tuesday, ProjectEuler.nextDay ProjectEuler.Saturday 31)
+
+[<Fact>]
+let ``after sunday in 31 day month the next day is wednesday`` () =
+    Assert.Equal(ProjectEuler.Wednesday, ProjectEuler.nextDay ProjectEuler.Sunday 31)

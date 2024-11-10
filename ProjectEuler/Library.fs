@@ -322,6 +322,9 @@ type Day = Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday
 let nextDay startDay daysInMonth =
     match startDay with
     | Monday -> Thursday
-    | Thursday when daysInMonth = 28 -> Thursday
+    | Tuesday -> Friday
+    | Wednesday -> Saturday
+    | Thursday -> Sunday
     | Friday -> Monday
-    | _ -> Friday
+    | Saturday -> Tuesday
+    | Sunday -> Wednesday
