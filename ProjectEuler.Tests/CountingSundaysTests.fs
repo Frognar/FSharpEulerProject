@@ -30,3 +30,7 @@ let ``but not on a century`` year =
 [<InlineData(2400)>]
 let ``unless it is divisible by 400`` year =
     Assert.True(ProjectEuler.isLeapYear year)
+
+[<Fact>]
+let ``if 1st January is Monday, the 1st of February is Thursday`` () =
+    Assert.Equal(ProjectEuler.Thursday, ProjectEuler.nextDay ProjectEuler.Monday 31)

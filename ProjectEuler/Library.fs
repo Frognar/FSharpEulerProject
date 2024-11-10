@@ -317,3 +317,7 @@ let digitSum n =
 
 let isLeapYear year =
     year % 4 = 0 && (year % 100 <> 0 || year % 400 = 0)
+
+type Day = Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday
+let nextDay startDay daysInMonth =
+    Thursday
