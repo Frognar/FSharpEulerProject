@@ -23,3 +23,10 @@ let ``a year divided by 4 is a leap year`` year =
 [<InlineData(2100)>]
 let ``but not on a century`` year =
     Assert.False(ProjectEuler.isLeapYear year)
+
+[<Theory>]
+[<InlineData(400)>]
+[<InlineData(2000)>]
+[<InlineData(2400)>]
+let ``unless it is divisible by 400`` year =
+    Assert.True(ProjectEuler.isLeapYear year)
