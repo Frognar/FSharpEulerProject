@@ -38,3 +38,7 @@ let ``if 1st January is Monday, the 1st of February is Thursday`` () =
 [<Fact>]
 let ``if 1st of February is Thursday in a leap year, the 1st of March is Friday`` () =
     Assert.Equal(ProjectEuler.Friday, ProjectEuler.nextDay ProjectEuler.Thursday 29)
+
+[<Fact>]
+let ``if 1st of February is Thursday in a non-leap year, the 1st of March is Thursday`` () =
+    Assert.Equal(ProjectEuler.Thursday, ProjectEuler.nextDay ProjectEuler.Thursday 28)
