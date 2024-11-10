@@ -314,3 +314,6 @@ let maximumTotal (triangle: int list list) =
 
 let digitSum n =
     n |> string |> Seq.map (fun x -> int (string x)) |> Seq.sum
+
+let isLeapYear year =
+    true
