@@ -323,4 +323,5 @@ let nextDay startDay daysInMonth =
     match startDay with
     | Monday -> Thursday
     | Thursday when daysInMonth = 28 -> Thursday
+    | Friday -> Monday
     | _ -> Friday
