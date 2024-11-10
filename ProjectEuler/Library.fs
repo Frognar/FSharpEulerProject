@@ -321,10 +321,10 @@ let isLeapYear year =
 type Day = Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday
 let nextDay startDay daysInMonth =
     match startDay with
-    | Monday -> Thursday
-    | Tuesday -> Friday
-    | Wednesday -> Saturday
-    | Thursday -> Sunday
-    | Friday -> Monday
-    | Saturday -> Tuesday
-    | Sunday -> Wednesday
+    | Monday -> if daysInMonth = 31 then Thursday else Wednesday
+    | Tuesday -> if daysInMonth = 31 then Friday else Thursday
+    | Wednesday -> if daysInMonth = 31 then Saturday else Friday
+    | Thursday -> if daysInMonth = 31 then Sunday else Saturday
+    | Friday -> if daysInMonth = 31 then Monday else Sunday
+    | Saturday -> if daysInMonth = 31 then Tuesday else Monday
+    | Sunday -> if daysInMonth = 31 then Wednesday else Tuesday
