@@ -316,4 +316,4 @@ let digitSum n =
     n |> string |> Seq.map (fun x -> int (string x)) |> Seq.sum
 
 let isLeapYear year =
-    year % 4 = 0
+    year % 4 = 0 && year % 100 <> 0
