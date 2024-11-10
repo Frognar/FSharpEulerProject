@@ -142,3 +142,7 @@ let ``after saturday in 29 day month the next day is sunday`` () =
 [<Fact>]
 let ``after sunday in 29 day month the next day is monday`` () =
     Assert.Equal(ProjectEuler.Monday, ProjectEuler.nextDay ProjectEuler.Sunday 29)
+
+[<Fact>]
+let ``there were 171 sundays the 1st from 1 Jan 1901 to 31 Dec 2000`` () =
+    Assert.Equal(171, ProjectEuler.countingSundays 1901 2000)

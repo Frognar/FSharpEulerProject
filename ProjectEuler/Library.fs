@@ -328,3 +328,16 @@ let nextDay startDay daysInMonth =
     | Friday -> List.item (daysInMonth % 4) [Friday; Saturday; Sunday; Monday]
     | Saturday -> List.item (daysInMonth % 4) [Saturday; Sunday; Monday; Tuesday]
     | Sunday -> List.item (daysInMonth % 4) [Sunday; Monday; Tuesday; Wednesday]
+
+let countingSundays startYear endYear =
+    let daysPerMonth = [31; 28; 31; 30; 31; 30; 31; 31; 30; 31; 30; 31]
+    let rec loop year month day count =
+        if year = endYear then count
+        else
+            let daysInMonth = if month = 2 && not (isLeapYear year) then daysPerMonth[month - 1] else 29
+            let nextDay = nextDay day daysInMonth
+            let newCount = if nextDay = Sunday then (count + 1) else count
+            match month with
+            | 12 -> loop (year + 1) 1 nextDay newCount
+            | _ -> loop year (month + 1) nextDay newCount
+    loop startYear 1 Wednesday 0
