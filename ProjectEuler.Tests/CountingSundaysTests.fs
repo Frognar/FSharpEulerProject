@@ -114,3 +114,31 @@ let ``after saturday in 28 day month the next day is saturday`` () =
 [<Fact>]
 let ``after sunday in 28 day month the next day is sunday`` () =
     Assert.Equal(ProjectEuler.Sunday, ProjectEuler.nextDay ProjectEuler.Sunday 28)
+
+[<Fact>]
+let ``after monday in 29 day month the next day is tuesday`` () =
+    Assert.Equal(ProjectEuler.Tuesday, ProjectEuler.nextDay ProjectEuler.Monday 29)
+
+[<Fact>]
+let ``after tuesday in 29 day month the next day is wednesday`` () =
+    Assert.Equal(ProjectEuler.Wednesday, ProjectEuler.nextDay ProjectEuler.Tuesday 29)
+
+[<Fact>]
+let ``after wednesday in 29 day month the next day is thursday`` () =
+    Assert.Equal(ProjectEuler.Thursday, ProjectEuler.nextDay ProjectEuler.Wednesday 29)
+
+[<Fact>]
+let ``after thursday in 29 day month the next day is friday`` () =
+    Assert.Equal(ProjectEuler.Friday, ProjectEuler.nextDay ProjectEuler.Thursday 29)
+
+[<Fact>]
+let ``after friday in 29 day month the next day is saturday`` () =
+    Assert.Equal(ProjectEuler.Saturday, ProjectEuler.nextDay ProjectEuler.Friday 29)
+
+[<Fact>]
+let ``after saturday in 29 day month the next day is sunday`` () =
+    Assert.Equal(ProjectEuler.Sunday, ProjectEuler.nextDay ProjectEuler.Saturday 29)
+
+[<Fact>]
+let ``after sunday in 29 day month the next day is monday`` () =
+    Assert.Equal(ProjectEuler.Monday, ProjectEuler.nextDay ProjectEuler.Sunday 29)
