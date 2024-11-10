@@ -320,4 +320,6 @@ let isLeapYear year =
 
 type Day = Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday
 let nextDay startDay daysInMonth =
-    Thursday
+    match startDay with
+    | Monday -> Thursday
+    | _ -> Friday

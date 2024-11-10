@@ -34,3 +34,7 @@ let ``unless it is divisible by 400`` year =
 [<Fact>]
 let ``if 1st January is Monday, the 1st of February is Thursday`` () =
     Assert.Equal(ProjectEuler.Thursday, ProjectEuler.nextDay ProjectEuler.Monday 31)
+
+[<Fact>]
+let ``if 1st of February is Thursday in a leap year, the 1st of March is Friday`` () =
+    Assert.Equal(ProjectEuler.Friday, ProjectEuler.nextDay ProjectEuler.Thursday 29)
