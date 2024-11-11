@@ -18,3 +18,7 @@ let ``number 220 is amicable`` () =
 [<Fact>]
 let ``number 2 is not amicable`` () =
     Assert.False(ProjectEuler.isAmicable 2)
+
+[<Fact>]
+let ``number 6 is not amicable`` () =
+    Assert.False(ProjectEuler.isAmicable 6)
