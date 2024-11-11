@@ -349,3 +349,7 @@ let properDivisorsOf n =
 let sumOfProperDivisorsOf n =
     properDivisorsOf n
     |> List.sum
+
+let isAmicable n =
+    let x = sumOfProperDivisorsOf n
+    sumOfProperDivisorsOf x = n
