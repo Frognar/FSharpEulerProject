@@ -341,3 +341,7 @@ let countingSundays startYear endYear =
             | 12 -> loop (year + 1) 1 nextDay newCount
             | _ -> loop year (month + 1) nextDay newCount
     loop startYear 1 Wednesday 0
+
+let properDivisorsOf n =
+    let divisors = getDivisors n
+    divisors[0..divisors.Length - 2]

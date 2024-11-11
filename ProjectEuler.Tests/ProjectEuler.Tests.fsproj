@@ -9,6 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <Compile Include="AmicableNumbersTests.fs" />
         <Compile Include="CountingSundaysTests.fs" />
         <Compile Include="EvenFibonacciNumbersTests.fs" />
         <Compile Include="FactorialDigitSumTests.fs" />
