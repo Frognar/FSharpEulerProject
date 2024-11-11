@@ -22,3 +22,10 @@ let ``number 2 is not amicable`` () =
 [<Fact>]
 let ``number 6 is not amicable`` () =
     Assert.False(ProjectEuler.isAmicable 6)
+
+[<Fact>]
+let ``sum of amicable numbers under 10000 is 31626`` () =
+    Assert.Equal(31626,
+                 [1..10000]
+                 |> List.filter ProjectEuler.isAmicable
+                 |> List.sum)
