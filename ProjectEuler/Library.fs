@@ -345,3 +345,7 @@ let countingSundays startYear endYear =
 let properDivisorsOf n =
     let divisors = getDivisors n
     divisors[0..divisors.Length - 2]
+
+let sumOfProperDivisorsOf n =
+    properDivisorsOf n
+    |> List.sum
