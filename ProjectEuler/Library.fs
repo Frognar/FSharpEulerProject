@@ -354,5 +354,7 @@ let isAmicable n =
     let x = sumOfProperDivisorsOf n
     sumOfProperDivisorsOf x = n  && x <> n
 
-let nameScore name =
-    53
+let nameScore (name: string) =
+    name
+    |> Seq.map (fun x -> int x - int 'A' + 1)
+    |> Seq.sum
