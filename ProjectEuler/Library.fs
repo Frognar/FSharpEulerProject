@@ -353,3 +353,6 @@ let sumOfProperDivisorsOf n =
 let isAmicable n =
     let x = sumOfProperDivisorsOf n
     sumOfProperDivisorsOf x = n  && x <> n
+
+let nameScore name =
+    53

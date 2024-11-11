@@ -22,6 +22,7 @@
         <Compile Include="LeastCommonMultipleTests.fs" />
         <Compile Include="LongestCollatzSequence.fs" />
         <Compile Include="MaximumPathSumTests.fs" />
+        <Compile Include="NameScoresTests.fs" />
         <Compile Include="NumberLetterCountsTests.fs" />
         <Compile Include="PowerDigitSumTests.fs" />
         <Compile Include="PrimeFactorsTests.fs" />
