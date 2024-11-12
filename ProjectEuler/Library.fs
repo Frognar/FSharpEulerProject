@@ -1,5 +1,6 @@
 ﻿module ProjectEuler
 
+open System.Collections.Generic
 open System.Numerics
 
 let sumOfMultiplesOf3And5 n =
@@ -373,3 +374,13 @@ let canBeWrittenAsSumOf2NumbersFrom numbers n =
 
 let abundantNumbersUpTo limit =
     [1..limit] |> List.filter isAbundant
+    
+let limitedSumsOfTwo numbers limit =
+    let sumSet = HashSet<int>()
+    for x in numbers do
+        for y in numbers do
+            let sum = x + y
+            if sum <= limit then
+                sumSet.Add(sum) |> ignore
+
+    sumSet |> Seq.toList

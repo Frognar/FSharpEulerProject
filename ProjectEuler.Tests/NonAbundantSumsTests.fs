@@ -27,3 +27,7 @@ let ``Three cannot be written as the sum of two numbers from list [1; 3]`` () =
 [<Fact>]
 let ``abundant numbers up to 20 are [12; 18; 20]`` () =
     Assert.StrictEqual([12; 18; 20], ProjectEuler.abundantNumbersUpTo 20)
+
+[<Fact>]
+let ``limited sums of two numbers from [1; 2; 5; 6] limited to 10 are [2; 3; 6; 7; 4; 8; 10]`` () =
+    Assert.StrictEqual([2; 3; 6; 7; 4; 8; 10], ProjectEuler.limitedSumsOfTwo [1; 2; 5; 6] 10) 
