@@ -370,3 +370,6 @@ let canBeWrittenAsSumOf2NumbersFrom numbers n =
         (b, numbers) ||> List.contains)
     |> List.isEmpty
     |> not
+
+let abundantNumbersUpTo limit =
+    [1..limit] |> List.filter isAbundant
