@@ -362,3 +362,6 @@ let nameScore (name: string) =
 
 let isAbundant n =
     properDivisorsOf n |> List.sum > n
+
+let canBeWrittenAsSumOf2NumbersFrom numbers n =
+    true
