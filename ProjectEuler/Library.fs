@@ -361,7 +361,7 @@ let nameScore (name: string) =
     |> Seq.sum
 
 let isAbundant n =
-    properDivisorsOf n |> List.sum > n
+    sumOfProperDivisorsOf n > n
 
 let canBeWrittenAsSumOf2NumbersFrom numbers n =
     numbers
