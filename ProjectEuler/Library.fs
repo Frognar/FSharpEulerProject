@@ -383,4 +383,4 @@ let limitedSumsOfTwo numbers limit =
             if sum <= limit then
                 sumSet.Add(sum) |> ignore
 
-    sumSet |> Seq.toList
+    sumSet
