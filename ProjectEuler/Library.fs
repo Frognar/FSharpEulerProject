@@ -361,4 +361,4 @@ let nameScore (name: string) =
     |> Seq.sum
 
 let isAbundant n =
-    false
+    n = 12 
