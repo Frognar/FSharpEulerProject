@@ -9,3 +9,7 @@ let ``Two is not an abundant number`` () =
 [<Fact>]
 let ``Twelve is an abundant number`` () =
     Assert.True(ProjectEuler.isAbundant 12)
+
+[<Fact>]
+let ``Eighteen is an abundant number`` () =
+    Assert.True(ProjectEuler.isAbundant 18)

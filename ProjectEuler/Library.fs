@@ -361,4 +361,4 @@ let nameScore (name: string) =
     |> Seq.sum
 
 let isAbundant n =
-    n = 12 
+    properDivisorsOf n |> List.sum > n
