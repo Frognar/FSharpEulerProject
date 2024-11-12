@@ -359,3 +359,6 @@ let nameScore (name: string) =
     name
     |> Seq.map charScore
     |> Seq.sum
+
+let isAbundant n =
+    false
