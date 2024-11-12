@@ -364,4 +364,9 @@ let isAbundant n =
     properDivisorsOf n |> List.sum > n
 
 let canBeWrittenAsSumOf2NumbersFrom numbers n =
-    true
+    numbers
+    |> List.filter (fun a ->
+        let b = n - a
+        (b, numbers) ||> List.contains)
+    |> List.isEmpty
+    |> not

@@ -18,3 +18,8 @@ let ``Eighteen is an abundant number`` () =
 let ``Three can be written as the sum of two numbers from list [1; 2; 3]`` () =
     let numbers = [1; 2; 3]
     Assert.True(ProjectEuler.canBeWrittenAsSumOf2NumbersFrom numbers 3)
+
+[<Fact>]
+let ``Three cannot be written as the sum of two numbers from list [1; 3]`` () =
+    let numbers = [1; 3]
+    Assert.False(ProjectEuler.canBeWrittenAsSumOf2NumbersFrom numbers 3)
