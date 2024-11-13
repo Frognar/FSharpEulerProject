@@ -386,4 +386,14 @@ let limitedSumsOfTwo numbers limit =
     sumSet
 
 let lexicographicPermutation nth digits =
-    [0; 1; 2]
+    let rec findPermutation n remainingDigits acc =
+        match remainingDigits with
+        | [] -> acc |> List.rev
+        | _ ->
+            let count = factorial (List.length remainingDigits - 1)
+            let index = n / count
+            let selectedDigit = List.item index remainingDigits
+            let newDigits = List.filter ((<>) selectedDigit) remainingDigits
+            findPermutation (n % count) newDigits (selectedDigit :: acc)
+
+    findPermutation (nth - 1) digits []
