@@ -384,3 +384,6 @@ let limitedSumsOfTwo numbers limit =
                 sumSet.Add(sum) |> ignore
 
     sumSet
+
+let lexicographicPermutation nth digits =
+    [0; 1; 2]

@@ -20,6 +20,7 @@
         <Compile Include="LargestProductInASeriesTests.fs" />
         <Compile Include="LargeSumTests.fs" />
         <Compile Include="LeastCommonMultipleTests.fs" />
+        <Compile Include="LexicographicPermutationsTests.fs" />
         <Compile Include="LongestCollatzSequence.fs" />
         <Compile Include="MaximumPathSumTests.fs" />
         <Compile Include="NameScoresTests.fs" />
