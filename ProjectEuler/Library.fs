@@ -405,8 +405,4 @@ let digitCount n =
     n |> string |> String.length
 
 let indexOfFirstTermWithDigits digitCountThreshold =
-    let rec findIndex index a b =
-        match digitCount a with
-        | x when x >= digitCountThreshold -> index
-        | _ -> findIndex (index + 1) b (a + b)
-    findIndex 1 1I 1I
+    (bigFibonacci |> Seq.findIndex (fun x -> digitCount x >= digitCountThreshold)) + 1
