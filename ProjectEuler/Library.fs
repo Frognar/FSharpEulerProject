@@ -3,9 +3,12 @@
 open System.Collections.Generic
 open System.Numerics
 
+let isDivisibleByAny xs n =
+    List.exists (fun x -> n % x = 0) xs
+
 let sumOfMultiplesOf3And5 n =
     [1 .. n-1]
-    |> List.filter (fun x -> x % 3 = 0 || x % 5 = 0)
+    |> List.filter (isDivisibleByAny [3; 5])
     |> List.sum
     
 let fibonacci =
@@ -13,16 +16,18 @@ let fibonacci =
     
 let bigFibonacci =
     Seq.unfold (fun (a, b) -> Some(a, (b, a + b))) (1I, 1I)
+    
+let numbersUpTo sequence threshold =
+    sequence |> Seq.takeWhile (fun x -> x <= threshold) |> Seq.toList
 
 let fibonacciUpTo maxFibValue =
-    fibonacci
-    |> Seq.takeWhile (fun x -> x <= maxFibValue)
-    |> Seq.toList
+    (fibonacci, maxFibValue) ||> numbersUpTo
+
+let sumOfEvenNumbers numbers =
+    numbers |> List.filter (fun x -> x % 2 = 0) |> List.sum
 
 let sumOfEvenFibonacciNumbers maxFibValue =
-    fibonacciUpTo maxFibValue
-    |> List.filter (fun x -> x % 2 = 0)
-    |> List.sum
+    fibonacciUpTo maxFibValue |> sumOfEvenNumbers
 
 let primeFactors (n: int64) : int64 list =
     let rec factor (n: int64) (div: int64) res =
