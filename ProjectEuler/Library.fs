@@ -397,3 +397,6 @@ let lexicographicPermutation nth digits =
             findPermutation (n % count) newDigits (selectedDigit :: acc)
 
     findPermutation (nth - 1) digits []
+
+let digitCount n =
+    n |> string |> String.length
