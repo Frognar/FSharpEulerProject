@@ -400,3 +400,6 @@ let lexicographicPermutation nth digits =
 
 let digitCount n =
     n |> string |> String.length
+
+let indexOfFirstTermWithDigits digitCountThreshold =
+    1
