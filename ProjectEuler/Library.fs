@@ -402,7 +402,8 @@ let digitCount n =
     n |> string |> String.length
 
 let indexOfFirstTermWithDigits digitCountThreshold =
-    match digitCountThreshold with
-    | 1 -> 1
-    | 3 -> 12
-    | _ -> 17
+    let rec findIndex index a b =
+        match digitCount a with
+        | x when x >= digitCountThreshold -> index
+        | _ -> findIndex (index + 1) b (a + b)
+    findIndex 1 1I 1I
