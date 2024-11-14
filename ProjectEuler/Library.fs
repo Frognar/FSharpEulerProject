@@ -402,4 +402,4 @@ let digitCount n =
     n |> string |> String.length
 
 let indexOfFirstTermWithDigits digitCountThreshold =
-    1
+    if digitCountThreshold = 1 then 1 else 12

@@ -17,3 +17,7 @@ let ``digit count of 1000 should be 4`` () =
 [<Fact>]
 let ``the first Fibonacci term with 1 digit is at index 1`` () =
     Assert.Equal(1, ProjectEuler.indexOfFirstTermWithDigits 1)
+
+[<Fact>]
+let ``the first Fibonacci term with 3 digits is at index 12`` () =
+    Assert.Equal(12, ProjectEuler.indexOfFirstTermWithDigits 3)
