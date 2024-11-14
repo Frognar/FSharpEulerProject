@@ -9,7 +9,7 @@ let sumOfMultiplesOf3And5 n =
     |> List.sum
     
 let fibonacci =
-    Seq.unfold (fun (a, b) -> Some(a, (b, a + b))) (1, 2)
+    Seq.unfold (fun (a, b) -> Some(a, (b, a + b))) (1, 1)
 
 let fibonacciUpTo maxFibValue =
     fibonacci
