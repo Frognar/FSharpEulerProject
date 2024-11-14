@@ -10,6 +10,9 @@ let sumOfMultiplesOf3And5 n =
     
 let fibonacci =
     Seq.unfold (fun (a, b) -> Some(a, (b, a + b))) (1, 1)
+    
+let bigFibonacci =
+    Seq.unfold (fun (a, b) -> Some(a, (b, a + b))) (1I, 1I)
 
 let fibonacciUpTo maxFibValue =
     fibonacci
