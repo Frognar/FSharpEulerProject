@@ -7,7 +7,7 @@ let isDivisibleByAny xs n =
     List.exists (fun x -> n % x = 0) xs
 
 let sumOfMultiplesOf3And5 n =
-    [1 .. n-1]
+    [1 .. n - 1]
     |> List.filter (isDivisibleByAny [3; 5])
     |> List.sum
     
@@ -17,17 +17,29 @@ let fibonacci =
 let bigFibonacci =
     Seq.unfold (fun (a, b) -> Some(a, (b, a + b))) (1I, 1I)
     
-let numbersUpTo sequence threshold =
-    sequence |> Seq.takeWhile (fun x -> x <= threshold) |> Seq.toList
+let numbersUpTo threshold sequence =
+    sequence
+    |> Seq.takeWhile (fun x -> x <= threshold)
+    |> Seq.toList
 
 let fibonacciUpTo maxFibValue =
-    (fibonacci, maxFibValue) ||> numbersUpTo
+    fibonacci
+    |> numbersUpTo maxFibValue
+
+let sumOfFilteredNumbers filter numbers : int =
+    numbers
+    |> List.filter filter
+    |> List.sum
+
+let isEven n = n % 2 = 0
 
 let sumOfEvenNumbers numbers =
-    numbers |> List.filter (fun x -> x % 2 = 0) |> List.sum
+    numbers
+    |> sumOfFilteredNumbers isEven
 
 let sumOfEvenFibonacciNumbers maxFibValue =
-    fibonacciUpTo maxFibValue |> sumOfEvenNumbers
+    fibonacciUpTo maxFibValue
+    |> sumOfEvenNumbers
 
 let primeFactors (n: int64) : int64 list =
     let rec factor (n: int64) (div: int64) res =
@@ -237,6 +249,9 @@ let factorial<'a when 'a :> INumber<'a> and 'a: comparison> (n: 'a) : 'a =
 let latticePaths (x: BigInteger) =
     (factorial (2I * x)) / ((factorial x) * (factorial x))
 
+let digitSum n =
+    n |> string |> Seq.map (fun x -> int (string x)) |> Seq.sum
+
 let powerDigitSum (n: int) p =
     let rec pow x p : BigInteger =
         match p with
@@ -245,7 +260,7 @@ let powerDigitSum (n: int) p =
         | _ -> pow (x * (n |> BigInteger)) (p - 1)
 
     let res = pow (n |> BigInteger) p
-    res |> string |> Seq.map string |> Seq.map int |> Seq.sum
+    res |> digitSum
 
 let read (n: int) =
     let readUnit n =
@@ -320,9 +335,6 @@ let maximumTotal (triangle: int list list) =
                                   |> List.indexed
                                   |> List.map (fun (i, x) -> x + if btm[i] >= btm[i + 1] then btm[i] else btm[i + 1]))
         progress tail head
-
-let digitSum n =
-    n |> string |> Seq.map (fun x -> int (string x)) |> Seq.sum
 
 let isLeapYear year =
     year % 4 = 0 && (year % 100 <> 0 || year % 400 = 0)
