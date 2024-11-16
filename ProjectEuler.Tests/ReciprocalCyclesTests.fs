@@ -33,3 +33,7 @@ let ``the length of the cycle for 1/2 is 0`` () =
 [<Fact>]
 let ``the length of the cycle for 1/3 is 1`` () =
     Assert.Equal(1, ProjectEuler.getRemainderCycleLength 1 3)
+
+[<Fact>]
+let ``the length of the cycle for 1/7 is 6`` () =
+    Assert.Equal(6, ProjectEuler.getRemainderCycleLength 1 7)
