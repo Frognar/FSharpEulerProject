@@ -432,3 +432,6 @@ let getRemainderCycle n d =
         else loop (reminder * 10) (reminder::acc)
 
     loop n [] |> List.rev
+
+let getRemainderCycleLength n d =
+    0
