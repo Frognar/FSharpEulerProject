@@ -425,7 +425,10 @@ let indexOfFirstTermWithDigits digitCountThreshold =
     (bigFibonacci |> Seq.findIndex (fun x -> digitCount x >= digitCountThreshold)) + 1
 
 let getRemainderCycle n d =
-    match d with
-    | 1 -> [0]
-    | 2 -> [1; 0]
-    | _ -> [1; 1]
+    let rec loop a acc =
+        let reminder = a % d
+        if reminder = 0 then 0::acc
+        else if acc |> List.contains reminder then (reminder::acc) 
+        else loop (reminder * 10) (reminder::acc)
+
+    loop n [] |> List.rev
