@@ -434,4 +434,11 @@ let getRemainderCycle n d =
     loop n [] |> List.rev
 
 let getRemainderCycleLength n d =
-    0
+    let reminders = getRemainderCycle n d
+    let last = List.last reminders
+    match last with
+    | 0 -> 0
+    | _ ->
+        let firstIndex = reminders |> List.findIndex ((=) last)
+        reminders.Length - (firstIndex + 1)
+    

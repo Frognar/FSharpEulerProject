@@ -25,3 +25,11 @@ let ``division of 1 by 7 is [1; 3; 2; 7; 1]`` () =
 [<Fact>]
 let ``the length of the cycle for 1/1 is 0`` () =
     Assert.Equal(0, ProjectEuler.getRemainderCycleLength 1 1)
+
+[<Fact>]
+let ``the length of the cycle for 1/2 is 0`` () =
+    Assert.Equal(0, ProjectEuler.getRemainderCycleLength 1 2)
+
+[<Fact>]
+let ``the length of the cycle for 1/3 is 1`` () =
+    Assert.Equal(1, ProjectEuler.getRemainderCycleLength 1 3)
