@@ -423,3 +423,6 @@ let digitCount n =
 
 let indexOfFirstTermWithDigits digitCountThreshold =
     (bigFibonacci |> Seq.findIndex (fun x -> digitCount x >= digitCountThreshold)) + 1
+
+let getRemainderCycle n d =
+    [0]
