@@ -17,3 +17,7 @@ let ``division of 1 by 3 is [1; 1]`` () =
 [<Fact>]
 let ``division of 1 by 4 is [1; 2; 0]`` () =
     Assert.StrictEqual([1; 2; 0], ProjectEuler.getRemainderCycle 1 4)
+
+[<Fact>]
+let ``division of 1 by 7 is [1; 3; 2; 7; 1]`` () =
+    Assert.StrictEqual([1; 3; 2; 6; 4; 5; 1], ProjectEuler.getRemainderCycle 1 7)
