@@ -37,3 +37,7 @@ let ``the length of the cycle for 1/3 is 1`` () =
 [<Fact>]
 let ``the length of the cycle for 1/7 is 6`` () =
     Assert.Equal(6, ProjectEuler.getRemainderCycleLength 1 7)
+
+[<Fact>]
+let ``the longest cycle for d < 10 has d = 7`` () =
+    Assert.Equal(7, ProjectEuler.longestReciprocalCycle 10)

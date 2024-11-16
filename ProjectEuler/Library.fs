@@ -441,4 +441,11 @@ let getRemainderCycleLength n d =
     | _ ->
         let firstIndex = reminders |> List.findIndex ((=) last)
         reminders.Length - (firstIndex + 1)
-    
+
+let longestReciprocalCycle threshold =
+    [1..threshold]
+    |> List.map (getRemainderCycleLength 1)
+    |> List.indexed
+    |> List.maxBy snd
+    |> fst
+    |> ((+) 1)
