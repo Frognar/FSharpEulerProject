@@ -19,6 +19,9 @@
     &lt;TestId&gt;xUnit::ACA3BA7B-FD2A-4959-B267-55ACC489FEC6::net8.0::ReciprocalCyclesTests&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::ACA3BA7B-FD2A-4959-B267-55ACC489FEC6::net8.0::QuadraticPrimesTests.x&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::ACA3BA7B-FD2A-4959-B267-55ACC489FEC6::net8.0::QuadraticPrimesTests.a = 0 and b = 0 has no prime solution&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::ACA3BA7B-FD2A-4959-B267-55ACC489FEC6::net8.0::QuadraticPrimesTests.quadratic formula n^2 + an + b with a = b = 0 is f(n) -&amp;gt; n^2&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::ACA3BA7B-FD2A-4959-B267-55ACC489FEC6::net8.0::QuadraticPrimesTests.quadratic formula n^2 + an + b with a = 1, b = 0 is f(n) -&amp;gt; n^2 + n&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::ACA3BA7B-FD2A-4959-B267-55ACC489FEC6::net8.0::QuadraticPrimesTests&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 	

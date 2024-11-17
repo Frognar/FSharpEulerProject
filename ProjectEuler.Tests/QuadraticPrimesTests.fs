@@ -19,3 +19,15 @@ let ``quadratic formula n^2 + an + b with a = 0, b = 1 is f(n) -> n^2 + 1`` () =
     Assert.StrictEqual(
         [0..5] |> List.map (fun n -> n * n + 1),
         [0..5] |> List.map (ProjectEuler.evaluateQuadratic 0 1))
+
+[<Fact>]
+let ``quadratic formula n^2 + an + b with a = 1, b = 41 is f(n) -> n^2 + n + 41`` () =
+    Assert.StrictEqual(
+        [0..5] |> List.map (fun n -> n * n + n + 41),
+        [0..5] |> List.map (ProjectEuler.evaluateQuadratic 1 41))
+
+[<Fact>]
+let ``quadratic formula n^2 + n + 41 produces primes for n = 0..39`` () =
+    Assert.True([0..39]
+                |> List.map (ProjectEuler.evaluateQuadratic 1 41)
+                |> List.forall ProjectEuler.isPrime)
