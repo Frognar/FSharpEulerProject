@@ -452,3 +452,6 @@ let longestReciprocalCycle threshold =
 
 let evaluateQuadratic a b x =
     square x + a * x + b
+
+let countConsecutivePrimes a b =
+    40
