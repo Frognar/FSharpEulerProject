@@ -453,8 +453,11 @@ let longestReciprocalCycle threshold =
 let evaluateQuadratic a b x =
     square x + a * x + b
 
-let countConsecutivePrimes a b =
-    Seq.initInfinite id
-    |> Seq.map (evaluateQuadratic a b)
-    |> Seq.takeWhile isPrime
+let countConsecutiveBy formula predicate seq =
+    seq
+    |> Seq.map formula
+    |> Seq.takeWhile predicate
     |> Seq.length
+
+let countConsecutivePrimes a b =
+    countConsecutiveBy (evaluateQuadratic a b) isPrime (Seq.initInfinite id)
