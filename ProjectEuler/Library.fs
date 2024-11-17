@@ -454,4 +454,7 @@ let evaluateQuadratic a b x =
     square x + a * x + b
 
 let countConsecutivePrimes a b =
-    40
+    Seq.initInfinite id
+    |> Seq.map (evaluateQuadratic a b)
+    |> Seq.takeWhile isPrime
+    |> Seq.length
