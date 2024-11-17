@@ -449,3 +449,6 @@ let longestReciprocalCycle threshold =
     |> List.maxBy snd
     |> fst
     |> ((+) 1)
+
+let evaluateQuadratic a b x =
+    square x

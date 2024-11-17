@@ -30,6 +30,7 @@
         <Compile Include="PowerDigitSumTests.fs" />
         <Compile Include="PrimeFactorsTests.fs" />
         <Compile Include="PrimeTests.fs" />
+        <Compile Include="QuadraticPrimesTests.fs" />
         <Compile Include="ReciprocalCyclesTests.fs" />
         <Compile Include="SpecialPythagoreanTripletTests.fs" />
         <Compile Include="SummationOfPrimesTests.fs" />
