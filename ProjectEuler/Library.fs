@@ -451,4 +451,4 @@ let longestReciprocalCycle threshold =
     |> ((+) 1)
 
 let evaluateQuadratic a b x =
-    square x + a * x
+    square x + a * x + b
