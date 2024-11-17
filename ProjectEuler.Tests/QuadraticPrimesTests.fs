@@ -34,3 +34,9 @@ let ``quadratic formula n^2 + n + 41 produces primes for n = 0..39`` () =
 [<Fact>]
 let ``quadratic formula n^2 + n + 41 produces 40 consecutive primes`` () =
     Assert.Equal(40, ProjectEuler.countConsecutivePrimes 1 41)
+
+[<Fact>]
+let ``quadratic formula n^2 - 79n + 1601 produces primes for n = 0..79`` () =
+    Assert.True([0..79]
+                |> List.map (ProjectEuler.evaluateQuadratic -79 1601)
+                |> List.forall ProjectEuler.isPrime)
