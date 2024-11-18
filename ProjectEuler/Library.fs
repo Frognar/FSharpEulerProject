@@ -461,3 +461,6 @@ let countConsecutiveBy formula predicate seq =
 
 let countConsecutivePrimes a b =
     countConsecutiveBy (evaluateQuadratic a b) isPrime (Seq.initInfinite id)
+
+let sumOfNumberSpiralCorners n =
+    1
