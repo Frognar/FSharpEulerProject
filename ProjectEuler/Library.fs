@@ -466,3 +466,9 @@ let sumOfNumberSpiralCorners n =
     match n with
     | 1 -> 1
     | x -> x * x + (x * x - (x - 1)) + (x * x - (x - 1) * 2) + (x * x - (x - 1) * 3)
+
+let sumOfNumberSpiralDiagonals n =
+    [1..n]
+    |> List.filter (fun x -> x % 2 = 1)
+    |> List.map sumOfNumberSpiralCorners
+    |> List.sum
