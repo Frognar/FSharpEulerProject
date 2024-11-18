@@ -19,5 +19,5 @@ let ``the sum of the numbers on the diagonals in 5 by 5 number spiral is 101`` (
     Assert.Equal(101, ProjectEuler.sumOfNumberSpiralDiagonals 5)
 
 [<Fact>]
-let ``the sum of the numbers on the diagonals in 1001 by 1001 number spiral is 101`` () =
+let ``the sum of the numbers on the diagonals in 1001 by 1001 number spiral is 669171001`` () =
     Assert.Equal(669171001, ProjectEuler.sumOfNumberSpiralDiagonals 1001)
