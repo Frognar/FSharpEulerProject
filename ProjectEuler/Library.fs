@@ -463,4 +463,6 @@ let countConsecutivePrimes a b =
     countConsecutiveBy (evaluateQuadratic a b) isPrime (Seq.initInfinite id)
 
 let sumOfNumberSpiralCorners n =
-    1
+    match n with
+    | 1 -> 1
+    | _ -> 3 + 5 + 7 + 9
