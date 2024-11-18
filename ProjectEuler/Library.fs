@@ -465,4 +465,5 @@ let countConsecutivePrimes a b =
 let sumOfNumberSpiralCorners n =
     match n with
     | 1 -> 1
-    | _ -> 3 + 5 + 7 + 9
+    | 3 -> 3 + 5 + 7 + 9
+    | _ -> 13 + 17 + 21 + 25
