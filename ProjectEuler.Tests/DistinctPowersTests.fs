@@ -24,6 +24,4 @@ let ``count of distinct terms from a list [4; 8; 16; 9; 27; 81; 16; 64; 256] is 
 
 [<Fact>]
 let ``count of distinct terms from a list of all power combinations of a^b with a,b in range [2..100] is 9183`` () =
-    Assert.Equal(9183, [2..100]
-                       |> ProjectEuler.powerCombinations
-                       |> ProjectEuler.countDistinctTerms)
+    Assert.Equal(9183, ProjectEuler.countDistinctPowerCombinations [2..100])

@@ -474,10 +474,16 @@ let sumOfNumberSpiralDiagonals n =
     |> List.sum
 
 let powerCombinations (range: int list) =
-    (range, range) ||> List.allPairs
-    |> List.map (fun (a, b) -> BigInteger.Pow(a, b))
+    (range, range)
+    ||> List.allPairs
+    |> List.map BigInteger.Pow
 
 let countDistinctTerms terms =
     terms
     |> List.distinct
     |> List.length
+
+let countDistinctPowerCombinations range =
+    range
+    |> powerCombinations
+    |> countDistinctTerms
