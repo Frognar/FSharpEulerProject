@@ -18,3 +18,7 @@ let ``power combinations of a^b with a,b in range [2..4] are [4; 8; 16; 9; 27; 8
 [<Fact>]
 let ``count of distinct terms from a list [4; 8; 9; 27] is 4`` () =
     Assert.Equal(4, ProjectEuler.countDistinctTerms [4; 8; 9; 27])
+
+[<Fact>]
+let ``count of distinct terms from a list [4; 8; 16; 9; 27; 81; 16; 64; 256] is 8`` () =
+    Assert.Equal(8, ProjectEuler.countDistinctTerms [4; 8; 16; 9; 27; 81; 16; 64; 256])

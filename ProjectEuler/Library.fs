@@ -478,4 +478,6 @@ let powerCombinations (range: int list) =
     |> List.map (fun (a, b) -> BigInteger.Pow(a, b))
 
 let countDistinctTerms terms =
-    4
+    terms
+    |> List.distinct
+    |> List.length
