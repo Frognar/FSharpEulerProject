@@ -474,7 +474,5 @@ let sumOfNumberSpiralDiagonals n =
     |> List.sum
 
 let powerCombinations (range: int list) =
-    match range with
-    | [x] -> [BigInteger.Pow(x, x)]
-    | [x; y] -> [BigInteger.Pow(x, x); BigInteger.Pow(x, y); BigInteger.Pow(y, x); BigInteger.Pow(y, y)]
-    | _ -> []
+    (range, range) ||> List.allPairs
+    |> List.map (fun (a, b) -> BigInteger.Pow(a, b))
