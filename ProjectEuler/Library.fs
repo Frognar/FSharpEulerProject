@@ -472,3 +472,6 @@ let sumOfNumberSpiralDiagonals n =
     |> List.filter (fun x -> x % 2 = 1)
     |> List.map sumOfNumberSpiralCorners
     |> List.sum
+
+let powerCombinations range =
+    [4]
