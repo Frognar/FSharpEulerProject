@@ -23,6 +23,7 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=47c14f6f_002D83dc_002D4d45_002D9b29_002D51cec3744955/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="DistinctPowersTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;xUnit::ACA3BA7B-FD2A-4959-B267-55ACC489FEC6::net8.0::DistinctPowersTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::ACA3BA7B-FD2A-4959-B267-55ACC489FEC6::net8.0::DigitFifthPowersTests&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 	
