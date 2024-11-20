@@ -9,6 +9,7 @@ open Xunit
 let ``fifth power of n`` (n: int) expected =
     Assert.Equal(expected, ProjectEuler.fifthPower n)
 
-[<Fact>]
-let ``the sum of the digit fifth powers for 1 is 1`` () =
-    Assert.Equal(1, ProjectEuler.digitFifthPowersSum 1)
+[<Theory>]
+[<InlineData(1, 1)>]
+let ``the sum of the digit fifth powers for n`` (n: int) expected =
+    Assert.Equal(expected, ProjectEuler.digitFifthPowersSum n)
