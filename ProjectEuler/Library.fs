@@ -494,5 +494,5 @@ let fifthPower n =
 let digitFifthPowersSum n =
     n
     |> string
-    |> Seq.map (string >> int)
+    |> Seq.map (string >> int >> fifthPower)
     |> Seq.sum
