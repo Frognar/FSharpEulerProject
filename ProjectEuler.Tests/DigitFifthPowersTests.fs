@@ -34,3 +34,9 @@ let ``all numbers that can be written as the sum of fifth powers of their digits
     Assert.StrictEqual(
         [4150; 4151; 54748; 92727; 93084; 194979],
         ([10..354294] |> List.filter ProjectEuler.isFifthPowerSum))
+
+[<Fact>]
+let ``the sum of all numbers that can be written as the sum of fifth powers of their digits`` () =
+    Assert.Equal(
+        443839,
+        ([10..354294] |> List.filter ProjectEuler.isFifthPowerSum) |> List.sum)
