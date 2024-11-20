@@ -16,6 +16,7 @@ let ``fifth power of n`` (n: int) expected =
 let ``the sum of the digit fifth powers for n`` (n: int) expected =
     Assert.Equal(expected, ProjectEuler.digitFifthPowersSum n)
 
-[<Fact>]
-let ``10 cannot be written as the sum of fifth powers`` () =
-    Assert.False(ProjectEuler.isFifthPowerSum 10)  
+[<Theory>]
+[<InlineData(10, false)>]
+let ``can n be written as the sum of fifth powers`` (n: int) expected =
+    Assert.Equal(expected, ProjectEuler.isFifthPowerSum n)
