@@ -498,4 +498,4 @@ let digitFifthPowersSum n =
     |> Seq.sum
 
 let isFifthPowerSum n =
-    false
+    n = digitFifthPowersSum n
