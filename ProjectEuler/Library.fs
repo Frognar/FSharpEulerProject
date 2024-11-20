@@ -490,3 +490,6 @@ let countDistinctPowerCombinations range =
 
 let fifthPower n =
     n * n * n * n * n
+
+let digitFifthPowersSum n =
+    1
