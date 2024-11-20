@@ -12,6 +12,7 @@
         <Compile Include="_1000digitFibonacciNumberTests.fs" />
         <Compile Include="AmicableNumbersTests.fs" />
         <Compile Include="CountingSundaysTests.fs" />
+        <Compile Include="DigitFifthPowersTests.fs" />
         <Compile Include="DistinctPowersTests.fs" />
         <Compile Include="EvenFibonacciNumbersTests.fs" />
         <Compile Include="FactorialDigitSumTests.fs" />
