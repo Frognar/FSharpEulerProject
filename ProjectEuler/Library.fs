@@ -489,4 +489,4 @@ let countDistinctPowerCombinations range =
     |> countDistinctTerms
 
 let fifthPower n =
-    1
+    n
