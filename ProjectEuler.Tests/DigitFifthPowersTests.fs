@@ -21,3 +21,10 @@ let ``the sum of the digit fifth powers for n`` (n: int) expected =
 [<InlineData(4150, true)>]
 let ``can n be written as the sum of digit fifth powers`` (n: int) expected =
     Assert.Equal(expected, ProjectEuler.isFifthPowerSum n)
+
+[<Theory>]
+[<InlineData(3, 2916)>]
+[<InlineData(4, 32805)>]
+[<InlineData(5, 354294)>]
+let ``find the largest number that can be written as the sum of n-th powers`` (n: int) expected =
+    Assert.Equal(expected, ProjectEuler.maxSearchLimit n)
