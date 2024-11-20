@@ -493,3 +493,6 @@ let fifthPower n =
 
 let digitFifthPowersSum n =
     n
+    |> string
+    |> Seq.map (string >> int)
+    |> Seq.sum
