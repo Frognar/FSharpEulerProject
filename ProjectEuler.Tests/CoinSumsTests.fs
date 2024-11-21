@@ -9,3 +9,7 @@ let ``there is only one (empty) combination for a sum of 0`` () =
 [<Fact>]
 let ``there is no combination for a sum of 5 with the numbers 2, 4 and 6`` () =
     Assert.Empty(ProjectEuler.findCombinations 5 [2; 4; 6])
+
+[<Fact>]
+let ``if the target is in given numbers, it should be a possible combination`` () =
+    Assert.Contains([5], ProjectEuler.findCombinations 5 [1; 2; 5; 10])
