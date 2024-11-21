@@ -505,3 +505,6 @@ let maxSearchLimit (power: int) =
         if n * (pown 9 power) < pown 10 (n - 1) then (n - 1) * (pown 9 power)
         else findLimit (n + 1)
     findLimit 1
+
+let findCombinations target numbers =
+    [[]]
