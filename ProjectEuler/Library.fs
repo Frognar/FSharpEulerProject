@@ -506,9 +506,15 @@ let maxSearchLimit (power: int) =
         else findLimit (n + 1)
     findLimit 1
 
-let findCombinations target numbers =
+let rec findCombinations target numbers =
     match target, numbers with
     | 0, _ -> [[]]
     | _, [] -> []
-    | _ when List.contains target numbers -> [[target]]
-    | _ -> []
+    | _, n :: rest ->
+        let withCurrent =
+            if target >= n then
+                findCombinations (target - n) numbers
+                |> List.map (fun combination -> n :: combination)
+            else []
+        let withoutCurrent = findCombinations target rest
+        withCurrent @ withoutCurrent
