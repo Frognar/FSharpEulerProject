@@ -23,3 +23,7 @@ let ``if the target can be obtained from the given numbers, it should be a possi
     Assert.Contains([1; 1; 1; 1; 1], ProjectEuler.findCombinations 5 [1; 2; 10])
     Assert.Contains([1; 1; 1; 2], ProjectEuler.findCombinations 5 [1; 2; 10])
     Assert.Contains([1; 2; 2], ProjectEuler.findCombinations 5 [1; 2; 10])
+
+[<Fact>]
+let ``there are 73,682 ways to present 200 as a sum of those numbers [1; 2; 5; 10; 20; 50; 100; 200]`` () =
+    Assert.Equal(73682, ProjectEuler.findCombinations 200 [1; 2; 5; 10; 20; 50; 100; 200] |> List.length)
