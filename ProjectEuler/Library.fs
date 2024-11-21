@@ -507,4 +507,6 @@ let maxSearchLimit (power: int) =
     findLimit 1
 
 let findCombinations target numbers =
-    [[]]
+    match target with
+    | 0 -> [[]]
+    | _ -> []
