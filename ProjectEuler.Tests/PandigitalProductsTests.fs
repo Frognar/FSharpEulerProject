@@ -43,3 +43,7 @@ let ``["1"; "2"; "3"; "4"] can be grouped into 3 groups`` () =
 [<Fact>]
 let ``("1", "2", "3") -> 1 * 2 <> 3`` () =
     Assert.False(ProjectEuler.canBeWrittenAsProduct ("1", "2", "3"))
+
+[<Fact>]
+let ``("2", "2", "4") -> 2 * 2 = 4`` () =
+    Assert.True(ProjectEuler.canBeWrittenAsProduct ("2", "2", "4"))

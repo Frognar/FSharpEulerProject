@@ -545,5 +545,5 @@ let makeGroups n list =
                 splitIntoParts (String.concat "" part :: parts) rest (count - 1))
     splitIntoParts [] list n
 
-let canBeWrittenAsProduct ns =
-    false
+let canBeWrittenAsProduct ((multiplicand, multiplier, product): string * string * string) =
+    (int multiplicand) * (int multiplier) = (int product)
