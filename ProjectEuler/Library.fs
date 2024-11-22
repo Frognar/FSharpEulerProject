@@ -520,4 +520,4 @@ let rec findCombinations target numbers =
         withCurrent @ withoutCurrent
 
 let isPandigital n digits =
-    false
+    digits = "123456789"
