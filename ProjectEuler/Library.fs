@@ -522,7 +522,11 @@ let rec findCombinations target numbers =
 let isPandigital n digits =
     digits |> Seq.sort |> Seq.map string |> String.concat "" = ([1..n] |> List.map string |> String.concat "")
 
-let rec permutationsOf n =
-    match n |> Seq.map string |> Seq.toList with
-    | [a; b] -> [[a; b]; [b; a]]
-    | _ -> [[n]]
+let permutationsOf n =
+    let rec permutations list =
+        match list with
+        | [] -> [[]]
+        | xs -> [for x in xs do
+                     for perm in permutations (List.filter ((<>) x) xs) -> x :: perm]
+
+    permutations (n |> Seq.map string |> Seq.toList)
