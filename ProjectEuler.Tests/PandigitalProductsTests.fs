@@ -19,9 +19,13 @@ let ``123 is a pandigital 1-3`` () =
     Assert.True(ProjectEuler.isPandigital 3 "123")
 
 [<Fact>]
-let ``permutations of "1" are ["1"]`` () =
+let ``permutations of "1" are [["1"]]`` () =
     Assert.StrictEqual([["1"]], ProjectEuler.permutationsOf "1")
 
 [<Fact>]
-let ``permutations of "2" are ["2"]`` () =
+let ``permutations of "2" are [["2"]]`` () =
     Assert.StrictEqual([["2"]], ProjectEuler.permutationsOf "2")
+
+[<Fact>]
+let ``permutations of "12" are [["1"; "2"]; ["2"; "1"]]`` () =
+    Assert.StrictEqual([["1"; "2"]; ["2"; "1"]], ProjectEuler.permutationsOf "12")
