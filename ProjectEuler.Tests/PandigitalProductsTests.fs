@@ -9,3 +9,7 @@ let ``123 is not a pandigital 1-9`` () =
 [<Fact>]
 let ``123456789 is a pandigital 1-9`` () =
     Assert.True(ProjectEuler.isPandigital 9 "123456789")
+
+[<Fact>]
+let ``987654321 is a pandigital 1-9`` () =
+    Assert.True(ProjectEuler.isPandigital 9 "987654321")

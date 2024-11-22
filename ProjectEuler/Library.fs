@@ -520,4 +520,4 @@ let rec findCombinations target numbers =
         withCurrent @ withoutCurrent
 
 let isPandigital n digits =
-    digits = "123456789"
+    digits |> Seq.sort |> Seq.map string |> String.concat "" = "123456789"
