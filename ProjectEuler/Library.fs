@@ -544,3 +544,6 @@ let makeGroups n list =
                 let rest = List.skip len remaining
                 splitIntoParts (String.concat "" part :: parts) rest (count - 1))
     splitIntoParts [] list n
+
+let canBeWrittenAsProduct ns =
+    false

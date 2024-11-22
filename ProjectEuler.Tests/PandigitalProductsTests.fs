@@ -39,3 +39,7 @@ let ``permutations of "123" are [["1"; "2"; "3"]; ["1"; "3"; "2"]; ["2"; "1"; "3
 let ``["1"; "2"; "3"; "4"] can be grouped into 3 groups`` () =
     let expected = [["1"; "2"; "34"]; ["1"; "23"; "4"]; ["12"; "3"; "4"]]
     Assert.StrictEqual(expected, ProjectEuler.makeGroups 3 ["1"; "2"; "3"; "4"])
+
+[<Fact>]
+let ``("1", "2", "3") -> 1 * 2 <> 3`` () =
+    Assert.False(ProjectEuler.canBeWrittenAsProduct ("1", "2", "3"))
