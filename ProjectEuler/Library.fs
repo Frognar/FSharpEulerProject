@@ -530,3 +530,17 @@ let permutationsOf n =
                      for perm in permutations (List.filter ((<>) x) xs) -> x :: perm]
 
     permutations (n |> Seq.map string |> Seq.toList)
+
+let makeGroups n list =
+    let rec splitIntoParts parts remaining count =
+        match count, remaining with
+        | 0, [] -> [List.rev parts]
+        | 0, _ -> []
+        | _, [] -> []
+        | _ ->
+            [1..List.length remaining]
+            |> List.collect (fun len ->
+                let part = List.take len remaining
+                let rest = List.skip len remaining
+                splitIntoParts (String.concat "" part :: parts) rest (count - 1))
+    splitIntoParts [] list n

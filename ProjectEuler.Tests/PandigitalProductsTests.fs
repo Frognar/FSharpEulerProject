@@ -32,5 +32,10 @@ let ``permutations of "12" are [["1"; "2"]; ["2"; "1"]]`` () =
 
 [<Fact>]
 let ``permutations of "123" are [["1"; "2"; "3"]; ["1"; "3"; "2"]; ["2"; "1"; "3"]; ["2"; "3"; "1"]; ["3"; "1"; "2"]; ["3"; "2"; "1"]]`` () =
-    Assert.StrictEqual([["1"; "2"; "3"]; ["1"; "3"; "2"]; ["2"; "1"; "3"]; ["2"; "3"; "1"]; ["3"; "1"; "2"]; ["3"; "2"; "1"]],
-                       ProjectEuler.permutationsOf "123")
+    let expected = [["1"; "2"; "3"]; ["1"; "3"; "2"]; ["2"; "1"; "3"]; ["2"; "3"; "1"]; ["3"; "1"; "2"]; ["3"; "2"; "1"]]
+    Assert.StrictEqual(expected, ProjectEuler.permutationsOf "123")
+
+[<Fact>]
+let ``["1"; "2"; "3"; "4"] can be grouped into 3 groups`` () =
+    let expected = [["1"; "2"; "34"]; ["1"; "23"; "4"]; ["12"; "3"; "4"]]
+    Assert.StrictEqual(expected, ProjectEuler.makeGroups 3 ["1"; "2"; "3"; "4"])
