@@ -31,6 +31,7 @@
         <Compile Include="NonAbundantSumsTests.fs" />
         <Compile Include="NumberLetterCountsTests.fs" />
         <Compile Include="NumberSpiralDiagonalsTests.fs" />
+        <Compile Include="PandigitalProductsTests.fs" />
         <Compile Include="PowerDigitSumTests.fs" />
         <Compile Include="PrimeFactorsTests.fs" />
         <Compile Include="PrimeTests.fs" />

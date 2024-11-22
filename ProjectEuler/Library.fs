@@ -518,3 +518,6 @@ let rec findCombinations target numbers =
             else []
         let withoutCurrent = findCombinations target rest
         withCurrent @ withoutCurrent
+
+let isPandigital n digits =
+    false
