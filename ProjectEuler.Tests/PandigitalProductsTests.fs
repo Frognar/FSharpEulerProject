@@ -47,3 +47,17 @@ let ``("1", "2", "3") -> 1 * 2 <> 3`` () =
 [<Fact>]
 let ``("2", "2", "4") -> 2 * 2 = 4`` () =
     Assert.True(ProjectEuler.canBeWrittenAsProduct ("2", "2", "4"))
+
+[<Fact>]
+let ``sum of all products whose multiplicand/multiplier/product identity can be written as a 1 through 9 pandigital is 45228`` () =
+    let sum = ProjectEuler.permutationsOf "123456789"
+              |> List.map (ProjectEuler.makeGroups 3)
+              |> List.concat
+              |> List.map (fun x -> (x[0], x[1], x[2]))
+              |> List.filter ProjectEuler.canBeWrittenAsProduct
+              |> List.map (fun (_, _, c) -> int c)
+              |> List.distinct
+              |> List.sum
+    Assert.Equal(45228, sum)
+
+    
