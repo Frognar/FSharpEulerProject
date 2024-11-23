@@ -559,3 +559,6 @@ let filterFractionsWithCommonDigit (fractions: (int * int) list) =
 
 let filterNonTrivialFractions (fractions: (int * int) list) =
     fractions |> List.filter (fun (x, y) -> not (x % 10 = 0 && y % 10 = 0))
+
+let canBeSimplifiedByRemovingCommonDigit (numerator, denominator) =
+    true

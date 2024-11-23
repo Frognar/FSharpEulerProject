@@ -49,3 +49,7 @@ let ``there are some fractions with at least one common digit in denominator and
 let ``there are some non-trivial fractions`` () =
     let fractions = [(10, 20); (12, 22); (10, 11)]
     Assert.StrictEqual([(12, 22); (10, 11)], ProjectEuler.filterNonTrivialFractions fractions)
+
+[<Fact>]
+let ``30/50 can be simplified by removing 0`` () =
+    Assert.True(ProjectEuler.canBeSimplifiedByRemovingCommonDigit (30, 50))
