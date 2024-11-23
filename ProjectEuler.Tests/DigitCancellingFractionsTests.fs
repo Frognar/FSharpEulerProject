@@ -39,3 +39,8 @@ let ``from factors [(1,1); (1,2); (2,1); (2;2)] only (1,2) has value smaller tha
 let ``there are no fractions with value smaller than 1 in [(1,1); (2,2); (3,3); (2,1)]`` () =
     let fractions = [(1,1); (2,2); (3,3); (2,1)]
     Assert.Empty(ProjectEuler.filterFractionsSmallerThanOne fractions)
+
+[<Fact>]
+let ``there are some fractions with at least one common digit in denominator and numerator`` () =
+    let fractions = [(10, 20); (11, 22); (12, 22)]
+    Assert.StrictEqual([(10, 20); (12, 22)], ProjectEuler.filterFractionsWithCommonDigit fractions)

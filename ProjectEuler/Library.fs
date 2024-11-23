@@ -553,3 +553,6 @@ let findPossibleFractions (numbers : int list) =
 
 let filterFractionsSmallerThanOne (fractions: (int * int) list) =
     fractions |> List.filter (fun (x, y) -> x < y)
+
+let filterFractionsWithCommonDigit (fractions: (int * int) list) =
+    fractions |> List.filter (fun (x, y) -> (string x) |> Seq.exists (string y).Contains)
