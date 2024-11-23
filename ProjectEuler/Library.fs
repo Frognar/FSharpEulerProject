@@ -552,5 +552,5 @@ let findPossibleFractions (digits : int list) =
     match digits with
     | [] -> []
     | [x] -> [(x, x)]
-    | [x; y] -> [(x, y); (y, x)]
+    | [x; y] -> [(x, x); (x, y); (y, x); (y, y)]
     | _ -> []
