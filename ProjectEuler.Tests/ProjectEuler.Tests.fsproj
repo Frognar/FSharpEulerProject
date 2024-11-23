@@ -13,6 +13,7 @@
         <Compile Include="AmicableNumbersTests.fs" />
         <Compile Include="CoinSumsTests.fs" />
         <Compile Include="CountingSundaysTests.fs" />
+        <Compile Include="DigitCancellingFractionsTests.fs" />
         <Compile Include="DigitFifthPowersTests.fs" />
         <Compile Include="DistinctPowersTests.fs" />
         <Compile Include="EvenFibonacciNumbersTests.fs" />
