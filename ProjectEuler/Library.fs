@@ -552,4 +552,4 @@ let findPossibleFractions (digits : int list) =
     (digits, digits) ||> List.allPairs
 
 let filterFractionsSmallerThanOne (pairs: (int * int) list) =
-    [pairs[1]]
+    pairs |> List.filter (fun (x, y) -> x < y)

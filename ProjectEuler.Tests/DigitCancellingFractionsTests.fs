@@ -34,3 +34,8 @@ let ``2/2 is a possible fraction from digits [1; 2]`` () =
 let ``from factors [(1,1); (1,2); (2,1); (2;2)] only (1,2) has value smaller than 1`` () =
     let fractions = [(1, 1); (1, 2); (2, 1); (2, 2)]
     Assert.StrictEqual([(1, 2)], ProjectEuler.filterFractionsSmallerThanOne fractions)
+
+[<Fact>]
+let ``there are no fractions with value smaller than 1 in [(1,1); (2,2); (3,3); (2,1)]`` () =
+    let fractions = [(1,1); (2,2); (3,3); (2,1)]
+    Assert.Empty(ProjectEuler.filterFractionsSmallerThanOne fractions)
