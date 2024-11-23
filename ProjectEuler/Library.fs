@@ -548,8 +548,8 @@ let makeGroups n list =
 let canBeWrittenAsProduct ((multiplicand, multiplier, product): string * string * string) =
     (int multiplicand) * (int multiplier) = (int product)
 
-let findPossibleFractions (digits : int list) =
-    (digits, digits) ||> List.allPairs
+let findPossibleFractions (numbers : int list) =
+    (numbers, numbers) ||> List.allPairs
 
-let filterFractionsSmallerThanOne (pairs: (int * int) list) =
-    pairs |> List.filter (fun (x, y) -> x < y)
+let filterFractionsSmallerThanOne (fractions: (int * int) list) =
+    fractions |> List.filter (fun (x, y) -> x < y)
