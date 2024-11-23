@@ -556,3 +556,6 @@ let filterFractionsSmallerThanOne (fractions: (int * int) list) =
 
 let filterFractionsWithCommonDigit (fractions: (int * int) list) =
     fractions |> List.filter (fun (x, y) -> (string x) |> Seq.exists (string y).Contains)
+
+let filterNonTrivialFractions (fractions: (int * int) list) =
+    fractions |> List.filter (fun (x, y) -> not (x % 10 = 0 && y % 10 = 0))

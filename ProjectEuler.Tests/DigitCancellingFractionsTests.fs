@@ -44,3 +44,8 @@ let ``there are no fractions with value smaller than 1 in [(1,1); (2,2); (3,3); 
 let ``there are some fractions with at least one common digit in denominator and numerator`` () =
     let fractions = [(10, 20); (11, 22); (12, 22)]
     Assert.StrictEqual([(10, 20); (12, 22)], ProjectEuler.filterFractionsWithCommonDigit fractions)
+
+[<Fact>]
+let ``there are some non-trivial fractions`` () =
+    let fractions = [(10, 20); (12, 22); (10, 11)]
+    Assert.StrictEqual([(12, 22); (10, 11)], ProjectEuler.filterNonTrivialFractions fractions)
