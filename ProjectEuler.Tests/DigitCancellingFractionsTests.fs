@@ -53,3 +53,7 @@ let ``there are some non-trivial fractions`` () =
 [<Fact>]
 let ``30/50 can be simplified by removing 0`` () =
     Assert.True(ProjectEuler.canBeSimplifiedByRemovingCommonDigit (30, 50))
+
+[<Fact>]
+let ``11/12 cannot be simplified by removing 1`` () =
+    Assert.False(ProjectEuler.canBeSimplifiedByRemovingCommonDigit (11, 12))
