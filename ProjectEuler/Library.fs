@@ -548,5 +548,5 @@ let makeGroups n list =
 let canBeWrittenAsProduct ((multiplicand, multiplier, product): string * string * string) =
     (int multiplicand) * (int multiplier) = (int product)
 
-let findPossibleFractions digits =
-    [(1, 1)]
+let findPossibleFractions (digits : int list) =
+    [(digits[0], digits[0])]
