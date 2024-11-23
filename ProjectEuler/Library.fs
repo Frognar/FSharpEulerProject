@@ -561,14 +561,13 @@ let filterNonTrivialFractions (fractions: (int * int) list) =
     fractions |> List.filter (fun (x, y) -> not (x % 10 = 0 && y % 10 = 0))
 
 let canBeSimplifiedByRemovingCommonDigit (numerator, denominator) =
-    let numeratorString = string numerator
-    let denominatorString = string denominator
-    let commonDigit = numeratorString |> Seq.find denominatorString.Contains
-    let x = numeratorString |> Seq.findIndex (fun x -> x = commonDigit)
-    let y = denominatorString |> Seq.findIndex (fun x -> x = commonDigit)
-    let newNumerator =numeratorString.Remove(x, 1)
-    let newDenominator = denominatorString.Remove(y, 1)
-    (float numerator) / (float denominator) = (float newNumerator) / (float newDenominator)
+    let numStr, denomStr = string numerator, string denominator
+    match numStr |> Seq.tryFind denomStr.Contains with
+    | Some commonDigit ->
+        let newNum = numStr.Remove(numStr.IndexOf(commonDigit), 1)
+        let newDenom = denomStr.Remove(denomStr.IndexOf(commonDigit), 1)
+        (float newNum) / (float newDenom) = (float numerator) / (float denominator)
+    | None -> false
 
 let findNonTrivialFractions numbers =
     numbers
