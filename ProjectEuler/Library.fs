@@ -549,4 +549,6 @@ let canBeWrittenAsProduct ((multiplicand, multiplier, product): string * string 
     (int multiplicand) * (int multiplier) = (int product)
 
 let findPossibleFractions (digits : int list) =
-    [(digits[0], digits[0])]
+    match digits with
+    | [] -> []
+    | _ -> [(digits[0], digits[0])]
