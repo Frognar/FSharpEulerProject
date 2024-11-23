@@ -17,3 +17,7 @@ let ``cannot build fractions without digits`` () =
 [<Fact>]
 let ``1/2 is a possible fraction from digits [1; 2]`` () =
     Assert.Contains((1, 2), ProjectEuler.findPossibleFractions [1; 2])
+
+[<Fact>]
+let ``2/1 is a possible fraction from digits [1; 2]`` () =
+    Assert.Contains((2, 1), ProjectEuler.findPossibleFractions [1; 2])
