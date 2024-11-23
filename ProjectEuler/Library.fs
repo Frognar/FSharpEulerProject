@@ -550,3 +550,6 @@ let canBeWrittenAsProduct ((multiplicand, multiplier, product): string * string 
 
 let findPossibleFractions (digits : int list) =
     (digits, digits) ||> List.allPairs
+
+let filterFractionsSmallerThanOne (pairs: (int * int) list) =
+    [pairs[1]]
