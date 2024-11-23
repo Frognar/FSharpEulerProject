@@ -57,3 +57,7 @@ let ``30/50 can be simplified by removing 0`` () =
 [<Fact>]
 let ``11/12 cannot be simplified by removing 1`` () =
     Assert.False(ProjectEuler.canBeSimplifiedByRemovingCommonDigit (11, 12))
+
+[<Fact>]
+let ``the non-trivial fractions are [(16, 64); (19, 95); (26, 65); (49, 98)]`` () =
+    Assert.StrictEqual([(16, 64); (19, 95); (26, 65); (49, 98)], ProjectEuler.findNonTrivialFractions [10..99])

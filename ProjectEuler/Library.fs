@@ -568,5 +568,12 @@ let canBeSimplifiedByRemovingCommonDigit (numerator, denominator) =
     let y = denominatorString |> Seq.findIndex (fun x -> x = commonDigit)
     let newNumerator =numeratorString.Remove(x, 1)
     let newDenominator = denominatorString.Remove(y, 1)
-    (float numerator) / (float denominator) = (float newNumerator) / (float newDenominator)    
-    
+    (float numerator) / (float denominator) = (float newNumerator) / (float newDenominator)
+
+let findNonTrivialFractions numbers =
+    numbers
+    |> findPossibleFractions
+    |> filterFractionsSmallerThanOne
+    |> filterFractionsWithCommonDigit
+    |> filterNonTrivialFractions
+    |> List.filter canBeSimplifiedByRemovingCommonDigit
