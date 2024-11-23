@@ -64,6 +64,14 @@ let ``the non-trivial fractions are [(16, 64); (19, 95); (26, 65); (49, 98)]`` (
 
 [<Fact>]
 let ``the simplified denominator for the product of four non-trivial fractions is 100`` () =
-    let a, b = (16 * 19 * 26 * 49, 64 * 95 * 65 * 98)
-    let gcd = ProjectEuler.greatestCommonDivisor a b
-    Assert.Equal(100, b / (int gcd))
+    let denominator = [10..99]
+                    |> ProjectEuler.findPossibleFractions
+                    |> ProjectEuler.filterFractionsSmallerThanOne
+                    |> ProjectEuler.filterFractionsWithCommonDigit
+                    |> ProjectEuler.filterNonTrivialFractions
+                    |> List.filter ProjectEuler.canBeSimplifiedByRemovingCommonDigit
+                    |> ProjectEuler.calculateProduct
+                    |> ProjectEuler.simplifyFraction
+                    |> snd
+
+    Assert.Equal(100, denominator)

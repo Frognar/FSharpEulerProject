@@ -69,8 +69,8 @@ let getLargestPalindromeFromMultiples xs =
     getPalindromesFromMultiples xs
     |> List.max
 
-let rec greatestCommonDivisor a b =
-    if b = 0L then a
+let rec greatestCommonDivisor<'a when 'a :> INumber<'a> and 'a: comparison> (a: 'a) (b: 'a) : 'a =
+    if b = 'a.Zero then a
     else greatestCommonDivisor b (a % b)
 
 let leastCommonMultiple numbers =
@@ -576,3 +576,11 @@ let findNonTrivialFractions numbers =
     |> filterFractionsWithCommonDigit
     |> filterNonTrivialFractions
     |> List.filter canBeSimplifiedByRemovingCommonDigit
+
+let calculateProduct (fractions: (int * int) list) =
+    fractions
+    |> List.fold (fun x (c, d) -> (fst x * c, snd x * d)) (1, 1)
+
+let simplifyFraction (numerator, denominator) =
+    let gcd = greatestCommonDivisor numerator denominator
+    (numerator / gcd, denominator / gcd)    
