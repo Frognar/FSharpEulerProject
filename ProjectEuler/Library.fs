@@ -586,4 +586,9 @@ let simplifyFraction (numerator, denominator) =
     (numerator / gcd, denominator / gcd)
 
 let isFactorialOfItsDigitSum n =
-    [1..n] |> Seq.fold (*) 1 = n
+    let digitFactorialSum = n
+                            |> string
+                            |> Seq.map (fun x -> [1..(x |> string |> int)] |> List.fold (*) 1)
+                            |> Seq.sum
+
+    n = digitFactorialSum

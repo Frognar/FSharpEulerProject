@@ -13,3 +13,7 @@ let ``2 can be written as the sum of factorial of its digits`` () =
 [<Fact>]
 let ``3 cannot be written as the sum of factorial of its digits`` () =
     Assert.False(ProjectEuler.isFactorialOfItsDigitSum 3)
+
+[<Fact>]
+let ``145 can be written as the sum of factorial of its digits`` () =
+    Assert.True(ProjectEuler.isFactorialOfItsDigitSum 145)
