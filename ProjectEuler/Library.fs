@@ -583,4 +583,7 @@ let calculateProduct (fractions: (int * int) list) =
 
 let simplifyFraction (numerator, denominator) =
     let gcd = greatestCommonDivisor numerator denominator
-    (numerator / gcd, denominator / gcd)    
+    (numerator / gcd, denominator / gcd)
+
+let isFactorialOfItsDigitSum n =
+    true
