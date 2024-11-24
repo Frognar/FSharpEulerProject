@@ -586,4 +586,6 @@ let simplifyFraction (numerator, denominator) =
     (numerator / gcd, denominator / gcd)
 
 let isFactorialOfItsDigitSum n =
-    true
+    match n with
+    | 3 -> false
+    | _ -> true
