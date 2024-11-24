@@ -26,3 +26,9 @@ let ``the limit for numbers that can be written as the sum of factorial of its d
     |> Seq.rev
     |> Seq.head
     |> (*) nf)
+
+[<Fact>]
+let ``sum of all numbers (above 2) that can be written as the sum of factorial of its digits is 40730`` () =
+    Assert.Equal(40730, [3..2177280]
+    |> List.filter ProjectEuler.isFactorialOfItsDigitSum
+    |> List.sum)
