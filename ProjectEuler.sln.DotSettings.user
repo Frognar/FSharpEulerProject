@@ -13,8 +13,19 @@
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AStringAsserts_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002Econfig_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003F992cf17f9b2cf4215ab3e6471552917c84de3ac1b86e54521136f03ea78c_003FStringAsserts_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	
 	
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=282e40cc_002D6905_002D4d18_002Dbd71_002D6be46b89a64b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=282e40cc_002D6905_002D4d18_002Dbd71_002D6be46b89a64b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;Solution /&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a2cdfba4_002D517b_002D4766_002D8b1e_002D1a29826555df/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DigitFactorialsTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::ACA3BA7B-FD2A-4959-B267-55ACC489FEC6::net8.0::DigitFactorialsTests&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=bdde05bd_002Dcba4_002D4c61_002D8fed_002Da0f18d7d8a3f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="sum of all numbers that can be written as the sum of factorial of its digits" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::ACA3BA7B-FD2A-4959-B267-55ACC489FEC6::net8.0::DigitFactorialsTests.sum of all numbers (above 2) that can be written as the sum of factorial of its digits is 40730&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::ACA3BA7B-FD2A-4959-B267-55ACC489FEC6::net8.0::DigitFactorialsTests.the limit for numbers that can be written as the sum of factorial of its digits is 2177280&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 	
 	
