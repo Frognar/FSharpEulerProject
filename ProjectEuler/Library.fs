@@ -586,6 +586,4 @@ let simplifyFraction (numerator, denominator) =
     (numerator / gcd, denominator / gcd)
 
 let isFactorialOfItsDigitSum n =
-    match n with
-    | 3 -> false
-    | _ -> true
+    [1..n] |> Seq.fold (*) 1 = n
