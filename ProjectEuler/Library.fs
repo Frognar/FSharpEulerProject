@@ -594,4 +594,12 @@ let isFactorialOfItsDigitSum n =
     n = digitFactorialSum
 
 let rotate n =
-    [451; 514]
+    let nstr = string n
+    let rec loop x i acc =
+        match i with
+        | _ when i = nstr.Length -> acc
+        | _ ->
+            let next = Seq.append (Seq.tail x) (Seq.singleton (Seq.head x)) |> Seq.map string |> String.concat ""
+            loop next (i + 1) (next :: acc)
+
+    loop nstr 1 [] |> Seq.map int |> Seq.rev
