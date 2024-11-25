@@ -11,6 +11,7 @@
     <ItemGroup>
         <Compile Include="_1000digitFibonacciNumberTests.fs" />
         <Compile Include="AmicableNumbersTests.fs" />
+        <Compile Include="CircularPrimesTests.fs" />
         <Compile Include="CoinSumsTests.fs" />
         <Compile Include="CountingSundaysTests.fs" />
         <Compile Include="DigitCancellingFractionsTests.fs" />

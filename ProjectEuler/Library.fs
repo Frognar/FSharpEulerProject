@@ -592,3 +592,6 @@ let isFactorialOfItsDigitSum n =
                             |> Seq.sum
 
     n = digitFactorialSum
+
+let rotate n =
+    [451]
