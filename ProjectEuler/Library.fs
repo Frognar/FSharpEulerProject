@@ -594,4 +594,4 @@ let isFactorialOfItsDigitSum n =
     n = digitFactorialSum
 
 let rotate n =
-    [451]
+    [451; 514]
