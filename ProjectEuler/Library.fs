@@ -604,8 +604,5 @@ let rotate n =
 
     loop nstr 1 [] |> Seq.map int |> Seq.rev
 
-let toBase2 n =
-    match n with
-    | 1 -> "1"
-    | 2 -> "10"
-    | _ -> "11"
+let toBase2 (n: int) =
+    System.Convert.ToString(n, 2)

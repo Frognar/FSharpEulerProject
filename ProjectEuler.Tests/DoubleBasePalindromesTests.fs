@@ -13,3 +13,7 @@ let ``2 in base 2 is 10`` () =
 [<Fact>]
 let ``3 in base 2 is 11`` () =
     Assert.Equal("11", ProjectEuler.toBase2 3)
+
+[<Fact>]
+let ``585 in base 2 is 1001001001`` () =
+    Assert.Equal("1001001001", ProjectEuler.toBase2 585)
