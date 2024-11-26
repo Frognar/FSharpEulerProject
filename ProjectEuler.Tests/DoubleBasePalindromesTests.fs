@@ -17,3 +17,7 @@ let ``3 in base 2 is 11`` () =
 [<Fact>]
 let ``585 in base 2 is 1001001001`` () =
     Assert.Equal("1001001001", ProjectEuler.toBase2 585)
+
+[<Fact>]
+let ``1 is palindrome in both base 10 and base 2`` () =
+    Assert.True(ProjectEuler.isDoubleBasePalindrome 1)

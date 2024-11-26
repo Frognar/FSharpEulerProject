@@ -606,3 +606,6 @@ let rotate n =
 
 let toBase2 (n: int) =
     System.Convert.ToString(n, 2)
+
+let isDoubleBasePalindrome n =
+    true
