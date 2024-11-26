@@ -607,4 +607,5 @@ let rotate n =
 let toBase2 n =
     match n with
     | 1 -> "1"
-    | _ -> "10"
+    | 2 -> "10"
+    | _ -> "11"
