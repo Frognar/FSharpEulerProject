@@ -25,3 +25,11 @@ let ``1 is palindrome in both base 10 and base 2`` () =
 [<Fact>]
 let ``2 is not palindrome in base 2`` () =
     Assert.False(ProjectEuler.isDoubleBasePalindrome 2)
+
+[<Fact>]
+let ``3 is palindrome in both base 10 and base 2`` () =
+    Assert.True(ProjectEuler.isDoubleBasePalindrome 3)
+
+[<Fact>]
+let ``11 is not palindrome in base 2`` () =
+    Assert.False(ProjectEuler.isDoubleBasePalindrome 11)
