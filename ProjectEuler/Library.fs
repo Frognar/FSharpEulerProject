@@ -603,3 +603,6 @@ let rotate n =
             loop next (i + 1) (next :: acc)
 
     loop nstr 1 [] |> Seq.map int |> Seq.rev
+
+let toBase2 n =
+    "1"

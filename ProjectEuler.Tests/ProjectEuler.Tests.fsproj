@@ -18,6 +18,7 @@
         <Compile Include="DigitFactorialsTests.fs" />
         <Compile Include="DigitFifthPowersTests.fs" />
         <Compile Include="DistinctPowersTests.fs" />
+        <Compile Include="DoubleBasePalindromesTests.fs" />
         <Compile Include="EvenFibonacciNumbersTests.fs" />
         <Compile Include="FactorialDigitSumTests.fs" />
         <Compile Include="HighlyDivisibleTriangularNumberTests.fs" />
