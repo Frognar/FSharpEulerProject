@@ -608,4 +608,4 @@ let toBase2 (n: int) =
     System.Convert.ToString(n, 2)
 
 let isDoubleBasePalindrome n =
-    true
+    n % 2 = 1
