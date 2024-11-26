@@ -609,3 +609,6 @@ let toBase2 (n: int) =
 
 let isDoubleBasePalindrome n =
     isPalindrome n && isPalindrome (toBase2 n)
+
+let sumOfDoubleBasePalindromes numbers =
+    numbers |> sumOfFilteredNumbers isDoubleBasePalindrome

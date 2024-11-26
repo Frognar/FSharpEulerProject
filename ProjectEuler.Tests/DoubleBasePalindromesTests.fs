@@ -33,3 +33,7 @@ let ``3 is palindrome in both base 10 and base 2`` () =
 [<Fact>]
 let ``11 is not palindrome in base 2`` () =
     Assert.False(ProjectEuler.isDoubleBasePalindrome 11)
+
+[<Fact>]
+let ``the sum of all double-base palindromes below one million is 872187`` () =
+    Assert.Equal(872187, ProjectEuler.sumOfDoubleBasePalindromes [1..1_000_000])
