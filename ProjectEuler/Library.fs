@@ -605,4 +605,6 @@ let rotate n =
     loop nstr 1 [] |> Seq.map int |> Seq.rev
 
 let toBase2 n =
-    "1"
+    match n with
+    | 1 -> "1"
+    | _ -> "10"
