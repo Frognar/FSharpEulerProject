@@ -643,3 +643,7 @@ let truncatablePrimes () =
     |> Seq.filter isTruncatablePrime
     |> Seq.take 11
     |> Seq.toList
+
+let sumOfTruncatablePrimes () =
+    truncatablePrimes ()
+    |> List.sum

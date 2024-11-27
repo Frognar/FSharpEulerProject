@@ -23,3 +23,7 @@ let ``All truncatable primes are [23; 37; 53; 73; 313; 317; 373; 797; 3137; 3797
     Assert.StrictEqual(
         [23; 37; 53; 73; 313; 317; 373; 797; 3137; 3797; 739397],
         ProjectEuler.truncatablePrimes ())
+
+[<Fact>]
+let ``sum of all truncatable primes is 748317`` () =
+    Assert.Equal(748317, ProjectEuler.sumOfTruncatablePrimes ())
