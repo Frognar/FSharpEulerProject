@@ -630,3 +630,6 @@ let rightTruncates n =
     |> Seq.map int
     |> Seq.take (nStr.Length - 1)
     |> Seq.toList
+
+let truncates n =
+    leftTruncates n @ rightTruncates n
