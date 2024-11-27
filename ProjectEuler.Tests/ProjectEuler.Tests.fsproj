@@ -45,6 +45,7 @@
         <Compile Include="SummationOfPrimesTests.fs" />
         <Compile Include="SumOfMultiplesOf3And5Tests.fs" />
         <Compile Include="SumSquareDifferenceTests.fs" />
+        <Compile Include="TruncatablePrimesTests.fs" />
         <Compile Include="Program.fs"/>
     </ItemGroup>
 

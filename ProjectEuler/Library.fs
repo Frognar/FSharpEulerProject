@@ -612,3 +612,12 @@ let isDoubleBasePalindrome n =
 
 let sumOfDoubleBasePalindromes numbers =
     numbers |> sumOfFilteredNumbers isDoubleBasePalindrome
+
+let leftTruncates n =
+    let nStr = n |> string
+    nStr
+    |> Seq.indexed
+    |> Seq.map (fun (i, _) -> nStr.Substring(i + 1))
+    |> Seq.map int
+    |> Seq.take (nStr.Length - 1)
+    |> Seq.toList
