@@ -637,3 +637,9 @@ let truncates n =
 let isTruncatablePrime n =
     let nIsPrime = isPrime n
     nIsPrime && truncates n |> List.forall isPrime
+
+let truncatablePrimes () =
+    Seq.initInfinite (fun i -> i + 10)
+    |> Seq.filter isTruncatablePrime
+    |> Seq.take 11
+    |> Seq.toList
