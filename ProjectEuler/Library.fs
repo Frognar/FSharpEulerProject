@@ -621,3 +621,12 @@ let leftTruncates n =
     |> Seq.map int
     |> Seq.take (nStr.Length - 1)
     |> Seq.toList
+
+let rightTruncates n =
+    let nStr = n |> string
+    nStr
+    |> Seq.indexed
+    |> Seq.map (fun (i, _) -> nStr.Remove(nStr.Length - i - 1))
+    |> Seq.map int
+    |> Seq.take (nStr.Length - 1)
+    |> Seq.toList
