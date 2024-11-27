@@ -12,4 +12,8 @@ let ``right truncates of 3797 are 379, 37, 3`` () =
 
 [<Fact>]
 let ``left and right truncates of 3797 are 797, 97, 7, 379, 37, 3`` () =
-    Assert.StrictEqual([797; 97; 7; 379; 37; 3], ProjectEuler.truncates 3797)  
+    Assert.StrictEqual([797; 97; 7; 379; 37; 3], ProjectEuler.truncates 3797)
+
+[<Fact>]
+let ``3797 is a truncatable prime`` () =
+    Assert.True(ProjectEuler.isTruncatablePrime 3797)

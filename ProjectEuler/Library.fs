@@ -633,3 +633,7 @@ let rightTruncates n =
 
 let truncates n =
     leftTruncates n @ rightTruncates n
+
+let isTruncatablePrime n =
+    let nIsPrime = isPrime n
+    nIsPrime && truncates n |> List.forall isPrime
