@@ -660,3 +660,11 @@ let concatenatedProduct n multipliers =
     |> List.map (fun x -> x * n)
     |> List.map string
     |> String.concat ""
+
+let findLargestPandigitalFor x =
+    let rec loop n acc =
+        let product = concatenatedProduct x [1..n]
+        if product.Length > 9 then acc
+        elif isPandigital1to9 product then product
+        else loop (n + 1) acc
+    loop 2 ""
