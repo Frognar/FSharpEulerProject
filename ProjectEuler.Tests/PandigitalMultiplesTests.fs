@@ -25,3 +25,7 @@ let ``largest pandigital concatenated product for 192 is 192384576`` () =
 [<Fact>]
 let ``largest pandigital concatenated product for 9 is 918273645`` () =
     Assert.Equal("918273645", ProjectEuler.findLargestPandigitalFor 9)
+
+[<Fact>]
+let ``largest pandigital concatenated product overall is 932718654`` () =
+    Assert.Equal("932718654", ProjectEuler.findLargestPandigitalOverall 1 9999)

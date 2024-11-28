@@ -668,3 +668,9 @@ let findLargestPandigitalFor x =
         elif isPandigital1to9 product then product
         else loop (n + 1) acc
     loop 2 ""
+
+let findLargestPandigitalOverall start stop =
+    [start..stop]
+    |> Seq.map findLargestPandigitalFor
+    |> Seq.filter (fun s -> s <> "")
+    |> Seq.maxBy int
