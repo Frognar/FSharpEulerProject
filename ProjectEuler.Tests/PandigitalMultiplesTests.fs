@@ -12,8 +12,8 @@ let ``concatenated product of 9 and [1..5] is "918273645"`` () =
 
 [<Fact>]
 let ``concatenated product of 192 and [1..3] is pandigital 1-9`` () =
-    Assert.True(ProjectEuler.isPandigital 9 (ProjectEuler.concatenatedProduct 192 [1..3]))
+    Assert.True(ProjectEuler.isPandigital1to9 (ProjectEuler.concatenatedProduct 192 [1..3]))
 
 [<Fact>]
 let ``concatenated product of 9 and [1..5] is pandigital 1-9`` () =
-    Assert.True(ProjectEuler.isPandigital 9 (ProjectEuler.concatenatedProduct 9 [1..5]))
+    Assert.True(ProjectEuler.isPandigital1to9 (ProjectEuler.concatenatedProduct 9 [1..5]))

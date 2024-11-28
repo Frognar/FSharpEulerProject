@@ -520,7 +520,10 @@ let rec findCombinations target numbers =
         withCurrent @ withoutCurrent
 
 let isPandigital n digits =
-    digits |> Seq.sort |> Seq.map string |> String.concat "" = ([1..n] |> List.map string |> String.concat "")
+    digits
+    |> Seq.sort
+    |> Seq.map string
+    |> String.concat "" = ([1..n] |> List.map string |> String.concat "")
 
 let permutationsOf n =
     let rec permutations list =
@@ -647,6 +650,10 @@ let truncatablePrimes () =
 let sumOfTruncatablePrimes () =
     truncatablePrimes ()
     |> List.sum
+    
+
+let isPandigital1to9 n =
+    isPandigital 9 n
 
 let concatenatedProduct n multipliers =
     multipliers
