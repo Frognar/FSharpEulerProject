@@ -647,3 +647,9 @@ let truncatablePrimes () =
 let sumOfTruncatablePrimes () =
     truncatablePrimes ()
     |> List.sum
+
+let concatenatedProduct n multipliers =
+    multipliers
+    |> List.map (fun x -> x * n)
+    |> List.map string
+    |> String.concat ""
