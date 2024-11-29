@@ -17,6 +17,8 @@
     &lt;TestId&gt;xUnit::ACA3BA7B-FD2A-4959-B267-55ACC489FEC6::net8.0::TruncatablePrimesTests.left truncates of 3797 are 797, 97, 7&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::ACA3BA7B-FD2A-4959-B267-55ACC489FEC6::net8.0::TruncatablePrimesTests&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::ACA3BA7B-FD2A-4959-B267-55ACC489FEC6::net8.0::PandigitalMultiplesTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::ACA3BA7B-FD2A-4959-B267-55ACC489FEC6::net8.0::IntegerRightTrianglesTests.there ate exactly three right triangles with perimeter equal to 120&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::ACA3BA7B-FD2A-4959-B267-55ACC489FEC6::net8.0::IntegerRightTrianglesTests&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 	

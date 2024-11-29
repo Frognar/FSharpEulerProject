@@ -13,3 +13,7 @@ let ``there are exactly three right triangles with perimeter equal to 120`` () =
     Assert.Contains([20; 48; 52], rightTriangles)
     Assert.Contains([24; 45; 51], rightTriangles)
     Assert.Contains([30; 40; 50], rightTriangles)
+
+[<Fact>]
+let ``the perimeter with the highest number of right triangles is 840`` () =
+    Assert.Equal(840, ProjectEuler.findPerimeterWithHighestNumberOfRightTriangles 1000)

@@ -681,3 +681,12 @@ let isRightTriangle a b c =
 let rightTriangles perimeter =
     threeSumCombinations perimeter
     |> List.filter (fun x -> isRightTriangle x[0] x[1] x[2])
+
+let findPerimeterWithHighestNumberOfRightTriangles limit =
+    [1..limit]
+    |> List.map rightTriangles
+    |> List.map List.length
+    |> List.indexed
+    |> List.maxBy snd
+    |> fst
+    |> (+) 1
