@@ -674,3 +674,6 @@ let findLargestPandigitalOverall start stop =
     |> Seq.map findLargestPandigitalFor
     |> Seq.filter (fun s -> s <> "")
     |> Seq.maxBy int
+
+let isRightTriangle a b c =
+    a * a + b * b = c * c

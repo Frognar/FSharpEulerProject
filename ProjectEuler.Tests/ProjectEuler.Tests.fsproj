@@ -22,6 +22,7 @@
         <Compile Include="EvenFibonacciNumbersTests.fs" />
         <Compile Include="FactorialDigitSumTests.fs" />
         <Compile Include="HighlyDivisibleTriangularNumberTests.fs" />
+        <Compile Include="IntegerRightTrianglesTests.fs" />
         <Compile Include="LatticePathsTests.fs" />
         <Compile Include="LargestPalindromeProductTests.fs" />
         <Compile Include="LargestProductInAGridTests.fs" />
