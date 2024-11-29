@@ -677,3 +677,7 @@ let findLargestPandigitalOverall start stop =
 
 let isRightTriangle a b c =
     a * a + b * b = c * c
+
+let rightTriangles perimeter =
+    threeSumCombinations perimeter
+    |> List.filter (fun x -> isRightTriangle x[0] x[1] x[2])
