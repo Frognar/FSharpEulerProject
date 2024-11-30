@@ -692,4 +692,8 @@ let findPerimeterWithHighestNumberOfRightTriangles limit =
     |> (+) 1
 
 let champernownesConstant index =
-    1
+    Seq.initInfinite (fun i -> (i + 1) |> string)
+    |> Seq.map (fun s -> s |> Seq.map (string >> int))
+    |> Seq.concat
+    |> Seq.skip (index - 1)
+    |> Seq.head
