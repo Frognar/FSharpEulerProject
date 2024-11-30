@@ -690,3 +690,6 @@ let findPerimeterWithHighestNumberOfRightTriangles limit =
     |> List.maxBy snd
     |> fst
     |> (+) 1
+
+let champernownesConstant index =
+    1
