@@ -697,3 +697,8 @@ let champernownesConstant index =
     |> Seq.concat
     |> Seq.skip (index - 1)
     |> Seq.head
+
+let champernownesConstantProduct indices =
+    indices
+    |> List.map champernownesConstant
+    |> List.fold (*) 1
