@@ -38,6 +38,7 @@
         <Compile Include="NumberLetterCountsTests.fs" />
         <Compile Include="NumberSpiralDiagonalsTests.fs" />
         <Compile Include="PandigitalMultiplesTests.fs" />
+        <Compile Include="PandigitalPrimeTests.fs" />
         <Compile Include="PandigitalProductsTests.fs" />
         <Compile Include="PowerDigitSumTests.fs" />
         <Compile Include="PrimeFactorsTests.fs" />

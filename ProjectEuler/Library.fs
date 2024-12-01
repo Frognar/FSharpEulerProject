@@ -703,3 +703,7 @@ let champernownesConstantProduct indices =
     indices
     |> List.map champernownesConstant
     |> List.reduce (*)
+
+let isPandigitalByLength x =
+    let xstr = string x
+    isPandigital (xstr |> String.length) xstr
