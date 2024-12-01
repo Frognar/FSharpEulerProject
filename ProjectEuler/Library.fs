@@ -707,3 +707,8 @@ let champernownesConstantProduct indices =
 let isPandigitalByLength x =
     let xstr = string x
     isPandigital (xstr |> String.length) xstr
+
+let findLargestPandigitalPrime () =
+    primesUpTo 7654321
+    |> List.filter isPandigitalByLength
+    |> List.max
