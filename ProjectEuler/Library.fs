@@ -715,3 +715,9 @@ let findLargestPandigitalPrime () =
 
 let triangleNumber n =
     n * (n + 1) / 2
+
+let triangleNumbersUpTo n =
+    Seq.initInfinite triangleNumber
+    |> Seq.takeWhile (fun x -> x <= n)
+    |> Seq.tail
+    |> Seq.toList

@@ -13,3 +13,7 @@ let ``2nd triangle number is 3`` () =
 [<Fact>]
 let ``3rd triangle number is 6`` () =
     Assert.Equal(6, ProjectEuler.triangleNumber 3)
+
+[<Fact>]
+let ``triangle numbers up to 10 are [1; 3; 6; 10]`` () =
+    Assert.StrictEqual([1; 3; 6; 10], ProjectEuler.triangleNumbersUpTo 10)    
