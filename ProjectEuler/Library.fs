@@ -712,3 +712,6 @@ let findLargestPandigitalPrime () =
     primesUpTo 7654321
     |> List.filter isPandigitalByLength
     |> List.max
+
+let triangleNumber n =
+    1
