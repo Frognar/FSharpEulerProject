@@ -21,3 +21,7 @@ let ``triangle numbers up to 10 are [1; 3; 6; 10]`` () =
 [<Fact>]
 let ``world value of 'SKY' is 55`` () =
     Assert.Equal(55, ProjectEuler.wordScore "SKY")
+
+[<Fact>]
+let ``world value of 'SKY' is a triangle number`` () =
+    Assert.True(ProjectEuler.isTriangleNumber "SKY")

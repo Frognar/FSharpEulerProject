@@ -721,3 +721,7 @@ let triangleNumbersUpTo n =
     |> Seq.takeWhile (fun x -> x <= n)
     |> Seq.tail
     |> Seq.toList
+
+let isTriangleNumber word =
+    let wordValue = wordScore word
+    triangleNumbersUpTo wordValue |> List.last = wordValue
