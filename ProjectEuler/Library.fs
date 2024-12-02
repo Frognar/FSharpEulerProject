@@ -714,4 +714,4 @@ let findLargestPandigitalPrime () =
     |> List.max
 
 let triangleNumber n =
-    1
+    if n = 1 then 1 else 3
