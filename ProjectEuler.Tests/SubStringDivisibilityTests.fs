@@ -4,7 +4,7 @@ open Xunit
 
 [<Fact>]
 let ``0 to 1 pandigital numbers are [10]`` () =
-    Assert.StrictEqual([10], ProjectEuler.generatePandigitalNumbers 1)
+    Assert.StrictEqual([10L], ProjectEuler.generatePandigitalNumbers 1)
 
 [<Fact>]
 let ``permutations of [1] are [[1]]`` () =
@@ -16,7 +16,7 @@ let ``permutations of [1; 2] are [[1; 2]; [2; 1]]`` () =
 
 [<Fact>]
 let ``0 to 2 pandigital numbers are [102; 120; 201; 210]`` () =
-    Assert.StrictEqual([102; 120; 201; 210], ProjectEuler.generatePandigitalNumbers 2)
+    Assert.StrictEqual([102L; 120; 201; 210], ProjectEuler.generatePandigitalNumbers 2)
 
 [<Fact>]
 let ``1406357289 substrings are [406; 063; 635; 357; 572; 728; 289]`` () =
@@ -25,3 +25,10 @@ let ``1406357289 substrings are [406; 063; 635; 357; 572; 728; 289]`` () =
 [<Fact>]
 let ``[406; 063; 635; 357; 572; 728; 289] are divisable by consecutively [2; 3; 5; 7; 11; 13; 17]`` () =
     Assert.True(ProjectEuler.isDivisableByConsecutively [2; 3; 5; 7; 11; 13; 17] [406; 063; 635; 357; 572; 728; 289])
+
+[<Fact>]
+let ``the sum of all 0 to 9 pandigital numbers with interesting sub-string divisibility property is 16695334890`` () =
+    Assert.Equal(16695334890L, ProjectEuler.generatePandigitalNumbers 9
+                 |> List.map (fun x -> (x, ProjectEuler.pandigitalSubstrings x))
+                 |> List.filter (fun x -> ProjectEuler.isDivisableByConsecutively [2; 3; 5; 7; 11; 13; 17] (snd x))
+                 |> List.sumBy fst)
