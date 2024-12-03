@@ -738,5 +738,8 @@ let rec permutations (list: int list) =
                     yield elem :: perm
         } |> Seq.toList
 
-let generatePandigitalNumbers s e =
-    [10]    
+let generatePandigitalNumbers n =
+    [0..n]
+    |> permutations
+    |> List.filter (fun x -> x[0] <> 0)
+    |> List.map (fun digits -> digits |> List.fold (fun acc d -> acc * 10 + d) 0)
