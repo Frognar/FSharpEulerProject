@@ -743,3 +743,11 @@ let generatePandigitalNumbers n =
     |> permutations
     |> List.filter (fun x -> x[0] <> 0)
     |> List.map (fun digits -> digits |> List.fold (fun acc d -> acc * 10 + d) 0)
+
+let pandigitalSubstrings n =
+    n
+    |> string
+    |> Seq.tail
+    |> Seq.windowed 3
+    |> Seq.map (fun x -> x |> Seq.map string |> String.concat "" |> int)
+    |> Seq.toList
