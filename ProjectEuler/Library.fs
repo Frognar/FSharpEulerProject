@@ -725,3 +725,6 @@ let triangleNumbersUpTo n =
 let isTriangleNumber word =
     let wordValue = wordScore word
     triangleNumbersUpTo wordValue |> List.last = wordValue
+
+let generatePandigitalNumbers s e =
+    [10]
