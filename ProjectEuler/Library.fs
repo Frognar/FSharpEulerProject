@@ -751,3 +751,7 @@ let pandigitalSubstrings n =
     |> Seq.windowed 3
     |> Seq.map (fun x -> x |> Seq.map string |> String.concat "" |> int)
     |> Seq.toList
+
+let isDivisableByConsecutively divisors ns =
+    List.zip divisors ns
+    |> List.forall (fun (d, x) -> x % d = 0)

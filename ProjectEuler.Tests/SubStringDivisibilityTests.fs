@@ -21,3 +21,7 @@ let ``0 to 2 pandigital numbers are [102; 120; 201; 210]`` () =
 [<Fact>]
 let ``1406357289 substrings are [406; 063; 635; 357; 572; 728; 289]`` () =
     Assert.StrictEqual([406; 063; 635; 357; 572; 728; 289], ProjectEuler.pandigitalSubstrings 1406357289)
+
+[<Fact>]
+let ``[406; 063; 635; 357; 572; 728; 289] are divisable by consecutively [2; 3; 5; 7; 11; 13; 17]`` () =
+    Assert.True(ProjectEuler.isDivisableByConsecutively [2; 3; 5; 7; 11; 13; 17] [406; 063; 635; 357; 572; 728; 289])
