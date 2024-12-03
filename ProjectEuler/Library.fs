@@ -726,8 +726,17 @@ let isTriangleNumber word =
     let wordValue = wordScore word
     triangleNumbersUpTo wordValue |> List.last = wordValue
 
-let permutations list =
-    [list]
+let rec permutations (list: int list) =
+    match list with
+    | [] -> [ [] ]
+    | _ ->
+        seq {
+            for i in 0 .. list.Length - 1 do
+                let elem = list[i]
+                let rest = list[0 .. i - 1] @ list[i + 1..]
+                for perm in permutations rest do
+                    yield elem :: perm
+        } |> Seq.toList
 
 let generatePandigitalNumbers s e =
     [10]    
