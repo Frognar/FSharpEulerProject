@@ -738,24 +738,6 @@ let rec permutations list =
                     yield elem :: perm
         }
 
-let generatePandigitalNumbers n: int64 seq =
-    [0..n]
-    |> permutations
-    |> Seq.filter (fun x -> x[0] <> 0)
-    |> Seq.map (fun digits -> digits |> List.fold (fun acc d -> acc * 10L + (int64 d)) 0L)
-
-let pandigitalSubstrings n =
-    n
-    |> string
-    |> Seq.tail
-    |> Seq.windowed 3
-    |> Seq.map (fun x -> x |> Seq.map string |> String.concat "" |> int)
-    |> Seq.toList
-
-let isDivisableByConsecutively divisors ns =
-    List.zip divisors ns
-    |> List.forall (fun (d, x) -> x % d = 0)
-
 let digitsToNumber digits =
     digits |> List.fold (fun acc c -> (acc * 10L) + c) 0L
 
