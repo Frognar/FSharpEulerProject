@@ -728,7 +728,7 @@ let isTriangleNumber word =
 
 let rec permutations (list: int list) =
     match list with
-    | [] -> [ [] ]
+    | [] -> seq [ [] ]
     | _ ->
         seq {
             for i in 0 .. list.Length - 1 do
@@ -736,13 +736,13 @@ let rec permutations (list: int list) =
                 let rest = list[0 .. i - 1] @ list[i + 1..]
                 for perm in permutations rest do
                     yield elem :: perm
-        } |> Seq.toList
+        }
 
-let generatePandigitalNumbers n: int64 list =
+let generatePandigitalNumbers n: int64 seq =
     [0..n]
     |> permutations
-    |> List.filter (fun x -> x[0] <> 0)
-    |> List.map (fun digits -> digits |> List.fold (fun acc d -> acc * 10L + (int64 d)) 0L)
+    |> Seq.filter (fun x -> x[0] <> 0)
+    |> Seq.map (fun digits -> digits |> List.fold (fun acc d -> acc * 10L + (int64 d)) 0L)
 
 let pandigitalSubstrings n =
     n
