@@ -726,7 +726,7 @@ let isTriangleNumber word =
     let wordValue = wordScore word
     triangleNumbersUpTo wordValue |> List.last = wordValue
 
-let rec permutations (list: int list) =
+let rec permutations list =
     match list with
     | [] -> seq [ [] ]
     | _ ->
