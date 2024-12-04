@@ -36,3 +36,7 @@ let ``the sum of all 0 to 9 pandigital numbers with interesting sub-string divis
 [<Fact>]
 let ``digits [1; 2; 3] form a number 123`` () =
     Assert.Equal(123L, ProjectEuler.digitsToNumber [1; 2; 3])
+
+[<Fact>]
+let ``digits [1; 4; 0; 6; 3; 5; 7; 2; 8; 9] has interesting sub-string divisibility property`` () =
+    Assert.True(ProjectEuler.hasInterestingSubStringDivisibility [1; 4; 0; 6; 3; 5; 7; 2; 8; 9])

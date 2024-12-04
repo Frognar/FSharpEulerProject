@@ -758,3 +758,13 @@ let isDivisableByConsecutively divisors ns =
 
 let digitsToNumber digits =
     digits |> List.fold (fun acc c -> (acc * 10L) + c) 0L
+
+let hasInterestingSubStringDivisibility (digits: int64 list) =
+    if digits.Length <> 10 then false
+    else
+        let primes = [2L; 3; 5; 7; 11; 13; 17]
+        digits
+        |> List.tail
+        |> List.windowed 3
+        |> List.zip primes
+        |> List.forall (fun (prime, window) -> (digitsToNumber window) % prime = 0)
