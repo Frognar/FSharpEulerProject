@@ -32,3 +32,7 @@ let ``the sum of all 0 to 9 pandigital numbers with interesting sub-string divis
                  |> Seq.map (fun x -> (x, ProjectEuler.pandigitalSubstrings x))
                  |> Seq.filter (fun x -> ProjectEuler.isDivisableByConsecutively [2; 3; 5; 7; 11; 13; 17] (snd x))
                  |> Seq.sumBy fst)
+
+[<Fact>]
+let ``digits [1; 2; 3] form a number 123`` () =
+    Assert.Equal(123L, ProjectEuler.digitsToNumber [1; 2; 3])

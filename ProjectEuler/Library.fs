@@ -755,3 +755,6 @@ let pandigitalSubstrings n =
 let isDivisableByConsecutively divisors ns =
     List.zip divisors ns
     |> List.forall (fun (d, x) -> x % d = 0)
+
+let digitsToNumber digits =
+    digits |> List.fold (fun acc c -> (acc * 10L) + c) 0L
