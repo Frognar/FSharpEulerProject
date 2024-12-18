@@ -751,5 +751,7 @@ let hasInterestingSubStringDivisibility (digits: int64 list) =
         |> List.zip primes
         |> List.forall (fun (prime, window) -> (digitsToNumber window) % prime = 0)
 
+let pentagonNumber n = n * (3 * n - 1) / 2
+
 let pentagonNumbers () =
-    Seq.initInfinite (fun x -> x * (3 * x - 1) / 2) |> Seq.tail
+    Seq.initInfinite id |> Seq.tail |> Seq.map pentagonNumber
