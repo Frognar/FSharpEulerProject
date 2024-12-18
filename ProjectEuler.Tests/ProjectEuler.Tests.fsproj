@@ -41,6 +41,7 @@
         <Compile Include="PandigitalMultiplesTests.fs" />
         <Compile Include="PandigitalPrimeTests.fs" />
         <Compile Include="PandigitalProductsTests.fs" />
+        <Compile Include="PentagonNumbersTests.fs" />
         <Compile Include="PowerDigitSumTests.fs" />
         <Compile Include="PrimeFactorsTests.fs" />
         <Compile Include="PrimeTests.fs" />

@@ -750,3 +750,6 @@ let hasInterestingSubStringDivisibility (digits: int64 list) =
         |> List.windowed 3
         |> List.zip primes
         |> List.forall (fun (prime, window) -> (digitsToNumber window) % prime = 0)
+
+let pentagonNumbers () =
+    seq { 1 }
