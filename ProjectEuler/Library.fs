@@ -752,4 +752,4 @@ let hasInterestingSubStringDivisibility (digits: int64 list) =
         |> List.forall (fun (prime, window) -> (digitsToNumber window) % prime = 0)
 
 let pentagonNumbers () =
-    seq { 1 }
+    seq { 1; 5 }
