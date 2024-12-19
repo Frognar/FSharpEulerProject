@@ -25,3 +25,7 @@ let ``2 is not pentagon number`` () =
 [<Fact>]
 let ``5 is pentagon number`` () =
     Assert.True(ProjectEuler.isPentagonNumber 5)
+
+[<Fact>]
+let ``5482660 is pentagon number`` () =
+    Assert.True(ProjectEuler.isPentagonNumber 5482660)

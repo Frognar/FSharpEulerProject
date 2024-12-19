@@ -757,4 +757,6 @@ let pentagonNumbers () =
     Seq.initInfinite id |> Seq.tail |> Seq.map pentagonNumber
 
 let isPentagonNumber n =
-    pentagonNumbers () |> Seq.takeWhile (fun x -> x <= n) |> Seq.last = n
+    let discriminant = 1.0 + 24.0 * float n
+    let sqrtDiscriminant = System.Math.Sqrt(discriminant)
+    sqrtDiscriminant = floor sqrtDiscriminant && (1.0 + sqrtDiscriminant) % 6.0 = 0.0
