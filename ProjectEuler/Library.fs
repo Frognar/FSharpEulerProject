@@ -757,4 +757,4 @@ let pentagonNumbers () =
     Seq.initInfinite id |> Seq.tail |> Seq.map pentagonNumber
 
 let isPentagonNumber n =
-    n = 1
+    pentagonNumbers () |> Seq.takeWhile (fun x -> x <= n) |> Seq.last = n
