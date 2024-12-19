@@ -13,3 +13,7 @@ let ``2nd pentagon number is 5`` () =
 [<Fact>]
 let ``10th pentagon number is 145`` () =
     Assert.Equal(145, ProjectEuler.pentagonNumbers () |> Seq.skip 9 |> Seq.head)
+
+[<Fact>]
+let ``1 is pentagon number`` () =
+    Assert.True(ProjectEuler.isPentagonNumber 1)

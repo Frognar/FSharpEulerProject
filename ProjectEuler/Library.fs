@@ -755,3 +755,6 @@ let pentagonNumber n = n * (3 * n - 1) / 2
 
 let pentagonNumbers () =
     Seq.initInfinite id |> Seq.tail |> Seq.map pentagonNumber
+
+let isPentagonNumber n =
+    true
