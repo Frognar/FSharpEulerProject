@@ -720,9 +720,8 @@ let triangleNumbers () =
     Seq.initInfinite triangleNumber |> Seq.tail    
 
 let triangleNumbersUpTo n =
-    Seq.initInfinite triangleNumber
+    triangleNumbers()
     |> Seq.takeWhile (fun x -> x <= n)
-    |> Seq.tail
     |> Seq.toList
 
 let isTriangleNumber word =
