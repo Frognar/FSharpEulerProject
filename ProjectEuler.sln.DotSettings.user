@@ -16,15 +16,14 @@
     &lt;TestId&gt;xUnit::ACA3BA7B-FD2A-4959-B267-55ACC489FEC6::net8.0::PentagonNumbersTests&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8e0adcbc_002Da5ef_002D4a6e_002Db091_002D5f57e0e18fb5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="CodedTriangleNumbersTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f5ab3d0a_002Dfb3d_002D4d9a_002Da13f_002D767b516332b7/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="PentagonNumbersTests #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
-    &lt;TestId&gt;xUnit::ACA3BA7B-FD2A-4959-B267-55ACC489FEC6::net8.0::CodedTriangleNumbersTests&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::ACA3BA7B-FD2A-4959-B267-55ACC489FEC6::net8.0::SubStringDivisibilityTests.permutations of [1] are [[1]]&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::ACA3BA7B-FD2A-4959-B267-55ACC489FEC6::net8.0::SubStringDivisibilityTests&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::ACA3BA7B-FD2A-4959-B267-55ACC489FEC6::net8.0::PentagonNumbersTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::ACA3BA7B-FD2A-4959-B267-55ACC489FEC6::net8.0::TriangularPentagonalHexagonalTests&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
+	
+	
 	
 	
 	

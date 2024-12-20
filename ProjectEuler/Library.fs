@@ -753,12 +753,12 @@ let hasInterestingSubStringDivisibility (digits: int64 list) =
         |> List.zip primes
         |> List.forall (fun (prime, window) -> (digitsToNumber window) % prime = 0)
 
-let pentagonNumber n = n * (3 * n - 1) / 2
+let pentagonalNumber n = n * (3 * n - 1) / 2
 
-let pentagonNumbers () =
-    Seq.initInfinite id |> Seq.tail |> Seq.map pentagonNumber
+let pentagonalNumbers () =
+    Seq.initInfinite pentagonalNumber |> Seq.tail
 
-let isPentagonNumber n =
+let isPentagonalNumber n =
     let discriminant = 1.0 + 24.0 * float n
     let sqrtDiscriminant = System.Math.Sqrt(discriminant)
     sqrtDiscriminant = floor sqrtDiscriminant && (1.0 + sqrtDiscriminant) % 6.0 = 0.0
