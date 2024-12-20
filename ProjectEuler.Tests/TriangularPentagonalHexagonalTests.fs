@@ -13,3 +13,9 @@ let ``first 5 pentagonal numbers are [1; 5; 12; 22; 35]`` () =
 [<Fact>]
 let ``first 5 hexagonal numbers are [1; 6; 15; 28; 45]`` () =
     Assert.StrictEqual([1; 6; 15; 28; 45], ProjectEuler.hexagonalNumbers () |> Seq.take 5 |> Seq.toList)
+
+[<Fact>]
+let ``40755 is triangle, pentagonal and hexagonal`` () =
+    Assert.True(ProjectEuler.isTriangleNumber 40755)
+    Assert.True(ProjectEuler.isPentagonalNumber 40755)
+    Assert.True(ProjectEuler.isHexagonalNumber 40755)

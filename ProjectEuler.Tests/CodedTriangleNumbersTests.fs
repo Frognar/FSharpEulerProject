@@ -24,7 +24,7 @@ let ``world value of 'SKY' is 55`` () =
 
 [<Fact>]
 let ``world value of 'SKY' is a triangle number`` () =
-    Assert.True(ProjectEuler.isTriangleNumber "SKY")
+    Assert.True(ProjectEuler.isTriangleNumberWord "SKY")
 
 [<Fact>]
 let ``words.txt contains 162 triangle numbers`` () =
@@ -32,5 +32,5 @@ let ``words.txt contains 162 triangle numbers`` () =
                 |> Array.collect (fun (x: string) -> x.Split(',') |> Array.map _.Replace("\"", ""))
 
     Assert.Equal(162, words
-                     |> Array.filter ProjectEuler.isTriangleNumber
+                     |> Array.filter ProjectEuler.isTriangleNumberWord
                      |> Array.length)

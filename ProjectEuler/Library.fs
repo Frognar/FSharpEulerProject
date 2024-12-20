@@ -724,7 +724,10 @@ let triangleNumbersUpTo n =
     |> Seq.takeWhile (fun x -> x <= n)
     |> Seq.toList
 
-let isTriangleNumber word =
+let isTriangleNumber n =
+    triangleNumbersUpTo n |> List.last = n
+
+let isTriangleNumberWord word =
     let wordValue = wordScore word
     triangleNumbersUpTo wordValue |> List.last = wordValue
 
@@ -767,3 +770,8 @@ let hexagonalNumber n = n * (2 * n - 1)
 
 let hexagonalNumbers () =
     Seq.initInfinite hexagonalNumber |> Seq.tail
+
+let isHexagonalNumber n =
+    hexagonalNumbers ()
+    |> Seq.takeWhile (fun x -> x <= n)
+    |> Seq.last = n
