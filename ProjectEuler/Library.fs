@@ -762,3 +762,8 @@ let isPentagonalNumber n =
     let discriminant = 1.0 + 24.0 * float n
     let sqrtDiscriminant = System.Math.Sqrt(discriminant)
     sqrtDiscriminant = floor sqrtDiscriminant && (1.0 + sqrtDiscriminant) % 6.0 = 0.0
+
+let hexagonalNumber n = n * (2 * n - 1)
+
+let hexagonalNumbers () =
+    Seq.initInfinite hexagonalNumber |> Seq.tail
