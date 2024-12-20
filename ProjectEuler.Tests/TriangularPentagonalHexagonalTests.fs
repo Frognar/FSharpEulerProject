@@ -19,3 +19,12 @@ let ``40755 is triangle, pentagonal and hexagonal`` () =
     Assert.True(ProjectEuler.isTriangleNumber 40755)
     Assert.True(ProjectEuler.isPentagonalNumber 40755)
     Assert.True(ProjectEuler.isHexagonalNumber 40755)
+
+[<Fact>]
+let ``next number that is triangle, pentagonal and hexagonal is 1533776805`` () =
+    let next = ProjectEuler.hexagonalNumbers ()
+               |> Seq.skip 143
+               |> Seq.skipWhile (fun x -> not (ProjectEuler.isPentagonalNumber x && ProjectEuler.isHexagonalNumber x))
+               |> Seq.head
+ 
+    Assert.Equal(1533776805, next)
