@@ -23,6 +23,7 @@
         <Compile Include="DoubleBasePalindromesTests.fs" />
         <Compile Include="EvenFibonacciNumbersTests.fs" />
         <Compile Include="FactorialDigitSumTests.fs" />
+        <Compile Include="GoldbachsOtherConjectureTests.fs" />
         <Compile Include="HighlyDivisibleTriangularNumberTests.fs" />
         <Compile Include="IntegerRightTrianglesTests.fs" />
         <Compile Include="LatticePathsTests.fs" />

@@ -775,3 +775,12 @@ let isHexagonalNumber n =
     hexagonalNumbers ()
     |> Seq.takeWhile (fun x -> x <= n)
     |> Seq.last = n
+
+let isOdd n =
+    n % 2 <> 0
+
+let isComposite n =
+    not (isPrime n)
+
+let isOddComposite n =
+    isOdd n && isComposite n
