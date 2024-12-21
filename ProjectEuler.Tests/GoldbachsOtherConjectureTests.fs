@@ -29,3 +29,7 @@ let ``15 met the Goldbach condition`` () =
 [<Fact>]
 let ``33 met the Goldbach condition`` () =
     Assert.True(ProjectEuler.isGoldbachTrue 33)
+
+[<Fact>]
+let ``the smallest number that didn't meet the Goldbach condition is 5777`` () =
+    Assert.Equal(5777, ProjectEuler.findSmallestOddComposite ())

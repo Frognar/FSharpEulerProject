@@ -791,4 +791,8 @@ let isGoldbachTrue n =
         let reminder = n - p
         let squarePart = reminder / 2L
         squarePart > 0L && (sqrt (float squarePart) |> int64 |> fun x -> x * x = squarePart))
-    
+
+let findSmallestOddComposite () =
+    Seq.initInfinite (fun x -> x + 3)
+    |> Seq.filter isOddComposite
+    |> Seq.find (fun n -> not (isGoldbachTrue n))
