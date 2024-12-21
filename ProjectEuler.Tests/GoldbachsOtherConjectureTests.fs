@@ -17,3 +17,15 @@ let ``7 is not odd composite`` () =
 [<Fact>]
 let ``1 is not odd composite`` () =
     Assert.False(ProjectEuler.isOddComposite 2)
+
+[<Fact>]
+let ``9 met the Goldbach condition`` () =
+    Assert.True(ProjectEuler.isGoldbachTrue 9)
+
+[<Fact>]
+let ``15 met the Goldbach condition`` () =
+    Assert.True(ProjectEuler.isGoldbachTrue 15)
+
+[<Fact>]
+let ``33 met the Goldbach condition`` () =
+    Assert.True(ProjectEuler.isGoldbachTrue 33)
