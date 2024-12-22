@@ -796,3 +796,6 @@ let findSmallestOddComposite () =
     Seq.initInfinite (fun x -> x + 3)
     |> Seq.filter isOddComposite
     |> Seq.find (fun n -> not (isGoldbachTrue n))
+
+let hasDistinctPrimeFactors count n =
+    primeFactors n |> List.distinct |> List.length = count
