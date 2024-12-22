@@ -799,3 +799,10 @@ let findSmallestOddComposite () =
 
 let hasDistinctPrimeFactors count n =
     primeFactors n |> List.distinct |> List.length = count
+
+let findConsecutiveNumbers count consecutiveCount =
+    let rec search n streak =
+        if streak = consecutiveCount then n - consecutiveCount
+        elif hasDistinctPrimeFactors count n then search (n + 1L) (streak + 1L)
+        else search (n + 1L) 0L
+    search 2L 0L
