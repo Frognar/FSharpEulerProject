@@ -808,4 +808,5 @@ let findConsecutiveNumbers count consecutiveCount =
     search 2L 0L
 
 let lastTenDigitsOfSeries n =
-    405071317L
+    let x = [1..n] |> List.map (fun x -> ((float x) ** x) |> int64) |> List.sum
+    x % 10000000000L
