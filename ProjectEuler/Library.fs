@@ -806,3 +806,6 @@ let findConsecutiveNumbers count consecutiveCount =
         elif hasDistinctPrimeFactors count n then search (n + 1L) (streak + 1L)
         else search (n + 1L) 0L
     search 2L 0L
+
+let lastTenDigitsOfSeries n =
+    405071317L

@@ -49,6 +49,7 @@
         <Compile Include="PrimeTests.fs" />
         <Compile Include="QuadraticPrimesTests.fs" />
         <Compile Include="ReciprocalCyclesTests.fs" />
+        <Compile Include="SelfPowersTests.fs" />
         <Compile Include="SpecialPythagoreanTripletTests.fs" />
         <Compile Include="SubStringDivisibilityTests.fs" />
         <Compile Include="SummationOfPrimesTests.fs" />
