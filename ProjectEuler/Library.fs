@@ -807,6 +807,17 @@ let findConsecutiveNumbers count consecutiveCount =
         else search (n + 1L) 0L
     search 2L 0L
 
+let modPow (base': BigInteger) (exp: int) (modulus: BigInteger) =
+    let rec power (base': BigInteger) (exp: int) (acc: BigInteger) =
+        if exp = 0 then acc
+        elif exp % 2 = 0 then
+            power ((base' * base') % modulus) (exp / 2) acc
+        else
+            power ((base' * base') % modulus) (exp / 2) ((acc * base') % modulus)
+    power base' exp 1I
+
 let lastTenDigitsOfSeries n =
-    let x = [1..n] |> List.map (fun x -> ((float x) ** x) |> int64) |> List.sum
-    x % 10000000000L
+    let modulus = 10000000000I
+    ([1..n]
+    |> List.map (fun n -> modPow (BigInteger n) n modulus)
+    |> List.sum) % modulus
