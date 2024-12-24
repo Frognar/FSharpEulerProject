@@ -40,3 +40,11 @@ let ``findSpecialSequences finds known sequence`` () =
     let knownSequence = [1487; 4817; 8147]
     Assert.Contains(knownSequence, sequences)
     Assert.Equal(2, sequences.Length)
+
+[<Fact>]
+let ``findSpecialSequences finds unknown sequence`` () =
+    Assert.Equal("296962999629", ProjectEuler.findSpecialSequences ()
+                                 |> List.last
+                                 |> List.map string
+                                 |> String.concat "")
+    
