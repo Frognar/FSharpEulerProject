@@ -746,6 +746,16 @@ let rec permutations list =
 let digitsToNumber digits =
     digits |> List.fold (fun acc c -> (acc * 10L) + c) 0L
 
+let getPermutations (n: int) : int list =
+    n
+    |> string
+    |> Seq.map (string >> int)
+    |> Seq.toList
+    |> permutations
+    |> Seq.toList
+    |> List.map (List.fold (fun acc c -> (acc * 10) + c) 0)
+    
+
 let hasInterestingSubStringDivisibility (digits: int64 list) =
     if digits.Length <> 10 then false
     else

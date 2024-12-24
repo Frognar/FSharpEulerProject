@@ -18,3 +18,11 @@ let ``permutations returns all unique permutations`` () =
     Assert.Contains([4; 8; 1; 7], perms)
     Assert.Contains([8; 1; 4; 7], perms)
     Assert.Equal(24, perms |> List.length)
+
+[<Fact>]
+let ``getPermutations returns all unique permutations`` () =
+    let perms = ProjectEuler.getPermutations 1487
+    Assert.Contains(1487, perms)
+    Assert.Contains(4817, perms)
+    Assert.Contains(8147, perms)
+    Assert.Equal(24, perms.Length)
