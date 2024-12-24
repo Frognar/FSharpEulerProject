@@ -46,6 +46,7 @@
         <Compile Include="PentagonNumbersTests.fs" />
         <Compile Include="PowerDigitSumTests.fs" />
         <Compile Include="PrimeFactorsTests.fs" />
+        <Compile Include="PrimePermutationsTests.fs" />
         <Compile Include="PrimeTests.fs" />
         <Compile Include="QuadraticPrimesTests.fs" />
         <Compile Include="ReciprocalCyclesTests.fs" />
