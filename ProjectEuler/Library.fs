@@ -846,10 +846,11 @@ let findSpecialSequences () =
         |> List.filter isPrime
     
     [for a in fourDigitPrimes do
-        let permsOfA = getPermutations a |> List.distinct
-        for b in permsOfA do
-            for c in permsOfA do
-                if a < b && b < c && 
-                   isPrime b && isPrime c && 
-                   isArithmeticSequence [a; b; c] then
+        let permsOfA = getPermutations a
+                       |> List.distinct
+                       |> List.filter isPrime
+
+        for b in permsOfA |> List.filter (fun x -> x > a) do
+            for c in permsOfA |> List.filter (fun x -> x > b) do
+                if isArithmeticSequence [a; b; c] then
                     yield [a; b; c]]
