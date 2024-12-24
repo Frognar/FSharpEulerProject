@@ -26,3 +26,10 @@ let ``getPermutations returns all unique permutations`` () =
     Assert.Contains(4817, perms)
     Assert.Contains(8147, perms)
     Assert.Equal(24, perms.Length)
+
+[<Fact>]
+let ``isArithmeticSequence identifies valid sequences`` () =
+    Assert.True(ProjectEuler.isArithmeticSequence [1487; 4817; 8147])
+    Assert.False(ProjectEuler.isArithmeticSequence [1487; 4817; 8148])
+    Assert.True(ProjectEuler.isArithmeticSequence [1; 2; 3])
+    Assert.False(ProjectEuler.isArithmeticSequence [1; 2; 4])

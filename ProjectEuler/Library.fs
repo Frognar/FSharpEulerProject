@@ -831,3 +831,11 @@ let lastTenDigitsOfSeries n =
     ([1..n]
     |> List.map (fun n -> modPow (BigInteger n) n modulus)
     |> List.sum) % modulus
+
+let isArithmeticSequence (numbers: int list) =
+    if numbers.Length < 2 then true
+    else
+        let differences = 
+            List.pairwise numbers
+            |> List.map (fun (a, b) -> b - a)
+        List.forall ((=) differences[0]) differences
