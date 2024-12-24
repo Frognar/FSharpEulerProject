@@ -839,3 +839,17 @@ let isArithmeticSequence (numbers: int list) =
             List.pairwise numbers
             |> List.map (fun (a, b) -> b - a)
         List.forall ((=) differences[0]) differences
+
+let findSpecialSequences () =
+    let fourDigitPrimes = 
+        [1000..9999]
+        |> List.filter isPrime
+    
+    [for a in fourDigitPrimes do
+        let permsOfA = getPermutations a |> List.distinct
+        for b in permsOfA do
+            for c in permsOfA do
+                if a < b && b < c && 
+                   isPrime b && isPrime c && 
+                   isArithmeticSequence [a; b; c] then
+                    yield [a; b; c]]

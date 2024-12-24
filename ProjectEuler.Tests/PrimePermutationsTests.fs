@@ -33,3 +33,10 @@ let ``isArithmeticSequence identifies valid sequences`` () =
     Assert.False(ProjectEuler.isArithmeticSequence [1487; 4817; 8148])
     Assert.True(ProjectEuler.isArithmeticSequence [1; 2; 3])
     Assert.False(ProjectEuler.isArithmeticSequence [1; 2; 4])
+
+[<Fact>]
+let ``findSpecialSequences finds known sequence`` () =
+    let sequences = ProjectEuler.findSpecialSequences ()
+    let knownSequence = [1487; 4817; 8147]
+    Assert.Contains(knownSequence, sequences)
+    Assert.Equal(2, sequences.Length)
